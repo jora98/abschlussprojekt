@@ -1,0 +1,66 @@
+Inhaltsübersicht
+
+Einleitung:
+-Projektbeschreibung
+-Projektziel
+-Projektbegründung
+
+Projektplanung:
+-Projektphasen
+-Ressourcenplanung
+-Entwicklungsprozess
+
+Analysephase:
+-Ist-Analyse
+-Wirtschaftlichkeitsanalyse
+  -make or buy Entscheidung
+  -Projektkosten
+  -Amortisationsdauer
+-Anwendungsfälle
+-Lastenheft
+
+Entwurfsphase:
+-Zielplattform
+-Architekturdesign
+-Entwurf der Benutzeroberfläche
+-Datenmodell
+-Geschäftslogik
+-Maßnahmen zur Qualitätssicherung
+-Deplyment
+-Pflichtenheft
+
+Implementierungsphase:
+-Implentierung des Backends und der Datenbank
+-Implentierung und Durchführen der Tests
+-Implementierung der Oberfläche
+-Testen der Anwendung
+
+Abnahme und Deploymentphase:
+-Code-Review
+-Deployment
+
+Dokumentation:
+
+Fazit:
+-soll-/ist-Vergleich
+-Ausblick
+
+Literaturverzeichnis:
+
+Anhang:
+
+verwendetet Ressourcen:
+hardware
+ -büropülatzmit lenovo thinkpad laptop
+Software
+ -git
+ -Gradle - Build-Tool
+ -MiKTeX - Distribution des Textsatzsystems TEX
+ -PGAdmin4 -  Verwaltungswerkzeug für Postgres-Datenbanken
+ -PostgresSQL - Datenbanksystem
+ -vscode
+ -Windows 11 Pro
+Personal
+-Informatiker - Review des Codes
+-Auszubildender - Umsetzung des Projekts
+-Ansprechpartner der Kapo Zürich

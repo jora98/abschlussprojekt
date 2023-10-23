@@ -1,0 +1,38 @@
+\babel@toc {german}{}\relax 
+\contentsline {section}{Tabellenverzeichnis}{iii}{section*.1}%
+\contentsline {section}{Abkürzungsverzeichnis}{iv}{section*.1}%
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Projektbeschreibung}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Projektziel}{1}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Projektplanung}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Projektphasen}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Ressourcenplanung}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Entwicklungsprozess}{2}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Analysephase}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Wirschaftlichkeitsanalyse}{3}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Projektkosten}{3}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Amortisationsdauer}{3}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Anwendungsfälle}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Lastenheft}{5}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Entwurfsphase}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Zielplattform}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Architekturdesign}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Entwurf der Benutzteroberfläche}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Datenmodell}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Geschäftslogik}{8}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Implementierungsphase}{8}{section.5}%
+\contentsline {section}{\numberline {6}Abnahme und Deploymentphase}{8}{section.6}%
+\contentsline {section}{\numberline {7}Dokumetation}{8}{section.7}%
+\contentsline {section}{\numberline {8}Fazit}{8}{section.8}%
+\contentsline {section}{Literaturverzeichnis}{8}{section.8}%
+\contentsline {section}{A Anhang}{9}{section.8}%
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitpanung}{9}{subsection.Alph0.1}%
+\contentsline {subsection}{\numberline {A.2}Verwendete Ressourcen}{10}{subsection.Alph0.2}%
+\contentsline {subsection}{\numberline {A.3}Amortisation}{11}{subsection.Alph0.3}%
+\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm}{12}{subsection.Alph0.4}%
+\contentsline {subsection}{\numberline {A.5}Lastenheft}{13}{subsection.Alph0.5}%
+\contentsline {subsection}{\numberline {A.6}Komponentendiagramm}{14}{subsection.Alph0.6}%
+\contentsline {subsection}{\numberline {A.7}Mockups}{15}{subsection.Alph0.7}%
+\contentsline {subsection}{\numberline {A.8}Entity-Relationship-Modell}{16}{subsection.Alph0.8}%
+\contentsline {subsection}{\numberline {A.9}Klassendiagramml}{17}{subsection.Alph0.9}%

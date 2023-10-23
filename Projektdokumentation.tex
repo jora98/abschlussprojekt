@@ -1,0 +1,480 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage{pgf-pie}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{pgfplots}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{uml}
+\usepackage{lipsum}
+\definecolor{softblue}{RGB}{0,48,100} % Definiert ein dezentes Blau
+\usepackage[colorlinks=true,
+            linkcolor=softblue, % Farbe für interne Links
+            urlcolor=softblue, % Farbe für externe URLs
+            citecolor=softblue, % Farbe für Zitationen
+            anchorcolor=softblue,
+            linktoc=page]{hyperref} % Nur Seitenzahlen im Inhaltsverzeichnis verlinken
+\usepackage{cleveref}
+\usepackage[nonumberlist]{glossaries}
+
+\definecolor{lightgray}{gray}{0.9}
+
+\title{Projektdokumentation: Pollution Detection - Mobile App Entwicklung}
+\author{Jona Rams}
+
+\newacronym{moscow}{MoSCoW}{Must, Should, Could, Would}
+\newacronym{python3}{Python3}{Version 3.10.10 der Python-Programmiersprache}
+\newacronym{erm}{ERM}{Entity-Relationship-Modell}
+\newacronym{crud}{CRUD}{Create, Read, Update, Delete}
+\newacronym{http}{HTTP}{Hypertext Transfer Protocol}
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{restful}{RESTful}{Representational State Transfer}
+
+\makeglossaries % Erzeugt das Abkürzungsverzeichnis
+
+\begin{document}
+\pagenumbering{roman} % Wechselt zu römischen Ziffern
+\maketitle
+
+\tableofcontents % Inhaltsverzeichnis
+
+\clearpage
+\phantomsection
+\listoftables
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+
+\clearpage
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
+
+
+\clearpage
+\pagenumbering{arabic}
+\section{Einleitung}
+In dieser Projektdokumentation wird der Ablauf des Projekts zur Entwicklung einer mobilen App für die Kantonspolizei Zürich erläutert. Dieses Projekt wurde von Jona Rams im Rahmen seines Abschlussprojekts für den Fachinformatiker mit der Fachrichtung Anwendungsentwicklung im Auftrag der Kantonspolizei Zürich durchgeführt. Die LogObject AG erhielt den Auftrag zur Entwicklung einer mobilen Anwendung, die es den Polizeibeamten der Kantonspolizei Zürich ermöglichen soll, Verschmutzungen während ihrer Streifenarbeit einfach zu erfassen und zu zählen. Die erfassten Daten werden digital in eine Datenbank geladen, um eine effiziente Erfassung und Auswertung zu gewährleisten.
+
+\subsection{Projektbeschreibung}
+\label{sec:projektbeschreibung}
+Die Hauptaufgabe dieses Projekts war die Erstellung eines Prototyps für die \glqq Pollution Detection\grqq{} App im Auftrag der Kantonspolizei Zürich. Die App unterstützt Polizeibeamte bei der Erfassung und Quantifizierung von Verschmutzungen während ihrer Streifenarbeit.\\
+Die \glqq Pollution Detection\grqq{} App bietet eine benutzerfreundliche Lösung, die es den Beamten ermöglicht, Verschmutzungen in von Kunden bereitgestellten geografischen Gebieten, den sogenannten Geoareas, effizient zu identifizieren und zu kategorisieren. Ein Schlüsselelement der App ist die nahtlose Integration der gesammelten Daten in eine zentrale Datenbank, wodurch eine zuverlässige Speicherung und einfache Analyse gewährleistet ist.\\
+Die Anwendung ermöglicht den Beamten nicht nur den Zugriff auf gespeicherte Daten über eine intuitive Benutzeroberfläche, sondern bietet auch die Flexibilität, eigene Verschmutzungsarten hinzuzufügen, die speziell für ihre Geoareas relevant sind.\\
+Das Hauptziel ist es, die Umweltüberwachung der Kantonspolizei Zürich zu optimieren und den Beamten ein leistungsfähiges Tool an die Hand zu geben, das sowohl benutzerfreundlich als auch anpassbar ist. Dies fördert die Erhaltung der öffentlichen Ordnung in den Geoareas und ermöglicht eine effektivere Bekämpfung der Umweltverschmutzung.
+
+\subsection{Projektziel}
+Das Hauptziel dieses Projekts war die Entwicklung der "Pollution Detection" App zur Digitalisierung der Verschmutzungserfassung für die Kantonspolizei Zürich. Durch diese Digitalisierung soll der Prozess der Datenerfassung und -dokumentation für die Beamten erheblich vereinfacht und beschleunigt werden. Die App zielt darauf ab, den manuellen Aufwand zu reduzieren, die Genauigkeit der erfassten Daten zu erhöhen und den Beamten ein flexibles und benutzerfreundliches Tool zur Umweltüberwachung zur Verfügung zu stellen.
+
+\section{Projektplanung}
+\subsection{Projektphasen}
+Gemäß den Vorgaben der IHK zu Essen war für die Realisierung des Projekts ein Zeitraum von 80 Stunden vorgesehen. Vor Beginn des Projekts wurde eine strukturierte Einteilung in verschiedene Entwicklungsphasen vorgenommen, um alle Aspekte der Softwareentwicklung abzudecken. Eine Übersicht über die geplanten Hauptphasen ist in  \hyperlink{Projektphasen}{Tabelle 1} dargestellt. Für eine ausführlichere Darstellung der geplanten Schritte innerhalb jeder Phase wird auf den Anhang verwiesen.\\
+\\
+
+\hypertarget{Projektphasen}{}
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|X|c|}
+    \hline
+    \rowcolor{gray}\textbf{Phase} & \textbf{Zeit (Stunden)} \\
+    \hline
+    Analyse & 6 \\
+    \hline
+    Entwurf & 12 \\
+    \hline
+    Implementierung & 43 \\
+    \hline
+    Tests & 11 \\
+    \hline
+    Deployment & 4 \\
+    \hline
+    Dokumentation & 3 \\
+    \hline
+\end{tabularx}
+\caption{Projektphasen}
+\label{tab:Projektphasen}
+\end{table}
+
+\subsection{Ressourcenplanung}
+\label{sec:ressourcenplanung}
+Die vollständige Auflistung aller für das Projekt verwendeten Ressourcen finden Sie im Anhang \hyperref[sec:ressourcen]{A.1: Verwendete Ressourcen}. Diese Planung beinhaltet nicht nur die verwendete Hard- und Software, sondern berücksichtigt auch das involvierte Personal. Bei der Auswahl der Software wurde insbesondere darauf geachtet, dass keine zusätzlichen Lizenzkosten entstehen und das notwendige Fachwissen bereits vorhanden ist. Zudem wurde darauf geachtet, dass die eingesetzten Technologien und Tools nicht gegen bestehende Richtlinien verstoßen. Die genauen technischen Spezifikationen und eingesetzten Tools, wie beispielsweise die Entwicklungsumgebung, werden im genannten Anhang detailliert aufgeführt.
+
+\subsection{Entwicklungsprozess}
+\label{sec:entwicklungsprozess}
+Vor dem eigentlichen Projektstart war es entscheidend, einen passenden Entwicklungsprozess auszuwählen, welcher die methodische Herangehensweise für die Projektumsetzung festlegt. Das Wasserfallmodell, das ich für dieses Vorhaben gewählt habe, ist ein geordneter und phasenbasierter Ansatz in der Softwareentwicklung. Dabei folgt jede Phase strikt auf die vorherige, wodurch klare Meilensteine und Abgrenzungen zwischen den einzelnen Entwicklungsschritten entstehen. Bei der Entwicklung der Benutzeroberfläche wählte ich jedoch einen agileren Ansatz, um einen kontinuierlichen Austausch mit dem Fachbereich zu gewährleisten und auf deren Feedback zeitnah reagieren zu können.
+
+\section{Analysephase}
+\subsection{Ist-Analyse}
+\label{sec:Ist-Analyse}
+Wie bereits in Abschnitt \hyperref[sec:projektbeschreibung]{1.1 (Projektbeschreibung)} dargelegt, zielt das Projekt \glqq Pollution Detection\grqq{} darauf ab, den Erfassungsprozess von Umweltverschmutzungsdaten für die Kantonspolizei Zürich zu digitalisieren. Aktuell wird die Erfassung von Verschmutzungsdaten während der Streifenarbeit manuell durchgeführt. Die Polizeibeamten notieren die Informationen auf physischen Datenträgern, was nicht nur zeitaufwendig, sondern auch fehleranfällig ist.\\
+Nach jeder Streife müssen die gesammelten Daten manuell in ein zentrales System eingegeben werden, was zu weiteren Verzögerungen und potenziellen Fehlern führt. Dieser analoge Ansatz hat mehrere Nachteile. Erstens erhöht er den Arbeitsaufwand für die Beamten erheblich, da sie sowohl vor Ort Daten erfassen als auch im Büro eingeben müssen. Zweitens besteht aufgrund des manuellen Eingabeprozesses ein erhöhtes Risiko von Fehlern, sei es durch Missverständnisse, Schreibfehler oder Übertragungsfehler. Dies kann zu inkonsistenten oder unvollständigen Datensätzen führen.\\
+Zusätzlich zur manuellen Erfassung und Eingabe fehlt derzeit eine effiziente Methode, um die gesammelten Daten zentral zu speichern und abzurufen. Die Daten werden zwar physisch gesammelt, aber es gibt keine standardisierte Methode, um sie in einem digitalen Format zu konsolidieren und für zukünftige Referenzen oder Analysen zugänglich zu machen. Dies unterstreicht die Notwendigkeit einer digitalen Lösung, die den gesamten Prozess der Datenerfassung und -speicherung optimiert.
+
+\subsection{Wirschaftlichkeitsanalyse}
+\subsubsection{Projektkosten}
+Im Folgenden werden die Kosten dargestellt, die während des Projekts anfallen. Zu berücksichtigen sind sowohl die Personalkosten des Entwicklers als auch der anderen Projektteilnehmer. Zusätzlich müssen die Kosten für die in Abschnitt \hyperref[sec:ressourcenplanung]{2.2 (Ressourcenplanung)} aufgelisteten Ressourcen berücksichtigt werden.\\
+Da genaue Personalkosten vertraulich sind, erfolgt die Kalkulation auf Basis von Stundensätzen, die intern festgelegt wurden. Die angegebenen Stundensätze umfassen hauptsächlich das Bruttogehalt sowie die arbeitgeberseitigen Sozialabgaben. Hinzu kommen die Kosten für die Nutzung der Ressourcen.\\
+Für einen Mitarbeiter wird ein Stundensatz von 25,00~€ veranschlagt. Für einen Auszubildenden beträgt der Stundensatz 10,00~€. Die Kosten für die Ressourcennutzung werden pauschal mit 12,00~€ pro Stunde angesetzt.\\
+Das Projekt hat eine geplante Laufzeit von 80 Stunden. In der nachfolgenden Tabelle \hyperlink{Kostenaufstellung}{Tabelle 2} sind die Kosten nach den einzelnen Projektvorgängen aufgeschlüsselt und summiert, um die Gesamtkosten des Projekts zu ermitteln. Diese belaufen sich auf insgesamt 1908,00~€.\\
+Die aufgeführten Kosten entsprechen den mit unserer Firma vereinbarten Beträgen.
+
+\hypertarget{Kostenaufstellung}{}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|r|r|r|}
+\hline
+\rowcolor{gray}
+\textbf{Vorgang} & \textbf{Zeit (Stunden)} & \textbf{Kosten pro Stunde (€)} & \textbf{Kosten gesamt (€)} \\
+\hline
+Entwicklung & 80 & 22 (10 Azubi + 12 Ressourcen) & 1760 \\
+\hline
+Code-Review & 2 & 37 (25 Fachkraft + 12 Ressourcen) & 74 \\
+\hline
+Fachgespräch & 2 & 37 (25 Fachkraft + 12 Ressourcen) & 74 \\
+\hline
+\hline
+Gesamt & - & - & 1908 \\
+\hline
+\end{tabular}
+\caption{Kostenaufstellung}
+\label{tab:Kostenaufstellung}
+\end{table}
+
+\subsubsection{Amortisationsdauer}
+Im Folgenden soll die Amortisationsdauer berechnet werden, um zu bestimmen, ab welchem Zeitpunkt sich die Investition in die Entwicklung der App finanziell auszahlt. Die Entwicklungskosten für die App wurden bereits in Tabelle \hyperlink{Kostenaufstellung}{Tabelle 2} detailliert dargelegt und belaufen sich auf 1908 €. Eine bedeutende Zeitersparung ergibt sich hauptsächlich durch die Automatisierung des Datenerfassungsprozesses und das Entfallen manueller Übertragungsaufgaben. Weitere Details zur bisherigen Vorgehensweise und den damit verbundenen Zeitaufwänden können unter  \hyperref[sec:Ist-Analyse]{3.1 Ist-Analyse} entnommen werden.
+
+\subsubsection*{1. Jährliche Zeiteinsparung}
+
+\textbf{a) Manueller Prozess:}
+\begin{itemize}
+    \item 3 Tage die Woche das manuelle Notieren (10 mal am Tag): $3 \times 10 \times 5 \text{ min} = 150 \text{ min}$
+    \item 3 Tage die Woche das Übertragen der Daten: $3 \times 10 \text{ min} = 30 \text{ min}$
+    \item Gesamtwöchentliche Dauer: $150 \text{ min} + 30 \text{ min} = 180 \text{ min}$
+    \item Jährlich (angenommen 52 Wochen): $180 \text{ min} \times 52 = 9360 \text{ min}$
+\end{itemize}
+\textbf{b) Digitaler Prozess mit der App:}
+\begin{itemize}
+    \item 3 Tage die Woche das digitale Eintragen (10 mal am Tag): $3 \times 10 \times 1 \text{ min} = 30 \text{ min}$
+    \item Jährlich (angenommen 52 Wochen): $30 \text{ min} \times 52 = 1560 \text{ min}$
+    \item Zeiteinsparung jährlich: $9360 \text{ min} - 1560 \text{ min} = 7800 \text{ min}$
+\end{itemize}
+
+\subsubsection*{2. Kostenersparnis}
+
+Unter der Annahme, dass die Kosten für einen Mitarbeiter, der diese Aufgaben durchführt, bei 40 €/Stunde liegen:\\
+Kostenersparnis pro Jahr: $\frac{7800 \text{ min}}{60 \text{ min/h}} \times 40 \text{ €/h} = 5200 \text{ €}$
+
+\subsubsection*{3. Amortisationszeit}
+Mit den gegebenen Entwicklungskosten von 1908 €:\\
+Amortisationszeit: $\frac{1908 \text{ €}}{5200 \text{ €/Jahr}} = 0,37 \text{ Jahre}$ oder ungefähr 4,4 Monate.\\
+Bei einer Nutzung von 3 Tagen die Woche und 10 mal am Tag würde sich die App demnach in etwa 4,4 Monaten amortisieren.\\
+Zusammenfassend zeigt sich, dass die Investition in die App bereits nach kurzer Zeit finanziell lohnenswert ist. Eine detaillierte grafische Darstellung der Amortisation finden Sie im unter  \hyperref[sec:amortisation]{A.2: Amortisation}
+
+\subsection{Anwendungsfälle}
+Um eine grobe Übersicht darüber zu erhalten, wie der Beamte mit der Anwendung arbeiten kann und welche Anwendungsfälle aus Endanwendersicht abgebildet werden müssen, wurde im Laufe der Analyse-Phase ein Use-Case-Diagramm erstellt. Dieses befindet sich unter \hyperref[sec:use-case-diagramm]{A.3: Use-Case-Diagramm}.
+\\
+Der Hauptakteur, der später mit der Anwendung arbeiten wird, ist der Beamte. Dieser hat die Aufgabe, Daten in die App einzuspeisen und von den bereitgestellten Funktionen zu profitieren. Das Diagramm zeigt die verschiedenen Interaktionen und Aufgaben, die der Streifenbeamte mit der App durchführen kann. Diese Interaktionen definieren die verschiedenen Rollen und Berechtigungen, die innerhalb der Anwendung benötigt werden.
+
+\subsection{Lastenheft}
+Am Ende der Analysephase wurde gemeinsam mit den Projektbeteiligten ein Lastenheft erstellt. In dem Lastenheft sind alle zu berücksichtigenden Anforderungen an die zu implementierende Softwarelösung, sortiert nach ihrer Wichtigkeit, festgehalten. Die Formulierung der Anforderungen erfolgte unter Anwendung der Must, Should, Could, Would (\acrshort{moscow})-Methode. Das bedeutet, dass in jeder Anforderung die Dringlichkeit in den Kategorien „muss“, „soll“, „kann“ und „würde gerne“ dargestellt wird. Diese Methodik half ebenfalls bei der Priorisierung der Anforderungen. Das komplette Lastenheft kann im Anhang \hyperref[sec:lastenheft]{A.5: Lastenheft} eingesehen werden.
+
+\section{Entwurfsphase}
+\subsection{Zielplattform}
+Wie bereits unter \hyperref[sec:projektbeschreibung]{1.1 (Projektbeschreibung)} erläutert, wird das Projekt als eigenständige Android-App realisiert. Die Daten, mit denen die App interagieren soll, sind in einer bestehenden PostgreSQL-Datenbank gespeichert. Dies ermöglicht einen direkten Zugriff auf bereits vorhandene Datenstrukturen, ohne dass zusätzliche Datenbanksysteme installiert werden müssen.\\
+Die Entscheidung, das Backend in \acrshort{python3} zu entwickeln, basierte auf mehreren Faktoren. Zum einen verfüge ich bereits über umfangreiche Erfahrungen mit \acrshort{python3}, was den Entwicklungsprozess beschleunigt und die Fehleranfälligkeit reduziert. Zum anderen bietet \acrshort{python3} eine breite Palette an Bibliotheken und Frameworks, die die Integration mit PostgreSQL erleichtern. Der Kunde gab mir in dieser Hinsicht freie Hand, was die Wahl der Technologie betrifft, und ich entschied mich für \acrshort{python3} aufgrund seiner Effizienz und Anpassungsfähigkeit.\\
+Zum Abschluss des Projekts wird die Anwendung zuerst auf einer Testplattform ausgerollt. Das Backend wird vorerst auf einem firmeninternen Laptop gehostet, um weitere Tests und Optimierungen in einer kontrollierten Umgebung zu ermöglichen. Parallel dazu wird eine PostgreSQL-Testdatenbank eingerichtet, um Testdaten effizient zu verwalten und den reibungslosen Ablauf der App sicherzustellen.\\
+Die Benutzeroberfläche wurde mit dem Ionic-Framework auf Angular-Basis entwickelt. Dieses Framework wurde gewählt, da es eine nahtlose Integration mit Android bietet und die Entwicklung von responsiven und benutzerfreundlichen Oberflächen erleichtert. Tests können entweder über einen Android-Emulator oder direkt auf einem Android-Gerät durchgeführt werden, um sicherzustellen, dass die App in realen Bedingungen optimal funktioniert.
+
+\subsection{Architekturdesign}
+\label{sec:architekturdesign}
+Für das \glqq Pollution Detection\grqq{}-Projekt wurde eine Drei-Schichten-Architektur gewählt. Die erste Schicht, die Präsentationsschicht, besteht aus dem Frontend, das mit dem Ionic Framework auf Angular-Basis entwickelt wurde. Dieses Frontend dient als Benutzerschnittstelle für die mobile Anwendung und stellt eine interaktive Oberfläche bereit, über die Benutzer Daten eingeben und Informationen anzeigen können. Es kommuniziert direkt mit dem Backend über \acrshort{http}-Anfragen, um Daten abzurufen oder zu senden.\\
+Die zweite Schicht, die Geschäftslogikschicht, ist das in \acrshort{python3} entwickelte Backend. Es dient als zentrale Schnittstelle für alle Datenoperationen und stellt eine \acrshort{restful} \acrshort{api} bereit, die \acrshort{crud}-Operationen (Create, Read, Update, Delete) unterstützt. Diese \acrshort{api} ermöglicht es, Daten zu erstellen, abzurufen, zu aktualisieren und zu löschen und bildet die Brücke zwischen der Präsentationsschicht und der Datenzugriffsschicht. Innerhalb dieser Schicht ist auch die Geschäftslogik der Anwendung enthalten.\\
+Die dritte und letzte Schicht, die Datenzugriffsschicht, beherbergt die PostgreSQL-Datenbank. In dieser Datenbank sind die Verschmutzungsdaten und andere relevante Informationen gespeichert. Sie bietet Mechanismen für den sicheren Zugriff auf die Daten und sorgt für deren Integrität und Konsistenz.\\
+Die klare Trennung in diese drei Schichten bietet nicht nur Flexibilität und Skalierbarkeit, sondern erleichtert auch das Debugging und die Fehlerbehebung, da Probleme leichter auf eine der drei Schichten zurückgeführt werden können.\\
+\\
+Die Interaktionen und Abhängigkeiten zwischen den beschriebenen Schichten sind im Anhang \hyperref[sec:komponentendiagramm]{A.6: Komponentendiagramm} dargestellt. Dieses Diagramm wurde bereits in der Entwurfsphase erstellt, um eine klare Struktur und Übersicht des Systems zu bieten.
+
+\subsection{Entwurf der Benutzteroberfläche}
+Wie unter \hyperref[sec:entwicklungsprozess]{2.3 (Entwicklungsprozess)} beschrieben, wurde für die Benutzeroberfläche ein intensiver Austausch mit den relevanten Stakeholdern vorgenommen, da sie die Hauptnutzer dieser Anwendung sein werden. Als ersten Schritt wurden Entwürfe erstellt. Die grafischen Darstellungen dieser Mockups finden Sie unter \hyperref[sec:mockups]{A.8: Mockups}.\\
+\\
+Im Header der App ist das \glqq LOGOBJECT\grqq{}-Logo platziert, um eine klare Zuordnung zur Marke zu ermöglichen. Der Hauptfokus der Startseite soll auf der Möglichkeit liegen, eine GeoArea auszuwählen. Diese Auswahl stellt ein zentrales Element der Anwendung dar und soll daher intuitiv und ohne Umwege für den Nutzer erreichbar sein.\\
+Nach der Auswahl der GeoArea soll die App automatisch die zugehörigen Pollutions laden und anzeigen. Hierbei ist geplant, dem Nutzer interaktive Bedienelemente zur Verfügung zu stellen, mit denen er Anpassungen an den Zahlenwerten vornehmen kann. Dafür sind Plus- und Minus-Buttons vorgesehen, die eine einfache und direkte Bearbeitung ermöglichen.\\
+Um eine effiziente Nutzung der App zu gewährleisten, wurde in den Entwürfen darauf geachtet, dass alle Funktionen mit wenigen Klicks erreichbar sind und der Nutzer stets einen klaren Überblick über die dargestellten Inhalte behält.\\
+Die Rücksprache mit den Stakeholdern hat bestätigt, dass dieser geplante Aufbau den Anforderungen entspricht, wobei jedoch Wert darauf gelegt wird, dass die Navigation einfach bleibt und der Benutzer nicht durch zu viele Unterseiten navigieren muss.
+
+\subsection{Datenmodell}
+Das Datenmodell, welches für die geplante mobile App konzipiert wurde, setzt sich aus den Entitäten \textbf{User}, \textbf{GeoArea} und \textbf{Pollution} zusammen.\\
+Die Entität \textbf{User} repräsentiert einen Anwender der App und besitzt folgende Attribute:
+\begin{itemize}
+    \item \texttt{id}: Ein eindeutiger Identifikator für jeden Benutzer.
+    \item \texttt{email}: Die E-Mail-Adresse des Benutzers.
+    \item \texttt{password}: Das Passwort des Benutzers.
+\end{itemize}
+Die Entitäten \textbf{GeoArea} und \textbf{Pollution} wurden vom Kunden vorgegeben.\\
+Die Entität \textbf{GeoArea} kapselt Informationen zu geografischen Bereichen, in denen \textbf{Pollutions} erfasst werden. Sie verfügt über folgende Attribute:
+\begin{itemize}
+    \item \texttt{id}: Ein eindeutiger Identifikator für jede GeoArea.
+    \item \texttt{datecreated}: Das Erstellungsdatum der GeoArea.
+    \item \texttt{language}: Die Sprache, die in dieser GeoArea vorherrschend ist.
+    \item \texttt{last\_update}: Das Datum des letzten Updates der GeoArea.
+    \item \texttt{mandant}: Der Mandant der GeoArea.
+    \item \texttt{admincomment}: Ein Kommentarfeld für Administratoren.
+    \item \texttt{automaticsearch}: Ein Boolean-Wert, der angibt, ob in dieser GeoArea eine automatische Suche aktiviert ist.
+    \item \texttt{name}: Der Name der GeoArea.
+    \item \texttt{polygon}: Die geografischen Grenzen der GeoArea.
+\end{itemize}
+Die Entität \textbf{Pollution} beschreibt spezifische Verschmutzungen oder Umweltbelastungen innerhalb einer GeoArea und hat folgende Attribute:
+\begin{itemize}
+    \item \texttt{id}: Ein eindeutiger Identifikator für jede Pollution.
+    \item \texttt{name}: Der Name der Pollution.
+    \item \texttt{count}: Eine Zählung oder Intensität der Pollution.
+    \item \texttt{description}: Eine Beschreibung der Pollution.
+    \item \texttt{geoarea\_fk}: Ein Fremdschlüssel, der die Pollution mit einer GeoArea verknüpft.
+\end{itemize}
+Eine essenzielle Beziehung in diesem Modell ist die zwischen \textbf{GeoArea} und \textbf{Pollution}. Jede \textbf{Pollution} muss zwingend einer \textbf{GeoArea} zugeordnet sein, wodurch eine 1:n-Beziehung entsteht. Dies bedeutet, dass eine GeoArea mehrere Pollutions besitzen kann, wohingegen eine Pollution immer genau einer GeoArea angehört.\\
+\\
+Der \textbf{User} könnte in weiteren Ausarbeitungen des Modells in Beziehung zu \textbf{GeoAreas} oder \textbf{Pollutions} stehen, etwa durch das Erfassen oder Bearbeiten von Daten. Diese potenziellen Beziehungen sind jedoch zum jetzigen Zeitpunkt noch nicht finalisiert.\\
+\\
+Im finalen Schritt des Entwicklungsprozesses wird dieses Datenmodell in ein Entity-Relationship-Modell (\acrshort{erm}) überführt. Dieses dient als Blaupause für die Implementierung der Datenstruktur in der eigentlichen App und stellt die Beziehungen zwischen den Entitäten klar dar. Das dazugehörige \acrshort{erm} wird im Anhang \hyperref[sec:entity-relationship-modell]{A.8: Entity-Relationship-Modell} dargestellt und bildet die Grundlage für die spätere Implementierung der Domänenklassen.
+
+\subsection{Geschäftslogik}
+Der grundsätzliche Aufbau der Anwendung wurde bereits im Abschnitt \hyperref[sec:architekturdesign]{4.2 (Architekturdesign)} erörtert. Um eine detaillierte Darstellung der Geschäftslogik und deren Implementierung zu bieten, habe ich eigenständig ein Klassendiagramm angefertigt. Dieses Diagramm dient als visuelle Darstellung der internen Struktur und verdeutlicht die Trennung sowie die Beziehungen der einzelnen Komponenten. Es bietet zudem eine Übersicht über die Schnittstellen und die Funktionsweisen der verschiedenen Services, Klassen und Module. Für eine ausführliche Ansicht des Klassendiagramms verweise ich auf den Anhang unter \hyperref[sec:klassendiagramm]{A.9: Klassendiagramm}.
+
+
+\section{Implementierungsphase}
+
+\section{Abnahme und Deploymentphase}
+
+\section{Dokumetation}
+
+\section{Fazit}
+
+\section*{Literaturverzeichnis}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+
+\clearpage
+\appendix
+\renewcommand{\thesubsection}{A.\arabic{subsection}}
+\section*{A Anhang}
+\addcontentsline{toc}{section}{A Anhang}
+\subsection{Detaillierte Zeitpanung}
+\label{sec:detaillierte zeitplanung}
+\begin{tabular}{|p{\textwidth}|c|}
+    \hline
+    \rowcolor{gray}Analysephase & 6h \\
+    \hline
+    \hspace{0.5cm}• Durchführen der Ist-Analyse &2h \\
+    \hline
+    \hspace{0.5cm}• Durchführen der Wirtschaftlichkeitsanalyse und Erstellung einer Amortisationsrechnung & 2h \\
+    \hline
+    \hspace{0.5cm}• In Zusammenarbeit mit dem Fachbereich, die Erstellung eines Lastenheftes  & 2h \\
+    \hline
+    \rowcolor{gray}Entwurf & 12h \\
+    \hline
+    \hspace{0.5cm}• Entwerfen der Benutzeroberfläche inkl. Erstellen von Mock-Ups & 4h \\
+    \hline
+    \hspace{0.5cm}• Entwerfen der Datenbankstruktur inkl. Erstellen eines ER-Modells & 3h \\
+    \hline
+    \hspace{0.5cm}• Planung der Architektur  & 3h \\
+    \hline
+    \hspace{0.5cm}• Erstellen des Pflichtenheftes & 2h \\
+    \hline
+    \rowcolor{gray}Implementierung des Backends und der Datenbank & 26h \\
+    \hline
+    \hspace{0.5cm}• Anlegen der Datenbank inkl. Tabellen & 3h \\
+    \hline
+    \hspace{0.5cm}• Anlegen des Backend-Projekts & 1h \\
+    \hline
+    \hspace{0.5cm}• Implementieren der RESTful API & 2h \\
+    \hline
+    \hspace{0.5cm}• Herstellen der Datenbankverbindung inkl. Konfiguration & 2h \\
+    \hline
+    \hspace{0.5cm}• Implementieren der Datenbankmodelle & 6h \\
+    \hline
+    \hspace{0.5cm}• Implementieren der Services & 12h \\
+    \hline
+    \rowcolor{gray}Implementierung und Durchführung der Tests & 11h \\
+    \hline
+    \hspace{0.5cm}• Anlegen einer Testdatenbank & 1h \\
+    \hline
+    \hspace{0.5cm}• Implementieren der API-Tests & 10h \\
+    \hline
+    \rowcolor{gray}Implementierung der Oberfläche & 17h \\
+    \hline
+    \hspace{0.5cm}• Anlegen des Frontend-Projekts & 2h \\
+    \hline
+    \hspace{0.5cm}• Umsetzung der Benutzeroberfläche & 15h \\
+    \hline
+    \rowcolor{gray}Deployment & 4h \\
+    \hline
+    \hspace{0.5cm}• Code-Review mit dem Ausbilder & 2h \\
+    \hline
+    \hspace{0.5cm}• Deployment des Prototyps in eine Testumgebung & 2h \\
+    \hline
+    \rowcolor{gray}Dokumentation & 3h \\
+    \hline
+    \hspace{0.5cm}• Erstellen des Benutzerhandbuchs & 3h \\
+    \hline
+    \rowcolor{gray}Gesamt & 80h \\
+    \hline
+\end{tabular}
+
+\clearpage
+\subsection{Verwendete Ressourcen}
+\label{sec:ressourcen}
+
+\noindent\textbf{Hardware}
+\begin{itemize}
+\item Büroarbeitsplatz mit Lenovo ThinkPad Laptop
+\end{itemize}
+
+\noindent\textbf{Software}
+\begin{itemize}
+\item Git – Verteilte Versionsverwaltung
+\item Gradle – Build-Management-Automatisierungstool
+\item MiKTeX – Distribution des Textsatzsystems \TeX
+\item PGAdmin4 – Verwaltungstool für PostgreSQL-Datenbanken
+\item PostgreSQL – Relationales Datenbanksystem
+\item Visual Studio Code (VSCode) – Quellcode-Editor
+\item Windows 11 Pro – Betriebssystem
+\end{itemize}
+
+\noindent\textbf{Personal}
+\begin{itemize}
+\item Informatiker – Review des Codes
+\item Auszubildender – Umsetzung des Projekts
+\item Ansprechpartner der Kantonspolizei Zürich
+\end{itemize}
+
+\clearpage
+\subsection{Amortisation}
+\label{sec:amortisation}
+\begin{figure}[H]
+\begin{tikzpicture}
+\begin{axis}[
+    title={Break-Even-Graph},
+    xlabel={Zeit (Monate)},
+    ylabel={Kosten (€)},
+    ylabel style={yshift=-2cm},
+    xmin=0, xmax=12,
+    ymin=0, ymax=11000,
+    xtick={0,1,...,12},
+    ytick={0,1000,2000,...,11000},
+    yticklabels={0€,1000€,2000€,3000€,4000€,5000€,6000€,7000€,8000€,9000€,10000€,11000€},
+    scaled y ticks=false,
+    grid style=dashed,
+    width=16cm,
+    height=20cm,
+    legend pos=north west,
+    legend cell align={left},
+]
+
+% Alte Methode
+\addplot[color=blue, no markers]
+    coordinates {(0,0) (4.4,6240*0.367) (12,6240)}; 
+\addlegendentry{Kosten Alte Methode}
+
+% Neue Methode mit App
+\addplot[color=red, no markers]
+    coordinates {(0,1908) (4.4,1908+1040*0.367) (12,1908+1040)};
+\addlegendentry{Kosten Neue Methode}
+
+% Break-Even-Punkt
+\fill[green] (axis cs:4.4,2289.28) circle (4pt);
+\draw[green, thick, dashed] (axis cs:4.4,0) -- (axis cs:4.4,2289.28);
+\addlegendimage{green, thick, dashed} \addlegendentry{Break-Even-Punkt}
+
+\end{axis}
+\end{tikzpicture}
+\caption{Amortisation}
+\label{fig:break_even}
+\end{figure}
+
+\clearpage
+\subsection{Use-Case-Diagramm}
+\label{sec:use-case-diagramm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{bilder/use-case-diagramm.drawio.png}
+\caption{Use-Case-Diagramm der Pollution Detection App}
+\end{figure}
+
+\clearpage
+\subsection{Lastenheft}
+\label{sec:lastenheft}
+
+Für die Entwicklung der \glqq Pollution Detection\grqq{} App für die Kantonspolizei Zürich sind folgende Anforderungen festgelegt:\\
+
+\textbf{1. Datenverarbeitung und Integration}
+
+\begin{itemize}
+    \item Die App \textbf{muss} Verschmutzungsdaten in Echtzeit erfassen und kategorisieren.
+    \item Es \textbf{muss} möglich sein, spezifische Verschmutzungsarten hinzuzufügen, die für bestimmte geografische Gebiete (Geoareas) relevant sind.
+    \item Es \textbf{muss} eine Funktion geben, die den Beamten erlaubt, Verschmutzungsarten zu bearbeiten und zu löschen.
+    \item Die erfassten Daten \textbf{könnten} mit anderen Datenquellen oder Systemen der Kantonspolizei synchronisiert werden.
+\end{itemize}
+
+\textbf{2. Benutzeroberfläche und Interaktivität}
+
+\begin{itemize}
+    \item Die App \textbf{muss} über eine intuitive Benutzeroberfläche verfügen, die eine schnelle und einfache Erfassung von Verschmutzungen ermöglicht.
+    \item Die App \textbf{könnte} in der Lage sein, die genaue Position der Verschmutzung mithilfe von GPS oder anderen geografischen Tools zu erfassen.
+\end{itemize}
+
+\textbf{3. Zugänglichkeit}
+
+\begin{itemize}
+    \item Die App \textbf{muss} auf Mobilgeräten funktionieren.
+    \item Die App \textbf{sollte} eine sichere Authentifizierungsmethode haben.
+\end{itemize}
+
+\textbf{4. Sonstige Anforderungen}
+
+\begin{itemize}
+    \item Es \textbf{sollten} regelmäßige Updates und Wartungen durchgeführt werden, um die App auf dem neuesten Stand zu halten und Sicherheitsrisiken zu minimieren.
+    \item Es \textbf{wäre} gut, über kontinuierlichen Support und mögliche Einweisungen zu verfügen.
+\end{itemize}
+
+\clearpage
+\subsection{Komponentendiagramm}
+\label{sec:komponentendiagramm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{bilder/Komponentendiagramm2.png}
+\caption{Komponentendiagramm}
+\end{figure}
+
+\clearpage
+\subsection{Mockups}
+\label{sec:mockups}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{bilder/prototyp1.png}
+\caption{Mockups}
+\end{figure}
+
+\clearpage
+\subsection{Entity-Relationship-Modell}
+\label{sec:entity-relationship-modell}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{bilder/Entity-Relationship-Diagram4.png}
+\caption{Entity-Relationship-Modell}
+\end{figure}
+
+\clearpage
+\subsection{Klassendiagramml}
+\label{sec:klassendiagramm}
+
+
+\end{document}
