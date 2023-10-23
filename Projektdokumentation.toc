@@ -21,6 +21,7 @@
 \contentsline {subsection}{\numberline {4.3}Entwurf der Benutzteroberfläche}{6}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Datenmodell}{6}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Geschäftslogik}{8}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Code-Qualitätssicherung}{8}{subsection.4.6}%
 \contentsline {section}{\numberline {5}Implementierungsphase}{8}{section.5}%
 \contentsline {section}{\numberline {6}Abnahme und Deploymentphase}{8}{section.6}%
 \contentsline {section}{\numberline {7}Dokumetation}{8}{section.7}%
@@ -35,4 +36,5 @@
 \contentsline {subsection}{\numberline {A.6}Komponentendiagramm}{14}{subsection.Alph0.6}%
 \contentsline {subsection}{\numberline {A.7}Mockups}{15}{subsection.Alph0.7}%
 \contentsline {subsection}{\numberline {A.8}Entity-Relationship-Modell}{16}{subsection.Alph0.8}%
-\contentsline {subsection}{\numberline {A.9}Klassendiagramml}{17}{subsection.Alph0.9}%
+\contentsline {subsection}{\numberline {A.9}Klassendiagramm}{17}{subsection.Alph0.9}%
+\contentsline {subsection}{\numberline {A.10}Statische Codeanalyse}{18}{subsection.Alph0.10}%

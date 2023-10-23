@@ -38,6 +38,7 @@
 \newacronym{http}{HTTP}{Hypertext Transfer Protocol}
 \newacronym{api}{API}{Application Programming Interface}
 \newacronym{restful}{RESTful}{Representational State Transfer}
+\newacronym{ci}{CI}{Continuous Integration}
 
 \makeglossaries % Erzeugt das Abkürzungsverzeichnis
 
@@ -244,8 +245,14 @@ Der \textbf{User} könnte in weiteren Ausarbeitungen des Modells in Beziehung zu
 Im finalen Schritt des Entwicklungsprozesses wird dieses Datenmodell in ein Entity-Relationship-Modell (\acrshort{erm}) überführt. Dieses dient als Blaupause für die Implementierung der Datenstruktur in der eigentlichen App und stellt die Beziehungen zwischen den Entitäten klar dar. Das dazugehörige \acrshort{erm} wird im Anhang \hyperref[sec:entity-relationship-modell]{A.8: Entity-Relationship-Modell} dargestellt und bildet die Grundlage für die spätere Implementierung der Domänenklassen.
 
 \subsection{Geschäftslogik}
-Der grundsätzliche Aufbau der Anwendung wurde bereits im Abschnitt \hyperref[sec:architekturdesign]{4.2 (Architekturdesign)} erörtert. Um eine detaillierte Darstellung der Geschäftslogik und deren Implementierung zu bieten, habe ich eigenständig ein Klassendiagramm angefertigt. Dieses Diagramm dient als visuelle Darstellung der internen Struktur und verdeutlicht die Trennung sowie die Beziehungen der einzelnen Komponenten. Es bietet zudem eine Übersicht über die Schnittstellen und die Funktionsweisen der verschiedenen Services, Klassen und Module. Für eine ausführliche Ansicht des Klassendiagramms verweise ich auf den Anhang unter \hyperref[sec:klassendiagramm]{A.9: Klassendiagramm}.
+Der grundsätzliche Aufbau der Anwendung wurde bereits im Abschnitt \hyperref[sec:architekturdesign]{4.2 (Architekturdesign)} erörtert. Um eine detaillierte Darstellung der Geschäftslogik und deren Implementierung zu bieten, habe ich eigenständig ein Klassendiagramm angefertigt. Dieses Diagramm dient als visuelle Darstellung der internen Struktur und verdeutlicht die Trennung sowie die Beziehungen der einzelnen Komponenten. Es bietet zudem eine Übersicht über die Schnittstellen und die Funktionsweisen der verschiedenen Services, Klassen und Module. Für eine ausführliche Ansicht des Klassendiagramms verweise ich auf den Anhang \hyperref[sec:klassendiagramm]{A.9: Klassendiagramm}.
 
+\subsection{Code-Qualitätssicherung}
+Im Laufe des Projektes wurden gezielte Maßnahmen ergriffen, um die Qualität des Codes zu gewährleisten. Ein zentrales Element dieses Prozesses war das Code-Review mit dem Ausbilder, wodurch die fachliche und technische Korrektheit des Projekts überprüft wurde.\\
+\\
+Des Weiteren wurde durch GitHub Actions von Anfang an eine Continuous Integration (\acrshort{ci}) implementiert. Dies gewährleistete eine automatische Überprüfung des Codes nach jedem Push und ermöglichte das rasche Erkennen und Beheben von Fehlern.\\
+\\
+Für die detaillierte Codeüberwachung kam Flake8 zum Einsatz, welches den Python-Code auf Fehler, potenzielle Probleme und die Einhaltung des PEP 8-Stils untersuchte. Ein Screenshot der Analyseergebnisse von Flake8 ist im Anhang A.11: Statische Codeanalyse zu finden.
 
 \section{Implementierungsphase}
 
@@ -473,8 +480,24 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{} App für die Kantonspo
 \end{figure}
 
 \clearpage
-\subsection{Klassendiagramml}
+\subsection{Klassendiagramm}
 \label{sec:klassendiagramm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.96\textwidth]{bilder/klassendiagramm.png}
+\caption{Klassendiagramm}
+\end{figure}
+
+\clearpage
+\subsection{Statische Codeanalyse}
+\label{sec:codeanalyse}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.96\textwidth]{bilder/flake8.png}
+\caption{Klassendiagramm}
+\end{figure}
 
 
 \end{document}
