@@ -61,6 +61,9 @@
 \tableofcontents % Inhaltsverzeichnis
 
 \clearpage
+\listoffigures
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
 \phantomsection
 \listoftables
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
@@ -311,6 +314,31 @@ In den Services wird der direkte Zugriff auf die Datenmodelle und deren Methoden
 \\
 Ein besonderes Augenmerk wurde auf den \texttt{auth\_service} gelegt, welcher nicht nur die Funktionen für Login und Registrierung bietet, sondern auch sicherstellt, dass Benutzerdaten sicher und vertraulich behandelt werden. Dies beinhaltet unter anderem die sichere Speicherung von Passwörtern und die Generierung von Tokens für authentifizierte Sessions.
 
+\subsection{Implementierung und Durchführung der Tests}
+Die Tests in unserer Anwendung können in zwei Hauptkategorien unterteilt werden: Tests für Hilfsfunktionen und Tests für API-Endpunkte. Die Hilfsfunktionen, die im Modul \texttt{test\_utils} getestet werden, überprüfen primär, ob E-Mail-Adressen als gültig erkannt werden und ob Passwörter korrekt gehasht und überprüft werden können.\\
+\\
+Für die Tests der Hilfsfunktionen ergänzende Codeausschnitte im Anhang \hyperref[sec:unittest]{A.13: Listing von unittest}.\\
+\\
+Im Modul \texttt{test\_endpoints} konzentrieren sich die Tests auf verschiedene API-Endpunkte. Bevor jeder Test durchgeführt wird, bereitet die Methode \texttt{setUp} die Testumgebung vor. Hier wird die Datenbank initialisiert und Testdaten werden eingefügt. Nachdem ein Test abgeschlossen ist, sorgt die Methode \texttt{tearDown} dafür, dass alle Änderungen rückgängig gemacht werden, sodass die Datenbank in ihren ursprünglichen Zustand zurückversetzt wird. Dies stellt sicher, dass Tests unter den gleichen Voraussetzungen durchgeführt werden und sich nicht gegenseitig beeinflussen.\\
+\\
+Zu den Integrationstests gibt es ergänzende Codeausschnitte im Anhang \hyperref[sec:unittest]{A.13: Listing von unittest}, die Einblicke in die Implementierung bieten.
+
+
+\subsection{Implementierung der Oberfläche}
+Auf Basis der in Abschnitt \textbf{4.3} (Entwurf der Benutzeroberfläche) dargestellten Mockups wurde die Benutzeroberfläche der mobilen Anwendung entwickelt. Die Implementierung erfolgte unter Verwendung des \textit{Ionic-Frameworks} auf \textit{Angular}-Basis, wie in Abschnitt \textbf{4.2} (Architekturdesign) beschrieben. Ionic bietet eine Sammlung von UI-Komponenten, die für mobile Anwendungen optimiert sind. Diese Komponenten sind in Web-Technologien wie HTML, CSS und Typescript geschrieben und bieten eine konsistente, plattformübergreifende Benutzererfahrung.\\
+\\
+Ein zentrales Konzept in Angular ist das \textit{Two-Way Data Binding}, welches eine direkte Interaktion zwischen der Benutzeroberfläche und den zugrunde liegenden Datenmodellen ermöglicht. Ein praktisches Beispiel aus der Anwendung zeigt ein Eingabefeld, das mit einer Variablen im Datenmodell verknüpft ist:
+\begin{verbatim}
+<ion-input color="light" type="number" [(ngModel)]="item.count" 
+inputmode="numeric" (ionChange)="onCountChange(item)"></ion-input>
+\end{verbatim}
+In diesem Ausschnitt wird die Variable \texttt{item.count} direkt mit dem Wert des Eingabefeldes synchronisiert. Wenn der Benutzer einen Wert in das Feld eingibt, wird \texttt{item.count} automatisch aktualisiert und umgekehrt. Der Event \texttt{(ionChange)} sorgt zudem dafür, dass bei jeder Änderung die Methode \texttt{onCountChange(item)} aufgerufen wird.\\
+\\
+Ein besonderes Augenmerk wurde auf die Benutzerfreundlichkeit und die Fehlertoleranz der Anwendung gelegt. Bei möglichen Fehlern oder Unklarheiten erhält der Benutzer aussagekräftige Fehler- und Informationsmeldungen. Dies stellt sicher, dass der Benutzer stets informiert ist und gegebenenfalls notwendige Korrekturen oder Aktionen vornehmen kann.\\
+\\
+Die Implementierung folgt allgemeinen Richtlinien der Software-Ergonomie, um eine intuitive und effiziente Benutzerführung zu gewährleisten. Dies beinhaltet beispielsweise eine Minimierung der notwendigen Interaktionen und die Bereitstellung von klaren, selbsterklärenden Steuerelementen.
+
+\subsection{Testen der Anwendung}
 
 
 
@@ -324,6 +352,7 @@ Ein besonderes Augenmerk wurde auf den \texttt{auth\_service} gelegt, welcher ni
 \addcontentsline{toc}{section}{Literaturverzeichnis}
 
 \clearpage
+\pagenumbering{roman}
 \appendix
 \renewcommand{\thesubsection}{A.\arabic{subsection}}
 \section*{A Anhang}
@@ -538,13 +567,13 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{}-App für die Kantonspo
 \end{figure}
 
 \clearpage
-\subsection{Klassendiagramm}
+\subsection{Klassendiagramm Auszug}
 \label{sec:klassendiagramm}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.96\textwidth]{bilder/klassendiagramm.png}
-\caption{Klassendiagramm}
+\caption{Auszug des Klassendiagramms}
 \end{figure}
 
 \clearpage
@@ -554,7 +583,7 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{}-App für die Kantonspo
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.96\textwidth]{bilder/flake8.png}
-\caption{Klassendiagramm}
+\caption{Statische Code-Analyse mit flake8}
 \end{figure}
 
 \clearpage
@@ -642,6 +671,111 @@ class PollutionCount(Resource):
         except Exception as e:
             db.session.rollback()  # Rollback changes in case of an error
             return {"message": f"An error occurred while updating pollution: {str(e)}"}, 500
+\end{lstlisting}
+
+\clearpage
+\subsection{Listing von unittest}
+\label{sec:unittest}
+\lstset{
+  basicstyle=\rmfamily\small,
+  backgroundcolor=\color{paleyellow},
+  commentstyle=\color{graugruen},
+  keywordstyle=\color{darkblue},
+  stringstyle=\color{codepurple},
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=10pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=4,
+  columns=flexible,
+  frame=single
+}
+
+\begin{lstlisting}[language=Python, caption=Implementation der Utils-Tests, label=lst:utilstest]
+import unittest
+from common.utils import Utils
+
+class TestUtils(unittest.TestCase):
+    def test_email_valid(self):
+        self.assertTrue(Utils.email_is_valid("example@example.com"))
+        self.assertFalse(Utils.email_is_valid("invalid_email"))
+
+    def test_hash_password(self):
+        password = "password123"
+        hashed_password = Utils.hash_password(password)
+        self.assertTrue(Utils.check_hashed_password(password, hashed_password))
+        self.assertFalse(Utils.check_hashed_password("wrong_password", hashed_password))
+
+
+if __name__ == '__main__':
+    unittest.main()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=Implementation der Integrationstests , label=lst:integrationtest]
+class TestAPIEndpoints(unittest.TestCase):
+    def setUp(self):
+        print("start setting up test environment...")
+
+        warnings.filterwarnings("ignore")
+
+        self.test_app = create_app(TestConfig, db)
+        self.app = self.test_app.test_client()
+
+        self.app_context = self.test_app.app_context()
+        self.app_context.push()
+
+        # Create the tables using the application context
+        with self.test_app.app_context():
+            db.create_all()
+
+    def tearDown(self):
+        # Drop the tables using the application context
+        with self.test_app.app_context():
+            print("tearDown")
+            db.session.close_all()
+            db.drop_all()
+
+        self.app_context.pop()
+
+    def test_update_pollution_count(self):
+        geoarea = GeoArea(
+            id=5,
+            name='Area 5',
+            datecreated='2023-01-01 00:00:00',
+            language='German',
+            last_update='2023-08-25 00:00:00',
+            mandant='Mandant A',
+            admincomment='Comment 1',
+            automaticsearch=True,
+            polygon="POLYGON((1 2,2 3, 3 4, 5 6, 1 2))"
+        )
+
+        pollution = Pollution(
+            name='PollutionDelete',
+            count=10,
+            description='Description',
+            geoarea_fk=5
+        )
+        db.session.add_all([pollution, geoarea])
+        db.session.commit()
+
+        expires = timedelta(days=7)
+        access_token = create_access_token(identity=geoarea.id, expires_delta=expires)
+        self.headers = {'Authorization': f'Bearer {access_token}'}
+
+        with self.test_app.test_client() as client:
+            response = client.put('/pollution/pollutionCount/' + pollution.id,
+                                  json={'count': 15}, headers=self.headers)
+
+            self.assertEqual(response.status_code, 200)
+
+            updated_pollution = db.session.query(Pollution).get(pollution.id)
+            self.assertEqual(updated_pollution.count, 15)
 \end{lstlisting}
 
 
