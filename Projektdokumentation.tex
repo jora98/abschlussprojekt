@@ -317,7 +317,7 @@ Ein besonderes Augenmerk wurde auf den \texttt{auth\_service} gelegt, welcher ni
 \subsection{Implementierung und Durchführung der Tests}
 Die Tests in unserer Anwendung können in zwei Hauptkategorien unterteilt werden: Tests für Hilfsfunktionen und Tests für API-Endpunkte. Die Hilfsfunktionen, die im Modul \texttt{test\_utils} getestet werden, überprüfen primär, ob E-Mail-Adressen als gültig erkannt werden und ob Passwörter korrekt gehasht und überprüft werden können.\\
 \\
-Für die Tests der Hilfsfunktionen ergänzende Codeausschnitte im Anhang \hyperref[sec:unittest]{A.13: Listing von unittest}.\\
+Für die Tests der Hilfsfunktionen gibt es ergänzende Codeausschnitte im Anhang \hyperref[sec:unittest]{A.13: Listing von unittest}.\\
 \\
 Im Modul \texttt{test\_endpoints} konzentrieren sich die Tests auf verschiedene API-Endpunkte. Bevor jeder Test durchgeführt wird, bereitet die Methode \texttt{setUp} die Testumgebung vor. Hier wird die Datenbank initialisiert und Testdaten werden eingefügt. Nachdem ein Test abgeschlossen ist, sorgt die Methode \texttt{tearDown} dafür, dass alle Änderungen rückgängig gemacht werden, sodass die Datenbank in ihren ursprünglichen Zustand zurückversetzt wird. Dies stellt sicher, dass Tests unter den gleichen Voraussetzungen durchgeführt werden und sich nicht gegenseitig beeinflussen.\\
 \\
