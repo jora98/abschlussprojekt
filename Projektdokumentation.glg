@@ -1,7 +1,7 @@
 This is makeindex, version 2.16 [MiKTeX 23.10].
 Scanning style file ./Projektdokumentation.ist...........................done (27 attributes redefined, 0 ignored).
-Scanning input file Projektdokumentation.glo....done (14 entries accepted, 0 rejected).
-Sorting entries....done (57 comparisons).
-Generating output file Projektdokumentation.gls....done (26 lines written, 0 warnings).
+Scanning input file Projektdokumentation.glo....done (26 entries accepted, 0 rejected).
+Sorting entries....done (144 comparisons).
+Generating output file Projektdokumentation.gls....done (46 lines written, 0 warnings).
 Output written in Projektdokumentation.gls.
 Transcript written in Projektdokumentation.glg.

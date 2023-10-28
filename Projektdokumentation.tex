@@ -17,6 +17,10 @@
 \usepackage{uml}
 \usepackage{lipsum}
 \definecolor{softblue}{RGB}{0,48,100} % Definiert ein dezentes Blau
+\definecolor{paleyellow}{RGB}{255,255,224}
+\definecolor{darkblue}{RGB}{0,0,139}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{graugruen}{RGB}{88,88,90}
 \usepackage[colorlinks=true,
             linkcolor=softblue, % Farbe für interne Links
             urlcolor=softblue, % Farbe für externe URLs
@@ -25,6 +29,7 @@
             linktoc=page]{hyperref} % Nur Seitenzahlen im Inhaltsverzeichnis verlinken
 \usepackage{cleveref}
 \usepackage[nonumberlist]{glossaries}
+\usepackage{listings}
 
 \definecolor{lightgray}{gray}{0.9}
 
@@ -39,6 +44,13 @@
 \newacronym{api}{API}{Application Programming Interface}
 \newacronym{restful}{RESTful}{Representational State Transfer}
 \newacronym{ci}{CI}{Continuous Integration}
+\newacronym{vscode}{VSCode}{Visual Studio Code}
+\newacronym{gps}{GPS}{Global Positioning System}
+\newacronym{venv}{venv}{virtual environment}
+\newacronym{orm}{ORM}{Object-Relational Mapping}
+\newacronym{sql}{SQL}{Structured Query Language}
+\newacronym{uuid}{UUID}{Universally Unique Identifier}
+\newacronym{id}{ID}{Identifier}
 
 \makeglossaries % Erzeugt das Abkürzungsverzeichnis
 
@@ -53,6 +65,9 @@
 \listoftables
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 
+\lstlistoflistings
+\addcontentsline{toc}{section}{Listings}
+
 \clearpage
 \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 \printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
@@ -65,13 +80,13 @@ In dieser Projektdokumentation wird der Ablauf des Projekts zur Entwicklung eine
 
 \subsection{Projektbeschreibung}
 \label{sec:projektbeschreibung}
-Die Hauptaufgabe dieses Projekts war die Erstellung eines Prototyps für die \glqq Pollution Detection\grqq{} App im Auftrag der Kantonspolizei Zürich. Die App unterstützt Polizeibeamte bei der Erfassung und Quantifizierung von Verschmutzungen während ihrer Streifenarbeit.\\
-Die \glqq Pollution Detection\grqq{} App bietet eine benutzerfreundliche Lösung, die es den Beamten ermöglicht, Verschmutzungen in von Kunden bereitgestellten geografischen Gebieten, den sogenannten Geoareas, effizient zu identifizieren und zu kategorisieren. Ein Schlüsselelement der App ist die nahtlose Integration der gesammelten Daten in eine zentrale Datenbank, wodurch eine zuverlässige Speicherung und einfache Analyse gewährleistet ist.\\
+Die Hauptaufgabe dieses Projekts war die Erstellung eines Prototyps für die \glqq Pollution Detection\grqq{}-App im Auftrag der Kantonspolizei Zürich. Die App unterstützt Polizeibeamte bei der Erfassung und Quantifizierung von Verschmutzungen während ihrer Streifenarbeit.\\
+Die \glqq Pollution Detection\grqq{}-App bietet eine benutzerfreundliche Lösung, die es den Beamten ermöglicht, Verschmutzungen in von Kunden bereitgestellten geografischen Gebieten, den sogenannten Geoareas, effizient zu identifizieren und zu kategorisieren. Ein Schlüsselelement der App ist die nahtlose Integration der gesammelten Daten in eine zentrale Datenbank, wodurch eine zuverlässige Speicherung und einfache Analyse gewährleistet ist.\\
 Die Anwendung ermöglicht den Beamten nicht nur den Zugriff auf gespeicherte Daten über eine intuitive Benutzeroberfläche, sondern bietet auch die Flexibilität, eigene Verschmutzungsarten hinzuzufügen, die speziell für ihre Geoareas relevant sind.\\
 Das Hauptziel ist es, die Umweltüberwachung der Kantonspolizei Zürich zu optimieren und den Beamten ein leistungsfähiges Tool an die Hand zu geben, das sowohl benutzerfreundlich als auch anpassbar ist. Dies fördert die Erhaltung der öffentlichen Ordnung in den Geoareas und ermöglicht eine effektivere Bekämpfung der Umweltverschmutzung.
 
 \subsection{Projektziel}
-Das Hauptziel dieses Projekts war die Entwicklung der "Pollution Detection" App zur Digitalisierung der Verschmutzungserfassung für die Kantonspolizei Zürich. Durch diese Digitalisierung soll der Prozess der Datenerfassung und -dokumentation für die Beamten erheblich vereinfacht und beschleunigt werden. Die App zielt darauf ab, den manuellen Aufwand zu reduzieren, die Genauigkeit der erfassten Daten zu erhöhen und den Beamten ein flexibles und benutzerfreundliches Tool zur Umweltüberwachung zur Verfügung zu stellen.
+Das Hauptziel dieses Projekts war die Entwicklung der \glqq Pollution Detection\grqq{}-App zur Digitalisierung der Verschmutzungserfassung für die Kantonspolizei Zürich. Durch diese Digitalisierung soll der Prozess der Datenerfassung und -dokumentation für die Beamten erheblich vereinfacht und beschleunigt werden. Die App zielt darauf ab, den manuellen Aufwand zu reduzieren, die Genauigkeit der erfassten Daten zu erhöhen und den Beamten ein flexibles und benutzerfreundliches Tool zur Umweltüberwachung zur Verfügung zu stellen.
 
 \section{Projektplanung}
 \subsection{Projektphasen}
@@ -178,6 +193,7 @@ Bei einer Nutzung von 3 Tagen die Woche und 10 mal am Tag würde sich die App de
 Zusammenfassend zeigt sich, dass die Investition in die App bereits nach kurzer Zeit finanziell lohnenswert ist. Eine detaillierte grafische Darstellung der Amortisation finden Sie im unter  \hyperref[sec:amortisation]{A.2: Amortisation}
 
 \subsection{Anwendungsfälle}
+\label{sec:anwendungsfälle}
 Um eine grobe Übersicht darüber zu erhalten, wie der Beamte mit der Anwendung arbeiten kann und welche Anwendungsfälle aus Endanwendersicht abgebildet werden müssen, wurde im Laufe der Analyse-Phase ein Use-Case-Diagramm erstellt. Dieses befindet sich unter \hyperref[sec:use-case-diagramm]{A.3: Use-Case-Diagramm}.
 \\
 Der Hauptakteur, der später mit der Anwendung arbeiten wird, ist der Beamte. Dieser hat die Aufgabe, Daten in die App einzuspeisen und von den bereitgestellten Funktionen zu profitieren. Das Diagramm zeigt die verschiedenen Interaktionen und Aufgaben, die der Streifenbeamte mit der App durchführen kann. Diese Interaktionen definieren die verschiedenen Rollen und Berechtigungen, die innerhalb der Anwendung benötigt werden.
@@ -254,7 +270,49 @@ Des Weiteren wurde durch GitHub Actions von Anfang an eine Continuous Integratio
 \\
 Für die detaillierte Codeüberwachung kam Flake8 zum Einsatz, welches den Python-Code auf Fehler, potenzielle Probleme und die Einhaltung des PEP 8-Stils untersuchte. Ein Screenshot der Analyseergebnisse von Flake8 ist im Anhang \hyperref[sec:codeanalyse]{A.10: Statische Codeanalyse} zu finden.
 
+\subsection{Deployment}
+Bei dem vorliegenden Projekt handelt es sich um eine mobile Anwendung. Aufgrund dessen ist das Deployment auf einem Firmenlaptop innerhalb des Firmennetzwerks notwendig, um in einer Testumgebung die Anwendung zu evaluieren. Das zugehörige Verteilungsdiagramm, welches den gesamten Prozess und die Architektur darstellt, ist im Anhang A.12 abgebildet.\\
+\\
+Die Entwicklung der mobilen App erfolgte mittels Ionic auf Angular-Basis. In diesem Projekt wurde \textit{Capacitor} als Cross-Platform Native Runtime eingesetzt. Mit den Befehlen \texttt{ionic build}, gefolgt von \texttt{npx cap sync} und \texttt{npx cap open android}, wird die Web-App in eine native Android-App konvertiert. Obwohl der Fokus auf \textit{Capacitor} liegt, wird im Hintergrund \textit{Gradle} als Build-System verwendet, sobald das Projekt in \textit{Android Studio} geöffnet ist, um die Android-App zu bauen.
+\\
+\\
+Für das Backend und die Datenbank der Anwendung kommen \textit{Docker-Container} zum Einsatz. \textit{Docker} erlaubt es, Anwendungen konsistent in Containern auszuführen. Bei jeder Aktualisierung des Quellcodes wird automatisch ein neues \textit{Docker-Image} für das Backend erstellt und ist somit stets aktuell für den Betrieb auf dem Firmenlaptop verfügbar.\\
+\\
+Nach erfolgreichem Deployment der Backend-Komponenten und der Datenbank kann die mobile App in der Testumgebung evaluiert werden. Diese kann sowohl über einen Android-Emulator, beispielsweise von Android Studio, direkt auf dem Laptop ausgeführt oder von einem Smartphone, das im Firmennetzwerk eingeloggt ist, aufgerufen werden.\\
+\\
+Insgesamt wurde durch den gezielten Einsatz verschiedener Technologien eine effiziente Testumgebung geschaffen, die eine gründliche Überprüfung der App vor einem endgültigen Rollout sicherstellt.
+
+
+\subsection{Plichtenhfeft}
+Basierend auf den in der Entwurfsphase entwickelten Konzepten wurde ein Pflichtenheft erstellt. Dieses baut direkt auf dem in Abschnitt \hyperref[sec:lastenheft]{3.4 (Lastenheft)} beschriebenen Lastenheft auf und definiert die konkrete Umsetzung der identifizierten Anforderungen. Das Pflichtenheft dient nicht nur als Überprüfungsinstrument am Projektende, sondern begleitet und leitet uns auch während der gesamten Entwicklungsphase. Ein Auszug daraus ist im Anhang \hyperref[sec:pflichtenheft]{A.11: Pflichtenheft} zu finden.
+
 \section{Implementierungsphase}
+Zu Beginn der Implementierungsphase stand die Einrichtung der notwendigen Projektstrukturen im Vordergrund.\\
+\\
+Für das Backend wurde zuerst in \acrshort{vscode} ein \acrshort{python3}-Projekt ins Leben gerufen. Dies ist ein essenzieller Schritt, um eine isolierte Entwicklungsumgebung zu gewährleisten und sicherzustellen, dass alle Abhängigkeiten und Bibliotheken korrekt verwaltet werden. Dafür wurde eine \gls{venv} erstellt. Diese bietet die Möglichkeit, Abhängigkeiten projektbezogen zu isolieren und somit sicherzustellen, dass unterschiedliche Projekte mit potenziell unterschiedlichen Anforderungen an die Paketversionen nicht in Konflikt geraten.\\
+\\
+Im Bereich des Frontends begann der Implementierungsprozess mit der Installation von Ionic. Ionic ist ein weit verbreitetes Framework zur Erstellung plattformübergreifender mobiler Anwendungen unter Verwendung von Webtechnologien. Nach der erfolgreichen Installation wurde mithilfe von Ionic ein neues Projekt auf der Grundlage von Angular generiert. Dieser Schritt bietet den Vorteil, dass Ionic eine Grundstruktur für das Projekt vorgibt. Dies erleichtert den Entwicklungsprozess erheblich, da bestimmte, immer wiederkehrende Aufgaben, wie die Einrichtung von Verzeichnisstrukturen oder die Integration von Basiskomponenten, automatisiert werden.
+
+\subsection{Implentierung des Datenmodelle und der Datenbank}
+In der Entwicklung der \glqq Pollution Detection\grqq{}-App war es notwendig, die Datenstruktur adäquat im Backend abzubilden. Ein wichtiges Werkzeug, das dabei zum Einsatz kam, war \textit{SQLAlchemy}, ein \acrshort{sql} Toolkit und \gls{orm} System für \acrshort{python3}. Es ermöglicht das Mapping von in \acrshort{python3} definierten Klassen zu Datenbanktabellen und umgekehrt.\\
+\\
+Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter Entitäten. Zum Beispiel wurden für die Klassen \texttt{User} und \texttt{Pollution} \acrshortpl{uuid} mit einer Hexadezimaldarstellung für ihre \acrshortpl{id} verwendet. Das \texttt{\_\_tablename\_\_}-Attribut in \textit{SQLAlchemy} bestimmt den Namen der Tabelle in der Datenbank, und in unserem Fall entspricht der Klassenname dem Tabellennamen. Fremdschlüssel werden durch \texttt{ForeignKey} und die zugehörigen Relationen durch \texttt{relationship} repräsentiert. Primärschlüssel werden durch das \texttt{primary\_key=True} Argument in der Spaltendefinition angegeben.\\
+\\
+Es ist wichtig zu erwähnen, dass sowohl die \texttt{Pollution}- als auch die \texttt{Geoarea}-Klasse vom Kunden übernommen wurden. Während \texttt{Pollution} eine neuere Implementierung darstellt und daher \acrshortpl{uuid} in Hexadezimalform verwendet, nutzt \texttt{Geoarea} aufgrund ihres Alters Ganzzahlen als \acrshortpl{id}. \\
+\\
+Abschließend sollte angemerkt werden, dass der Kunde ein Backup bereitstellte, das eine Anzahl von Testgebieten enthielt. Diese wurden in der Entwicklungsphase intensiv zum Testen und Verifizieren der Funktionalität des Systems genutzt.
+
+\subsection{Implementierung der Geschfäftslogik}
+Die Geschäftslogik fokussiert sich auf die Abbildung und Verarbeitung der Daten entsprechend der fachlichen Anforderungen. Entsprechend den in Abschnitt \hyperref[sec:anwendungsfälle]{3.3 (Anwendungsfälle)} erläuterten Anwendungsfällen, wurden die Hauptservices in der Service-Schicht realisiert. Hierbei wurden spezielle Service-Dateien, wie der \texttt{auth\_service} für Authentifizierungsprozesse, der \texttt{geoarea\_service} zur Abfrage von geografischen Gebieten und der \texttt{pollution\_service} zur umfassenden Verwaltung von Pollution-Daten, erstellt.\\
+\\
+Zur Implementierung der in den Services definierten Methoden und zur Sicherstellung eines effizienten Zugriffs auf die Daten, wurde \textit{SQLAlchemy} als \acrshort{orm} genutzt. Durch die Verwendung von \textit{SQLAlchemy} wird eine klare Trennung zwischen Datenzugriff und Geschäftslogik erreicht. Dies bietet auch die Möglichkeit, bei Bedarf einfach auf andere Datenbank-Implementierungen umzusteigen.\\
+\\
+In den Services wird der direkte Zugriff auf die Datenmodelle und deren Methoden gehandhabt. So wird beispielsweise im \texttt{pollution\_service} eine Schnittstelle zur Datenmanipulation genutzt, welche die \acrshort{crud}-Operationen auf Pollution-Daten in der Datenbank ermöglicht. Ein zentraler Bestandteil der Logik innerhalb des \texttt{Pollution}-Services besteht darin, die Anzahl der gemeldeten Umweltverschmutzungen zu aktualisieren. Bei der Aktualisierung wird besonders darauf geachtet, dass die Werte korrekt und konsistent sind. Der \texttt{PollutionCount}-Resource verwendet entsprechende Schnittstellen, um die Anzahl der Verschmutzungen zu ändern. Bei einer Anfrage zum Aktualisieren eines \texttt{Pollution}-Eintrags wird zuerst überprüft, ob dieser Eintrag in der Datenbank existiert. Wenn der Eintrag gefunden wird, wird die \texttt{count}-Eigenschaft des \texttt{Pollution}-Objekts mit dem neuen Wert aktualisiert. Sollte während dieses Prozesses ein Fehler auftreten, etwa bei Datenbankkonflikten, wird die Transaktion rückgängig gemacht, um die Integrität der Daten zu gewährleisten. Im Anhang \hyperref[sec:pflichtenheft]{A.12: Listing von Python-Code} ist der entsprechende Code der \texttt{PollutionCount}-Klasse zu sehen.\\
+\\
+Ein besonderes Augenmerk wurde auf den \texttt{auth\_service} gelegt, welcher nicht nur die Funktionen für Login und Registrierung bietet, sondern auch sicherstellt, dass Benutzerdaten sicher und vertraulich behandelt werden. Dies beinhaltet unter anderem die sichere Speicherung von Passwörtern und die Generierung von Tokens für authentifizierte Sessions.
+
+
+
 
 \section{Abnahme und Deploymentphase}
 
@@ -410,16 +468,16 @@ Für die detaillierte Codeüberwachung kam Flake8 zum Einsatz, welches den Pytho
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.85\textwidth]{bilder/use-case-diagramm.drawio.png}
-\caption{Use-Case-Diagramm der Pollution Detection App}
+\caption{Use-Case-Diagramm der \glqq Pollution Detection\grqq{}-App}
 \end{figure}
 
 \clearpage
 \subsection{Lastenheft}
 \label{sec:lastenheft}
 
-Für die Entwicklung der \glqq Pollution Detection\grqq{} App für die Kantonspolizei Zürich sind folgende Anforderungen festgelegt:\\
+Für die Entwicklung der \glqq Pollution Detection\grqq{}-App für die Kantonspolizei Zürich sind folgende Anforderungen festgelegt:\\
 
-\textbf{1. Datenverarbeitung und Integration}
+\noindent\textbf{1. Datenverarbeitung und Integration}
 
 \begin{itemize}
     \item Die App \textbf{muss} Verschmutzungsdaten in Echtzeit erfassen und kategorisieren.
@@ -428,21 +486,21 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{} App für die Kantonspo
     \item Die erfassten Daten \textbf{könnten} mit anderen Datenquellen oder Systemen der Kantonspolizei synchronisiert werden.
 \end{itemize}
 
-\textbf{2. Benutzeroberfläche und Interaktivität}
+\noindent\textbf{2. Benutzeroberfläche und Interaktivität}
 
 \begin{itemize}
     \item Die App \textbf{muss} über eine intuitive Benutzeroberfläche verfügen, die eine schnelle und einfache Erfassung von Verschmutzungen ermöglicht.
     \item Die App \textbf{könnte} in der Lage sein, die genaue Position der Verschmutzung mithilfe von GPS oder anderen geografischen Tools zu erfassen.
 \end{itemize}
 
-\textbf{3. Zugänglichkeit}
+\noindent\textbf{3. Zugänglichkeit}
 
 \begin{itemize}
     \item Die App \textbf{muss} auf Mobilgeräten funktionieren.
     \item Die App \textbf{sollte} eine sichere Authentifizierungsmethode haben.
 \end{itemize}
 
-\textbf{4. Sonstige Anforderungen}
+\noindent\textbf{4. Sonstige Anforderungen}
 
 \begin{itemize}
     \item Es \textbf{sollten} regelmäßige Updates und Wartungen durchgeführt werden, um die App auf dem neuesten Stand zu halten und Sicherheitsrisiken zu minimieren.
@@ -498,6 +556,93 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{} App für die Kantonspo
 \includegraphics[width=0.96\textwidth]{bilder/flake8.png}
 \caption{Klassendiagramm}
 \end{figure}
+
+\clearpage
+\subsection{Pflichtenheft (Auszug)}
+\label{sec:pflichtenheft}
+
+Der folgende Abschnitt bietet einen Auszug aus dem Pflichtenheft und beschreibt die geplante Umsetzung der im Lastenheft definierten Anforderungen:\\
+\\
+\noindent\textbf{1. Entwicklungsumgebung und Plattform}
+\begin{itemize}
+    \item Als Entwicklungsumgebung wird \acrshort{vscode} verwendet.
+    \item Die \acrshort{api} wird mit \acrshort{python3} unter Verwendung des Flask-Frameworks entwickelt.
+    \item Es wird eine Schnittstelle implementiert, über die Verschmutzungsdaten erfasst, kategorisiert, bearbeitet und gelöscht werden können.
+    \item Die Anwendung wird auf einem Laptop im firmeninternen Netzwerk deployed und dort getestet.
+    \item Für die \acrshort{ci} wird GitHub Actions eingesetzt.
+\end{itemize}
+
+\noindent\textbf{2. Datenbank}
+\begin{itemize}
+    \item Die Daten werden in einer Postgres-Testdatenbank gespeichert.
+    \item Sowohl die Datenbank als auch die \acrshort{api} werden in Docker-Containern gehostet.
+\end{itemize}
+
+\noindent\textbf{3. Oberfläche und Interaktivität}
+\begin{itemize}
+    \item Für die Entwicklung der App-Oberfläche wird das Ionic Framework auf Basis von Angular verwendet.
+    \item Die Benutzeroberfläche wird für eine schnelle Erfassung von Verschmutzungen optimiert.
+    \item Die Oberfläche wird automatisch gebaut und in eine native App umgewandelt.
+\end{itemize}
+
+\noindent\textbf{4. Zugänglichkeit und Sicherheit}
+\begin{itemize}
+    \item Die App wird für Mobilgeräte optimiert.
+    \item Es wird eine Authentifizierungsmethode implementiert.
+\end{itemize}
+
+\noindent\textbf{5. Geschäftslogik, Tests und Wartung}
+\begin{itemize}
+    \item Für die \gls{api} werden Unittests in Python durchgeführt.
+    \item Ein regelmäßiges Update- und Wartungssystem wird eingerichtet.
+    \item Ein Support-System wird bereitgestellt.
+\end{itemize}
+
+\clearpage
+\subsection{Listing von Python-Code}
+\label{sec:python-code}
+\lstset{
+  basicstyle=\rmfamily\small,
+  backgroundcolor=\color{paleyellow},
+  commentstyle=\color{graugruen},
+  keywordstyle=\color{darkblue},
+  stringstyle=\color{codepurple},
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=10pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=4,
+  columns=flexible,
+  frame=single
+}
+
+\begin{lstlisting}[language=Python, caption=Implementation der PollutionCount-Klasse, label=lst:pollutionCount]
+class PollutionCount(Resource):
+    parser = reqparse.RequestParser()
+    parser.add_argument('count', type=int, required=True, help="Count field is required")
+
+    @jwt_required()
+    def put(self, pollution_id: str):
+        data = PollutionCount.parser.parse_args()
+        pollution = Pollution.query.get(pollution_id)
+
+        if not pollution:
+            return {"message": "Pollution not found"}, 404
+
+        pollution.count = data['count']
+
+        try:
+            db.session.commit()  # Commit the changes to the database
+            return {"message": "PollutionCount updated successfully"}, 200
+        except Exception as e:
+            db.session.rollback()  # Rollback changes in case of an error
+            return {"message": f"An error occurred while updating pollution: {str(e)}"}, 500
+\end{lstlisting}
 
 
 \end{document}

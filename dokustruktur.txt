@@ -26,7 +26,7 @@ Entwurfsphase:
 -Datenmodell
 -Geschäftslogik
 -Maßnahmen zur Qualitätssicherung
--Deplyment
+-Deployment
 -Pflichtenheft
 
 Implementierungsphase:
