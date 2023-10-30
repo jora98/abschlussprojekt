@@ -207,15 +207,21 @@ Am Ende der Analysephase wurde gemeinsam mit den Projektbeteiligten ein Lastenhe
 \section{Entwurfsphase}
 \subsection{Zielplattform}
 Wie bereits unter \hyperref[sec:projektbeschreibung]{1.1 (Projektbeschreibung)} erläutert, wird das Projekt als eigenständige Android-App realisiert. Die Daten, mit denen die App interagieren soll, sind in einer bestehenden PostgreSQL-Datenbank gespeichert. Dies ermöglicht einen direkten Zugriff auf bereits vorhandene Datenstrukturen, ohne dass zusätzliche Datenbanksysteme installiert werden müssen.\\
+\\
 Die Entscheidung, das Backend in \acrshort{python3} zu entwickeln, basierte auf mehreren Faktoren. Zum einen verfüge ich bereits über umfangreiche Erfahrungen mit \acrshort{python3}, was den Entwicklungsprozess beschleunigt und die Fehleranfälligkeit reduziert. Zum anderen bietet \acrshort{python3} eine breite Palette an Bibliotheken und Frameworks, die die Integration mit PostgreSQL erleichtern. Der Kunde gab mir in dieser Hinsicht freie Hand, was die Wahl der Technologie betrifft, und ich entschied mich für \acrshort{python3} aufgrund seiner Effizienz und Anpassungsfähigkeit.\\
+\\
 Zum Abschluss des Projekts wird die Anwendung zuerst auf einer Testplattform ausgerollt. Das Backend wird vorerst auf einem firmeninternen Laptop gehostet, um weitere Tests und Optimierungen in einer kontrollierten Umgebung zu ermöglichen. Parallel dazu wird eine PostgreSQL-Testdatenbank eingerichtet, um Testdaten effizient zu verwalten und den reibungslosen Ablauf der App sicherzustellen.\\
+\\
 Die Benutzeroberfläche wurde mit dem Ionic-Framework auf Angular-Basis entwickelt. Dieses Framework wurde gewählt, da es eine nahtlose Integration mit Android bietet und die Entwicklung von responsiven und benutzerfreundlichen Oberflächen erleichtert. Tests können entweder über einen Android-Emulator oder direkt auf einem Android-Gerät durchgeführt werden, um sicherzustellen, dass die App in realen Bedingungen optimal funktioniert.
 
 \subsection{Architekturdesign}
 \label{sec:architekturdesign}
 Für das \glqq Pollution Detection\grqq{}-Projekt wurde eine Drei-Schichten-Architektur gewählt. Die erste Schicht, die Präsentationsschicht, besteht aus dem Frontend, das mit dem Ionic Framework auf Angular-Basis entwickelt wurde. Dieses Frontend dient als Benutzerschnittstelle für die mobile Anwendung und stellt eine interaktive Oberfläche bereit, über die Benutzer Daten eingeben und Informationen anzeigen können. Es kommuniziert direkt mit dem Backend über \acrshort{http}-Anfragen, um Daten abzurufen oder zu senden.\\
+\\
 Die zweite Schicht, die Geschäftslogikschicht, ist das in \acrshort{python3} entwickelte Backend. Es dient als zentrale Schnittstelle für alle Datenoperationen und stellt eine \acrshort{restful} \acrshort{api} bereit, die \acrshort{crud}-Operationen (Create, Read, Update, Delete) unterstützt. Diese \acrshort{api} ermöglicht es, Daten zu erstellen, abzurufen, zu aktualisieren und zu löschen und bildet die Brücke zwischen der Präsentationsschicht und der Datenzugriffsschicht. Innerhalb dieser Schicht ist auch die Geschäftslogik der Anwendung enthalten.\\
+\\
 Die dritte und letzte Schicht, die Datenzugriffsschicht, beherbergt die PostgreSQL-Datenbank. In dieser Datenbank sind die Verschmutzungsdaten und andere relevante Informationen gespeichert. Sie bietet Mechanismen für den sicheren Zugriff auf die Daten und sorgt für deren Integrität und Konsistenz.\\
+\\
 Die klare Trennung in diese drei Schichten bietet nicht nur Flexibilität und Skalierbarkeit, sondern erleichtert auch das Debugging und die Fehlerbehebung, da Probleme leichter auf eine der drei Schichten zurückgeführt werden können.\\
 \\
 Die Interaktionen und Abhängigkeiten zwischen den beschriebenen Schichten sind im Anhang \hyperref[sec:komponentendiagramm]{A.6: Komponentendiagramm} dargestellt. Dieses Diagramm wurde bereits in der Entwurfsphase erstellt, um eine klare Struktur und Übersicht des Systems zu bieten.
@@ -225,7 +231,9 @@ Wie unter \hyperref[sec:entwicklungsprozess]{2.3 (Entwicklungsprozess)} beschrie
 \\
 Im Header der App ist das \glqq LOGOBJECT\grqq{}-Logo platziert, um eine klare Zuordnung zur Marke zu ermöglichen. Der Hauptfokus der Startseite soll auf der Möglichkeit liegen, eine GeoArea auszuwählen. Diese Auswahl stellt ein zentrales Element der Anwendung dar und soll daher intuitiv und ohne Umwege für den Nutzer erreichbar sein.\\
 Nach der Auswahl der GeoArea soll die App automatisch die zugehörigen Pollutions laden und anzeigen. Hierbei ist geplant, dem Nutzer interaktive Bedienelemente zur Verfügung zu stellen, mit denen er Anpassungen an den Zahlenwerten vornehmen kann. Dafür sind Plus- und Minus-Buttons vorgesehen, die eine einfache und direkte Bearbeitung ermöglichen.\\
+\\
 Um eine effiziente Nutzung der App zu gewährleisten, wurde in den Entwürfen darauf geachtet, dass alle Funktionen mit wenigen Klicks erreichbar sind und der Nutzer stets einen klaren Überblick über die dargestellten Inhalte behält.\\
+\\
 Die Rücksprache mit den Stakeholdern hat bestätigt, dass dieser geplante Aufbau den Anforderungen entspricht, wobei jedoch Wert darauf gelegt wird, dass die Navigation einfach bleibt und der Benutzer nicht durch zu viele Unterseiten navigieren muss.
 
 \subsection{Datenmodell}
@@ -274,6 +282,7 @@ Des Weiteren wurde durch GitHub Actions von Anfang an eine Continuous Integratio
 Für die detaillierte Codeüberwachung kam Flake8 zum Einsatz, welches den Python-Code auf Fehler, potenzielle Probleme und die Einhaltung des PEP 8-Stils untersuchte. Ein Screenshot der Analyseergebnisse von Flake8 ist im Anhang \hyperref[sec:codeanalyse]{A.10: Statische Codeanalyse} zu finden.
 
 \subsection{Deployment}
+\label{sec:deployment}
 Bei dem vorliegenden Projekt handelt es sich um eine mobile Anwendung. Aufgrund dessen ist das Deployment auf einem Firmenlaptop innerhalb des Firmennetzwerks notwendig, um in einer Testumgebung die Anwendung zu evaluieren. Das zugehörige Verteilungsdiagramm, welches den gesamten Prozess und die Architektur darstellt, ist im Anhang A.12 abgebildet.\\
 \\
 Die Entwicklung der mobilen App erfolgte mittels Ionic auf Angular-Basis. In diesem Projekt wurde \textit{Capacitor} als Cross-Platform Native Runtime eingesetzt. Mit den Befehlen \texttt{ionic build}, gefolgt von \texttt{npx cap sync} und \texttt{npx cap open android}, wird die Web-App in eine native Android-App konvertiert. Obwohl der Fokus auf \textit{Capacitor} liegt, wird im Hintergrund \textit{Gradle} als Build-System verwendet, sobald das Projekt in \textit{Android Studio} geöffnet ist, um die Android-App zu bauen.
@@ -299,7 +308,7 @@ Im Bereich des Frontends begann der Implementierungsprozess mit der Installation
 \subsection{Implentierung des Datenmodelle und der Datenbank}
 In der Entwicklung der \glqq Pollution Detection\grqq{}-App war es notwendig, die Datenstruktur adäquat im Backend abzubilden. Ein wichtiges Werkzeug, das dabei zum Einsatz kam, war \textit{SQLAlchemy}, ein \acrshort{sql} Toolkit und \gls{orm} System für \acrshort{python3}. Es ermöglicht das Mapping von in \acrshort{python3} definierten Klassen zu Datenbanktabellen und umgekehrt.\\
 \\
-Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter Entitäten. Zum Beispiel wurden für die Klassen \texttt{User} und \texttt{Pollution} \acrshortpl{uuid} mit einer Hexadezimaldarstellung für ihre \acrshortpl{id} verwendet. Das \texttt{\_\_tablename\_\_}-Attribut in \textit{SQLAlchemy} bestimmt den Namen der Tabelle in der Datenbank, und in unserem Fall entspricht der Klassenname dem Tabellennamen. Fremdschlüssel werden durch \texttt{ForeignKey} und die zugehörigen Relationen durch \texttt{relationship} repräsentiert. Primärschlüssel werden durch das \texttt{primary\_key=True} Argument in der Spaltendefinition angegeben.\\
+Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter Entitäten. Zum Beispiel wurden für die Klassen \texttt{User} und \texttt{Pollution} \acrshortpl{uuid} mit einer Hexadezimaldarstellung für ihre \acrshortpl{id} verwendet. Das \texttt{\_\_tablename\_\_}-Attribut in \textit{SQLAlchemy} bestimmt den Namen der Tabelle in der Datenbank, und in unserem Fall entspricht der Klassenname dem Tabellennamen. Fremdschlüssel werden durch \texttt{ForeignKey} und die zugehörigen Relationen durch \texttt{relationship} repräsentiert. Primärschlüssel werden durch das \texttt{primary\_key=True} Argument in der Spaltendefinition angegeben. Ein exemplarischer Codeausschnitt hierzu kann im Anhang \hyperref[sec:python-code]{A.12: Listing von Python-Code} eingesehen werden.\\
 \\
 Es ist wichtig zu erwähnen, dass sowohl die \texttt{Pollution}- als auch die \texttt{Geoarea}-Klasse vom Kunden übernommen wurden. Während \texttt{Pollution} eine neuere Implementierung darstellt und daher \acrshortpl{uuid} in Hexadezimalform verwendet, nutzt \texttt{Geoarea} aufgrund ihres Alters Ganzzahlen als \acrshortpl{id}. \\
 \\
@@ -310,7 +319,7 @@ Die Geschäftslogik fokussiert sich auf die Abbildung und Verarbeitung der Daten
 \\
 Zur Implementierung der in den Services definierten Methoden und zur Sicherstellung eines effizienten Zugriffs auf die Daten, wurde \textit{SQLAlchemy} als \acrshort{orm} genutzt. Durch die Verwendung von \textit{SQLAlchemy} wird eine klare Trennung zwischen Datenzugriff und Geschäftslogik erreicht. Dies bietet auch die Möglichkeit, bei Bedarf einfach auf andere Datenbank-Implementierungen umzusteigen.\\
 \\
-In den Services wird der direkte Zugriff auf die Datenmodelle und deren Methoden gehandhabt. So wird beispielsweise im \texttt{pollution\_service} eine Schnittstelle zur Datenmanipulation genutzt, welche die \acrshort{crud}-Operationen auf Pollution-Daten in der Datenbank ermöglicht. Ein zentraler Bestandteil der Logik innerhalb des \texttt{Pollution}-Services besteht darin, die Anzahl der gemeldeten Umweltverschmutzungen zu aktualisieren. Bei der Aktualisierung wird besonders darauf geachtet, dass die Werte korrekt und konsistent sind. Der \texttt{PollutionCount}-Resource verwendet entsprechende Schnittstellen, um die Anzahl der Verschmutzungen zu ändern. Bei einer Anfrage zum Aktualisieren eines \texttt{Pollution}-Eintrags wird zuerst überprüft, ob dieser Eintrag in der Datenbank existiert. Wenn der Eintrag gefunden wird, wird die \texttt{count}-Eigenschaft des \texttt{Pollution}-Objekts mit dem neuen Wert aktualisiert. Sollte während dieses Prozesses ein Fehler auftreten, etwa bei Datenbankkonflikten, wird die Transaktion rückgängig gemacht, um die Integrität der Daten zu gewährleisten. Im Anhang \hyperref[sec:pflichtenheft]{A.12: Listing von Python-Code} ist der entsprechende Code der \texttt{PollutionCount}-Klasse zu sehen.\\
+In den Services wird der direkte Zugriff auf die Datenmodelle und deren Methoden gehandhabt. So wird beispielsweise im \texttt{pollution\_service} eine Schnittstelle zur Datenmanipulation genutzt, welche die \acrshort{crud}-Operationen auf Pollution-Daten in der Datenbank ermöglicht. Ein zentraler Bestandteil der Logik innerhalb des \texttt{Pollution}-Services besteht darin, die Anzahl der gemeldeten Umweltverschmutzungen zu aktualisieren. Bei der Aktualisierung wird besonders darauf geachtet, dass die Werte korrekt und konsistent sind. Der \texttt{PollutionCount}-Resource verwendet entsprechende Schnittstellen, um die Anzahl der Verschmutzungen zu ändern. Bei einer Anfrage zum Aktualisieren eines \texttt{Pollution}-Eintrags wird zuerst überprüft, ob dieser Eintrag in der Datenbank existiert. Wenn der Eintrag gefunden wird, wird die \texttt{count}-Eigenschaft des \texttt{Pollution}-Objekts mit dem neuen Wert aktualisiert. Sollte während dieses Prozesses ein Fehler auftreten, etwa bei Datenbankkonflikten, wird die Transaktion rückgängig gemacht, um die Integrität der Daten zu gewährleisten. Im Anhang \hyperref[sec:python-code]{A.12: Listing von Python-Code} ist der entsprechende Code der \texttt{PollutionCount}-Klasse zu sehen.\\
 \\
 Ein besonderes Augenmerk wurde auf den \texttt{auth\_service} gelegt, welcher nicht nur die Funktionen für Login und Registrierung bietet, sondern auch sicherstellt, dass Benutzerdaten sicher und vertraulich behandelt werden. Dies beinhaltet unter anderem die sichere Speicherung von Passwörtern und die Generierung von Tokens für authentifizierte Sessions.
 
@@ -325,7 +334,7 @@ Zu den Integrationstests gibt es ergänzende Codeausschnitte im Anhang \hyperref
 
 
 \subsection{Implementierung der Oberfläche}
-Auf Basis der in Abschnitt \textbf{4.3} (Entwurf der Benutzeroberfläche) dargestellten Mockups wurde die Benutzeroberfläche der mobilen Anwendung entwickelt. Die Implementierung erfolgte unter Verwendung des \textit{Ionic-Frameworks} auf \textit{Angular}-Basis, wie in Abschnitt \textbf{4.2} (Architekturdesign) beschrieben. Ionic bietet eine Sammlung von UI-Komponenten, die für mobile Anwendungen optimiert sind. Diese Komponenten sind in Web-Technologien wie HTML, CSS und Typescript geschrieben und bieten eine konsistente, plattformübergreifende Benutzererfahrung.\\
+Auf Basis der in Abschnitt \textbf{4.3} (Entwurf der Benutzeroberfläche) dargestellten Mockups wurde die Benutzeroberfläche der mobilen Anwendung entwickelt. Die Implementierung erfolgte unter Verwendung des \textit{Ionic-Frameworks} auf \textit{Angular}-Basis, wie in Abschnitt \hyperref[sec:architekturdesign]{4.2 (Architekturdesgin)} beschrieben. Ionic bietet eine Sammlung von UI-Komponenten, die für mobile Anwendungen optimiert sind. Diese Komponenten sind in Web-Technologien wie HTML, CSS und Typescript geschrieben und bieten eine konsistente, plattformübergreifende Benutzererfahrung.\\
 \\
 Ein zentrales Konzept in Angular ist das \textit{Two-Way Data Binding}, welches eine direkte Interaktion zwischen der Benutzeroberfläche und den zugrunde liegenden Datenmodellen ermöglicht. Ein praktisches Beispiel aus der Anwendung zeigt ein Eingabefeld, das mit einer Variablen im Datenmodell verknüpft ist:
 \begin{verbatim}
@@ -339,12 +348,37 @@ Ein besonderes Augenmerk wurde auf die Benutzerfreundlichkeit und die Fehlertole
 Die Implementierung folgt allgemeinen Richtlinien der Software-Ergonomie, um eine intuitive und effiziente Benutzerführung zu gewährleisten. Dies beinhaltet beispielsweise eine Minimierung der notwendigen Interaktionen und die Bereitstellung von klaren, selbsterklärenden Steuerelementen.
 
 \subsection{Testen der Anwendung}
-
-
+Nach der Backend-Entwicklung und der Implementierung des Frontends wurde die Benutzeroberfläche in der Testumgebung getestet. Hierbei lag der Fokus darauf, die Interaktion des Benutzers mit der Anwendung zu simulieren. \\
+\\
+Während der Oberflächentests wurden verschiedene Benutzeraktionen durchgeführt, um mögliche Fehler zu erkennen und zu korrigieren. Das Hauptziel dieser Tests war es sicherzustellen, dass die Anwendung stabil läuft und der Endbenutzer problemlos damit interagieren kann.\\
+\\
+Ein Beispiel für einen durchgeführten Oberflächentest ist im Anhang A.23: Oberflächentest auf Seite xxiii zu finden.
 
 \section{Abnahme und Deploymentphase}
+\subsection{Code-Review}
+Bevor die Anwendung in die Testumgebung übertragen wurde, fand ein ausführliches Code-Review in Zusammenarbeit mit dem Ausbilder statt. Der Schwerpunkt dieses Reviews lag sowohl auf der Erkennung fachlicher als auch technischer Fehler. Zusätzlich wurde auf die Verständlichkeit und Lesbarkeit des Codes Wert gelegt. Da der Ausbilder bereits zuvor mit dem Projekt vertraut gemacht wurde, war keine gesonderte Einführung notwendig. Dies erleichterte den Review-Prozess, da der Kontext und die Zielsetzung des Projekts bereits bekannt waren.
 
-\section{Dokumetation}
+\subsection{Deployment}
+
+Wie in Abschnitt \hyperref[sec:deployment]{4.7 (Deployment)} beschrieben, wurde die Anwendung mithilfe eines festgelegten Deployment-Prozesses entwickelt. Für die Übertragung auf die Testumgebung wurde dieser Prozess wie folgt durchgeführt.\\
+\\
+Zu Beginn wurde Git auf dem Ziel-Laptop installiert und das Projekt aus dem GitHub-Repository geklont. Dies stellte sicher, dass alle benötigten Dateien, einschließlich des \texttt{docker-compose.yml}-Files, auf dem Testlaptop vorhanden waren.\\
+\\
+Docker und Docker Compose wurden ebenfalls auf dem Laptop installiert und konfiguriert. Nach der Installation wurde der Befehl \texttt{docker-compose up} im Projektverzeichnis ausgeführt, um die notwendigen Docker-Images herunterzuladen und die Container zu starten.\\
+\\
+Nach dem ersten \texttt{docker-compose up} wurde ein Backup der PostgreSQL-Datenbank eingespielt, um die Datenbank mit den erforderlichen Daten zu befüllen. Mit dieser finalen Aktion war die Anwendung vollständig auf der Testumgebung eingerichtet und einsatzbereit.
+
+
+\section{Dokumentation}
+Die Dokumentation dieses Projekts teilt sich in drei Hauptteile: die Projektdokumentation, die Benutzerdokumentation und die Entwicklerdokumentation.\\
+\\
+Die Projektdokumentation beschreibt den gesamten Prozess der Projektumsetzung, von der Planung bis zum Deployment. Sie dient als Überblick und Nachschlagewerk für alle Phasen und Entscheidungen, die während der Entwicklung getroffen wurden.\\
+\\
+Das Benutzerhandbuch bietet Endanwendern einen leichten Einstieg in die Anwendung. Es erläutert die Grundfunktionen der Software, zeigt, wie man sich darin navigiert, und gibt detaillierte Anweisungen zur Verwendung der verschiedenen Funktionen, illustriert durch Screenshots. Ein Ausschnitt des Benutzerhandbuchs ist im Anhang \hyperref[sec:benutzerdokumentation]{A.14: Benutzerdokumentation (Auszug)} zu finden.\\
+\\
+Die Entwicklerdokumentation bietet eine detaillierte Beschreibung der Softwarekomponenten. Es enthält Erläuterungen zu den Klassen, ihren Attributen und Methoden sowie deren Zusammenhängen. Die Dokumentation wurde manuell verfasst und soll als Leitfaden für zukünftige Entwicklungs- oder Anpassungsarbeiten dienen. Ein Ausschnitt der Entwicklerdokumentation ist im Anhang \hyperref[sec:entwicklerdokumentation]{A.15: Entwicklerdokumentation (Auszug)} zu finden.
+
+
 
 \section{Fazit}
 
@@ -567,7 +601,7 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{}-App für die Kantonspo
 \end{figure}
 
 \clearpage
-\subsection{Klassendiagramm Auszug}
+\subsection{Klassendiagramm (Auszug)}
 \label{sec:klassendiagramm}
 
 \begin{figure}[h]
@@ -649,6 +683,19 @@ Der folgende Abschnitt bietet einen Auszug aus dem Pflichtenheft und beschreibt 
   columns=flexible,
   frame=single
 }
+
+\begin{lstlisting}[language=Python, caption=Implementation der Pollution-Klasse, label=lst:pollution]
+class Pollution(db.Model):
+    __tablename__ = 'pollution'
+
+    id = db.Column(
+        db.String(32), primary_key=True, unique=True, nullable=False,
+        default=lambda: uuid.uuid4().hex)
+    name = db.Column(db.String(100))
+    count = db.Column(db.Integer)
+    description = db.Column(db.String)
+    geoarea_fk = db.Column(db.Integer, db.ForeignKey('geoarea.id'))
+\end{lstlisting}
 
 \begin{lstlisting}[language=Python, caption=Implementation der PollutionCount-Klasse, label=lst:pollutionCount]
 class PollutionCount(Resource):
@@ -777,6 +824,14 @@ class TestAPIEndpoints(unittest.TestCase):
             updated_pollution = db.session.query(Pollution).get(pollution.id)
             self.assertEqual(updated_pollution.count, 15)
 \end{lstlisting}
+
+\clearpage
+\subsection{Benutzerdokumentation (Auszug)}
+\label{sec:benutzerdokumentation}
+
+\clearpage
+\subsection{Entwicklerdokumentation (Auszug)}
+\label{sec:entwicklerdokumentation}
 
 
 \end{document}
