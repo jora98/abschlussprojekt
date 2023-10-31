@@ -378,10 +378,31 @@ Das Benutzerhandbuch bietet Endanwendern einen leichten Einstieg in die Anwendun
 \\
 Die Entwicklerdokumentation bietet eine detaillierte Beschreibung der Softwarekomponenten. Es enthält Erläuterungen zu den Klassen, ihren Attributen und Methoden sowie deren Zusammenhängen. Die Dokumentation wurde manuell verfasst und soll als Leitfaden für zukünftige Entwicklungs- oder Anpassungsarbeiten dienen. Ein Ausschnitt der Entwicklerdokumentation ist im Anhang \hyperref[sec:entwicklerdokumentation]{A.15: Entwicklerdokumentation (Auszug)} zu finden.
 
-
-
 \section{Fazit}
+\subsection{Soll- / Ist-Vergleich}
+Bei der Überprüfung der Projektplanung im Vergleich zur tatsächlichen Umsetzung zeigten sich vereinzelt Abweichungen.\\
+\\
+Das Deployment auf den Firmenlaptop konnte effizienter durchgeführt werden als erwartet, was auf die nahezu vollständig vorbereitete Testumgebung zurückzuführen ist. Dies führte zu einer Zeitersparnis von zwei Stunden im geplanten Arbeitsverlauf.\\
+\\
+Während der Implementierungsphase ergaben sich jedoch zusätzliche Anforderungen bei der Wahl der Testdatenbank. Ursprünglich war geplant, eine ressourcenschonendere Datenbank zu verwenden. Allerdings traten bei der Verwendung des Geometry-Datentyps Komplikationen auf. Daher entschieden wir uns, bei der Testdatenbank ebenfalls auf PostgreSQL mit der PostGIS-Erweiterung zu setzen, da sie den benötigten Datentyp effizient unterstützt. Diese Entscheidung resultierte in einem zusätzlichen Zeitaufwand von zwei Stunden.
 
+\subsection{Erfahrungsgewinne}
+Während der Umsetzung dieses Abschlussprojektes konnte ich zahlreiche wertvolle Erfahrungen in verschiedenen Bereichen des Software-Developments sammeln. Ein wesentlicher Schwerpunkt lag in der Vertiefung meiner Kenntnisse im Fullstack-Development, insbesondere in der Arbeit mit Python.\\
+\\
+Ein Kernaspekt meiner Lernerfahrungen bezog sich auf das Web-Framework Flask. Durch die intensive Arbeit mit diesem Tool konnte ich meine Fähigkeiten und mein Verständnis im Umgang damit erheblich ausbauen. Parallel dazu bot mir das Projekt die Gelegenheit, mich mit der Bibliothek SQLAlchemy vertraut zu machen und Einblicke in die Dynamik und Möglichkeiten von Datenbank-Operationen zu gewinnen.\\
+\\
+Neben diesen technischen Aspekten erhielt ich auch tiefgreifende Erkenntnisse in der Projektplanung. Hierzu zählen insbesondere die Erstellung und Interpretation von Diagrammen sowie das Verständnis für deren Bedeutung und Anwendung in der Projektstruktur.\\
+\\
+Ein weiterer bedeutender Bereich meiner Lernerfahrungen war die Arbeit mit Ionic. Dies ermöglichte mir, meine Kenntnisse in der mobilen App-Entwicklung zu vertiefen. Zusätzlich konnte ich durch die Arbeit an diesem Projekt mein Wissen in TypeScript ausbauen und festigen.\\
+\\
+Insgesamt betrachtet hat dieses Projekt wesentlich dazu beigetragen, mein Fachwissen in verschiedenen Technologien und Methoden des Software-Developments zu erweitern und zu vertiefen.
+
+\subsection{Ausblick}
+Obwohl das im Rahmen dieses Projekts entwickelte System primär als Prototyp konzipiert wurde, legt es ein solides Fundament für zukünftige Entwicklungen und Erweiterungen. Es steht noch eine ausführliche Testphase mit dem Kunden bevor, deren Ergebnisse maßgeblich über die nächsten Schritte und eventuelle Anpassungen entscheiden werden.\\
+\\
+Es bleibt abzuwarten, wie sich die Zusammenarbeit mit dem Kunden weiterentwickelt und welche spezifischen Anforderungen oder Wünsche in den Vordergrund treten werden. Die im Projekt geschaffene Basis ermöglicht jedenfalls flexible Anpassungen und Erweiterungen, um den unterschiedlichen Bedürfnissen und Anforderungen gerecht zu werden.
+
+\clearpage
 \section*{Literaturverzeichnis}
 \addcontentsline{toc}{section}{Literaturverzeichnis}
 
@@ -828,6 +849,43 @@ class TestAPIEndpoints(unittest.TestCase):
 \clearpage
 \subsection{Benutzerdokumentation (Auszug)}
 \label{sec:benutzerdokumentation}
+Nach erfolgreicher Anmeldung gelangen Sie zur Hauptseite.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{bilder/select\_geoarea.png}
+\end{figure}
+
+\noindent Hier befindet sich ein Dropdown-Menü mit der Beschriftung \glqq Select geoarea\grqq{}. Um eine Geoarea auszuwählen, klicken Sie auf die Leiste. Es öffnet sich ein Menü mit den verfügbaren Geoareas. Wählen Sie die gewünschte Geoarea aus, um die Pollutions zu dem ausgewählten Gebiet zu erhalten.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.365\textwidth]{bilder/pollutions1.png}
+\end{figure}
+
+\noindent Hier können Sie verschiedene Aktionen durchführen:
+
+\begin{enumerate}
+    \item \textbf{Anzahl bearbeiten:} Jede Verschmutzung zeigt die aktuelle Anzahl (Count) an. Mit den Plus- und Minus-Tasten können Sie die Anzahl der jeweiligen Pollution erhöhen oder verringern.
+    \item \textbf{Beschreibung bearbeiten:} Um die Beschreibung einer Pollution zu ändern, klicken Sie einfach auf das Beschreibungsfeld. 
+    \item \textbf{Mehr anzeigen:} Wenn der Beschreibungstext zu lang ist und nicht vollständig angezeigt wird, klicken Sie auf den \glqq More\grqq{}-Button. Ein Pop-Up-Fenster erscheint, in dem die vollständige Beschreibung sichtbar ist.
+   \item \textbf{Verschmutzung löschen:} Das kleine Mülleimer-Symbol in der oberen rechten Ecke jeder Verschmutzung dient dazu, den Löschvorgang zu initiieren. Ein Klick darauf öffnet ein kleines Fenster, das nach einer Bestätigung fragt, um sicherzustellen, dass Sie die Verschmutzung tatsächlich löschen möchten. Erst nach der Bestätigung wird die Verschmutzung endgültig gelöscht.
+    \item \textbf{Neue Verschmutzung hinzufügen:} Unten befindet sich ein Button mit der Bezeichnung \glqq ADD POLLUTION\grqq{}. Wenn Sie diesen anklicken, öffnet sich ein Menü, in dem Sie eine neue Verschmutzung für das ausgewählte Gebiet hinzufügen können.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{bilder/add\_pollution.png}
+\end{figure}
+
+\noindent In diesem Menü können Sie eine neue Pollution zur aktuell ausgewählten Geoarea hinzufügen. Es ist wichtig, dass bereits eine Geoarea ausgewählt wurde und dass die neue Pollution einen eindeutigen Namen besitzt. Ohne diese Informationen ist das Hinzufügen einer neuen Pollution nicht möglich.:
+\begin{enumerate}
+    \item \textbf{Verschmutzungsname:} Geben Sie den Namen der neuen Verschmutzung im Feld "Pollution name" ein.
+    \item \textbf{Anzahl:} Setzen Sie die Anzahl der Verschmutzung, standardmäßig auf 0 gesetzt.
+    \item \textbf{Beschreibung:} Fügen Sie eine detaillierte Beschreibung der Verschmutzung im Feld "Description" hinzu.
+    \item \textbf{Bestätigen oder Abbrechen:} Klicken Sie auf "CONFIRM", um die Verschmutzung hinzuzufügen, oder auf "CANCEL", um das Hinzufügen abzubrechen.
+\end{enumerate}
+
 
 \clearpage
 \subsection{Entwicklerdokumentation (Auszug)}
