@@ -53,7 +53,11 @@ verwendetet Ressourcen:
 hardware
  -büropülatzmit lenovo thinkpad laptop
 Software
+ -android studio
+ -
+ -docker
  -git
+ -github actions
  -Gradle - Build-Tool
  -MiKTeX - Distribution des Textsatzsystems TEX
  -PGAdmin4 -  Verwaltungswerkzeug für Postgres-Datenbanken
@@ -64,3 +68,6 @@ Personal
 -Informatiker - Review des Codes
 -Auszubildender - Umsetzung des Projekts
 -Ansprechpartner der Kapo Zürich
+
+
+testdatenbank muss noch neu konfiguriert und eingerichtet werden
