@@ -633,7 +633,7 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{}-App für die Kantonspo
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.96\textwidth]{bilder/klassendiagramm.png}
+\includegraphics[width=0.89\textwidth]{bilder/klassendiagramm.png}
 \caption{Auszug des Klassendiagramms}
 \end{figure}
 
@@ -718,10 +718,10 @@ class Pollution(db.Model):
     id = db.Column(
         db.String(32), primary_key=True, unique=True, nullable=False,
         default=lambda: uuid.uuid4().hex)
-    name = db.Column(db.String(100))
     count = db.Column(db.Integer)
     description = db.Column(db.String)
     geoarea_fk = db.Column(db.Integer, db.ForeignKey('geoarea.id'))
+    pollution_type_fk = db.Column(db.String, db.ForeignKey('pollution_type.id'))
 \end{lstlisting}
 
 \begin{lstlisting}[language=Python, caption=Implementation der PollutionCount-Klasse, label=lst:pollutionCount]
@@ -829,13 +829,19 @@ class TestAPIEndpoints(unittest.TestCase):
             polygon="POLYGON((1 2,2 3, 3 4, 5 6, 1 2))"
         )
 
-        pollution = Pollution(
-            name='PollutionDelete',
-            count=10,
-            description='Description',
-            geoarea_fk=5
+        pollutionType1 = PollutionType(
+            name='Typ 1'
         )
-        db.session.add_all([pollution, geoarea])
+        db.session.add(pollutionType1)
+        db.session.commit()
+
+        pollution = Pollution(
+            count=10,
+            description='Description 1',
+            geoarea_fk=5,
+            pollution_type_fk=db.session.query(PollutionType).first().id
+        )
+        db.session.add_all([pollutionType1, pollution, geoarea])
         db.session.commit()
 
         expires = timedelta(days=7)
@@ -884,13 +890,25 @@ Nach erfolgreicher Anmeldung gelangen Sie zur Hauptseite.
 \includegraphics[width=0.5\textwidth]{bilder/add\_pollution.png}
 \end{figure}
 
-\noindent In diesem Menü können Sie eine neue Pollution zur aktuell ausgewählten Geoarea hinzufügen. Es ist wichtig, dass bereits eine Geoarea ausgewählt wurde und dass die neue Pollution einen eindeutigen Namen besitzt. Ohne diese Informationen ist das Hinzufügen einer neuen Pollution nicht möglich.:
+\noindent In diesem Menü können Sie eine neue Pollution zur aktuell ausgewählten Geoarea hinzufügen. Es ist wichtig, dass bereits eine Geoarea ausgewählt wurde und dass die neue Pollution einen eindeutigen Type besitzt. Ohne diese Informationen ist das Hinzufügen einer neuen Pollution nicht möglich.:
 \begin{enumerate}
-    \item \textbf{Verschmutzungsname:} Geben Sie den Namen der neuen Verschmutzung im Feld "Pollution name" ein.
+    \item \textbf{Pollution Type:} Geben Sie den Type der neuen Pollution im Feld \glqq Pollution Type\grqq{} ein.
     \item \textbf{Anzahl:} Setzen Sie die Anzahl der Verschmutzung, standardmäßig auf 0 gesetzt.
-    \item \textbf{Beschreibung:} Fügen Sie eine detaillierte Beschreibung der Verschmutzung im Feld "Description" hinzu.
-    \item \textbf{Bestätigen oder Abbrechen:} Klicken Sie auf "CONFIRM", um die Verschmutzung hinzuzufügen, oder auf "CANCEL", um das Hinzufügen abzubrechen.
+    \item \textbf{Beschreibung:} Fügen Sie eine detaillierte Beschreibung der Verschmutzung im Feld \glqq Descritption\grqq{} hinzu.
+    \item \textbf{Bestätigen oder Abbrechen:} Klicken Sie auf \glqq CONFIRM\grqq{}, um die Verschmutzung hinzuzufügen, oder auf \glqq CANCEL\grqq{}, um das Hinzufügen abzubrechen.
+    \item\textbf{Neuen Pollution Type hinzufügen:} Klicken Sie auf den blauen Button \glqq ADD POLLUTION TYPE\grqq{}, um einen neuen Pollution Type zu erstellen und der Datenbank hinzuzufügen
 \end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{bilder/add\_pollution\_type.png}
+\end{figure}
+\noindent In dieses Menü gelangen Sie, wie bereits im letzten Unterpunkt erwähnt, durch betätigen des \glqq ADD POLLUTION TYPE\grqq{} Buttons.:
+\begin{enumerate}
+        \item \textbf{Pollution Type:} Geben Sie die Bezeichnung des neuen Pollution Type im Feld \glqq Pollution Type\grqq{} ein. Diese Bezeichnung sollte eindeutig sein, um Verwechslungen mit bereits vorhandenen Types zu vermeiden.
+        \item \textbf{Bestätigen oder Abbrechen:} Um den neuen Pollution Type zu speichern, klicken Sie auf \glqq CONFIRM\grqq{}. Wenn Sie den Vorgang abbrechen möchten, wählen Sie \glqq CANCEL\grqq{}. \end{enumerate}
+
+\noindent Bitte beachten Sie, dass der neu erstellte Pollution Type nur dann der Datenbank hinzugefügt wird, wenn Sie auf \glqq CONFIRM\grqq{} klicken.
 
 
 \clearpage
