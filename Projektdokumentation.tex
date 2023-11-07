@@ -240,15 +240,15 @@ Um eine effiziente Nutzung der App zu gewährleisten, wurde in den Entwürfen da
 Die Rücksprache mit den Stakeholdern hat bestätigt, dass dieser geplante Aufbau den Anforderungen entspricht, wobei jedoch Wert darauf gelegt wird, dass die Navigation einfach bleibt und der Benutzer nicht durch zu viele Unterseiten navigieren muss.
 
 \subsection{Datenmodell}
-Das Datenmodell, welches für die geplante mobile App konzipiert wurde, setzt sich aus den Entitäten \textbf{User}, \textbf{GeoArea} und \textbf{Pollution} zusammen.\\
+Das Datenmodell, welches für die geplante mobile App konzipiert wurde, setzt sich aus den Entitäten \textbf{User}, \textbf{GeoArea}, \textbf{Pollution} und \textbf{PollutionType} zusammen.\\
+\\
 Die Entität \textbf{User} repräsentiert einen Anwender der App und besitzt folgende Attribute:
 \begin{itemize}
     \item \texttt{id}: Ein eindeutiger Identifikator für jeden Benutzer.
     \item \texttt{email}: Die E-Mail-Adresse des Benutzers.
     \item \texttt{password}: Das Passwort des Benutzers.
 \end{itemize}
-Die Entitäten \textbf{GeoArea} und \textbf{Pollution} wurden vom Kunden vorgegeben.\\
-Die Entität \textbf{GeoArea} kapselt Informationen zu geografischen Bereichen, in denen \textbf{Pollutions} erfasst werden. Sie verfügt über folgende Attribute:
+Die Entitäten \textbf{GeoArea} und \textbf{Pollution} wurden vom Kunden vorgegeben. Die Entität \textbf{GeoArea} kapselt Informationen zu geografischen Bereichen, in denen \textbf{Pollutions} erfasst werden. Sie verfügt über folgende Attribute:
 \begin{itemize}
     \item \texttt{id}: Ein eindeutiger Identifikator für jede GeoArea.
     \item \texttt{datecreated}: Das Erstellungsdatum der GeoArea.
@@ -260,19 +260,23 @@ Die Entität \textbf{GeoArea} kapselt Informationen zu geografischen Bereichen, 
     \item \texttt{name}: Der Name der GeoArea.
     \item \texttt{polygon}: Die geografischen Grenzen der GeoArea.
 \end{itemize}
-Die Entität \textbf{Pollution} beschreibt spezifische Verschmutzungen oder Umweltbelastungen innerhalb einer GeoArea und hat folgende Attribute:
+Die Entität \textbf{PollutionType} definiert verschiedene Typen von Umweltbelastungen und stellt eine standardisierte Nomenklatur bereit. Sie wurde ebenfalls von der Polizei vorgegeben und umfasst:
+\begin{itemize}
+    \item \texttt{id}: Ein eindeutiger Identifikator für jeden PollutionType.
+    \item \texttt{name}: Der Name des PollutionTypes.
+\end{itemize}
+Die Entität \textbf{Pollution} beschreibt spezifische Verschmutzungen innerhalb einer GeoArea. Um eine konsistente Benennung der Verschmutzungstypen sicherzustellen, bezieht sich \textbf{Pollution} über einen Fremdschlüssel auf \textbf{PollutionType}:
 \begin{itemize}
     \item \texttt{id}: Ein eindeutiger Identifikator für jede Pollution.
-    \item \texttt{name}: Der Name der Pollution.
+    \item \texttt{pollution\_type\_fk}: Ein Fremdschlüssel, der die Pollution mit einem bestimmten PollutionType verknüpft.
     \item \texttt{count}: Eine Zählung oder Intensität der Pollution.
     \item \texttt{description}: Eine Beschreibung der Pollution.
     \item \texttt{geoarea\_fk}: Ein Fremdschlüssel, der die Pollution mit einer GeoArea verknüpft.
 \end{itemize}
-Eine essenzielle Beziehung in diesem Modell ist die zwischen \textbf{GeoArea} und \textbf{Pollution}. Jede \textbf{Pollution} muss zwingend einer \textbf{GeoArea} zugeordnet sein, wodurch eine 1:n-Beziehung entsteht. Dies bedeutet, dass eine GeoArea mehrere Pollutions besitzen kann, wohingegen eine Pollution immer genau einer GeoArea angehört.\\
+Eine essenzielle Beziehung in diesem Modell ist die zwischen \textbf{GeoArea} und \textbf{Pollution} sowie zwischen \textbf{PollutionType} und \textbf{Pollution}. Jede \textbf{Pollution} muss zwingend einem \textbf{PollutionType} und einer \textbf{GeoArea} zugeordnet sein, wodurch eine 1:n-Beziehung zwischen \textbf{GeoArea} und \textbf{Pollution} entsteht. Zusätzlich besteht eine n:1-Beziehung zwischen \textbf{Pollution} und \textbf{PollutionType}, was bedeutet, dass jeder PollutionType mehreren Pollutions zugeordnet werden kann, während eine Pollution genau einem PollutionType angehört.\\
 \\
-Der \textbf{User} könnte in weiteren Ausarbeitungen des Modells in Beziehung zu \textbf{GeoAreas} oder \textbf{Pollutions} stehen, etwa durch das Erfassen oder Bearbeiten von Daten. Diese potenziellen Beziehungen sind jedoch zum jetzigen Zeitpunkt noch nicht finalisiert.\\
-\\
-Im finalen Schritt des Entwicklungsprozesses wird dieses Datenmodell in ein Entity-Relationship-Modell (\acrshort{erm}) überführt. Dieses dient als Blaupause für die Implementierung der Datenstruktur in der eigentlichen App und stellt die Beziehungen zwischen den Entitäten klar dar. Das dazugehörige \acrshort{erm} wird im Anhang \hyperref[sec:entity-relationship-modell]{A.8: Entity-Relationship-Modell} dargestellt und bildet die Grundlage für die spätere Implementierung der Domänenklassen.
+Im finalen Schritt des Entwicklungsprozesses wird dieses Datenmodell in ein Entity-Relationship-Modell (\acrshort{erm}) überführt, das im Anhang \hyperref[sec:entity-relationship-modell]{A.8: Entity-Relationship-Modell} dargestellt wird und die Grundlage für die Implementierung der Datenstruktur in der eigentlichen App bildet.
+
 
 \subsection{Geschäftslogik}
 Der grundsätzliche Aufbau der Anwendung wurde bereits im Abschnitt \hyperref[sec:architekturdesign]{4.2 (Architekturdesign)} erörtert. Um eine detaillierte Darstellung der Geschäftslogik und deren Implementierung zu bieten, habe ich eigenständig ein Klassendiagramm angefertigt. Dieses Diagramm dient als visuelle Darstellung der internen Struktur und verdeutlicht die Trennung sowie die Beziehungen der einzelnen Komponenten. Es bietet zudem eine Übersicht über die Schnittstellen und die Funktionsweisen der verschiedenen Services, Klassen und Module. Für eine ausführliche Ansicht des Klassendiagramms verweise ich auf den Anhang \hyperref[sec:klassendiagramm]{A.9: Klassendiagramm}.
@@ -311,14 +315,15 @@ Im Bereich des Frontends begann der Implementierungsprozess mit der Installation
 \subsection{Implentierung des Datenmodelle und der Datenbank}
 In der Entwicklung der \glqq Pollution Detection\grqq{}-App war es notwendig, die Datenstruktur adäquat im Backend abzubilden. Ein wichtiges Werkzeug, das dabei zum Einsatz kam, war \textit{SQLAlchemy}, ein \acrshort{sql} Toolkit und \gls{orm} System für \acrshort{python3}. Es ermöglicht das Mapping von in \acrshort{python3} definierten Klassen zu Datenbanktabellen und umgekehrt.\\
 \\
-Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter Entitäten. Zum Beispiel wurden für die Klassen \texttt{User} und \texttt{Pollution} \acrshortpl{uuid} mit einer Hexadezimaldarstellung für ihre \acrshortpl{id} verwendet. Das \texttt{\_\_tablename\_\_}-Attribut in \textit{SQLAlchemy} bestimmt den Namen der Tabelle in der Datenbank, und in unserem Fall entspricht der Klassenname dem Tabellennamen. Fremdschlüssel werden durch \texttt{ForeignKey} und die zugehörigen Relationen durch \texttt{relationship} repräsentiert. Primärschlüssel werden durch das \texttt{primary\_key=True} Argument in der Spaltendefinition angegeben. Ein exemplarischer Codeausschnitt hierzu kann im Anhang \hyperref[sec:python-code]{A.12: Listing von Python-Code} eingesehen werden.\\
+Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter Entitäten. Zum Beispiel wurden für die Klassen \texttt{User}, \texttt{Pollution} und \texttt{PollutionType} \acrshortpl{uuid} mit einer Hexadezimaldarstellung für ihre \acrshortpl{id} verwendet. Das \texttt{\_\_tablename\_\_}-Attribut in \textit{SQLAlchemy} bestimmt den Namen der Tabelle in der Datenbank, und in unserem Fall entspricht der Klassenname dem Tabellennamen. Fremdschlüssel werden durch \texttt{ForeignKey} und die zugehörigen Relationen durch \texttt{relationship} repräsentiert. Primärschlüssel werden durch das \texttt{primary\_key=True} Argument in der Spaltendefinition angegeben. Ein exemplarischer Codeausschnitt hierzu kann im Anhang \hyperref[sec:python-code]{A.12: Listing von Python-Code} eingesehen werden.\\
 \\
-Es ist wichtig zu erwähnen, dass sowohl die \texttt{Pollution}- als auch die \texttt{Geoarea}-Klasse vom Kunden übernommen wurden. Während \texttt{Pollution} eine neuere Implementierung darstellt und daher \acrshortpl{uuid} in Hexadezimalform verwendet, nutzt \texttt{Geoarea} aufgrund ihres Alters Ganzzahlen als \acrshortpl{id}. \\
+Es ist wichtig zu erwähnen, dass sowohl die \texttt{Pollution}-, \texttt{PollutionType}- als auch die \texttt{Geoarea}-Klasse vom Kunden übernommen wurden. Während \texttt{Pollution} und \texttt{Pollu\-tion\-Type}
+ eine neuere Implementierung darstellen und daher \acrshortpl{uuid} in Hexadezimalform verwenden, nutzt \texttt{Geoarea} aufgrund ihres Alters Ganzzahlen als \acrshortpl{id}.\\
 \\
 Abschließend sollte angemerkt werden, dass der Kunde ein Backup bereitstellte, das eine Anzahl von Testgebieten enthielt. Diese wurden in der Entwicklungsphase intensiv zum Testen und Verifizieren der Funktionalität des Systems genutzt.
 
 \subsection{Implementierung der Geschfäftslogik}
-Die Geschäftslogik fokussiert sich auf die Abbildung und Verarbeitung der Daten entsprechend der fachlichen Anforderungen. Entsprechend den in Abschnitt \hyperref[sec:anwendungsfälle]{3.3 (Anwendungsfälle)} erläuterten Anwendungsfällen, wurden die Hauptservices in der Service-Schicht realisiert. Hierbei wurden spezielle Service-Dateien, wie der \texttt{auth\_service} für Authentifizierungsprozesse, der \texttt{geoarea\_service} zur Abfrage von geografischen Gebieten und der \texttt{pollution\_service} zur umfassenden Verwaltung von Pollution-Daten, erstellt.\\
+Die Geschäftslogik fokussiert sich auf die Abbildung und Verarbeitung der Daten entsprechend der fachlichen Anforderungen. Entsprechend den in Abschnitt \hyperref[sec:anwendungsfälle]{3.3 (Anwendungsfälle)} erläuterten Anwendungsfällen, wurden die Hauptservices in der Service-Schicht realisiert. Hierbei wurden spezielle Service-Dateien, wie der \texttt{auth\_service} für Authentifizierungsprozesse, der \texttt{geoarea\_service} zur Abfrage von geografischen Gebieten, der \texttt{pollution\_type\_service} zur Abfrage der verschiedenen Verschmutzungsarten und der \texttt{pollution\_service} zur umfassenden Verwaltung von Pollution-Daten, erstellt.\\
 \\
 Zur Implementierung der in den Services definierten Methoden und zur Sicherstellung eines effizienten Zugriffs auf die Daten, wurde \textit{SQLAlchemy} als \acrshort{orm} genutzt. Durch die Verwendung von \textit{SQLAlchemy} wird eine klare Trennung zwischen Datenzugriff und Geschäftslogik erreicht. Dies bietet auch die Möglichkeit, bei Bedarf einfach auf andere Datenbank-Implementierungen umzusteigen.\\
 \\
@@ -557,7 +562,7 @@ Es bleibt abzuwarten, wie sich die Zusammenarbeit mit dem Kunden weiterentwickel
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.85\textwidth]{bilder/use-case-diagramm.drawio.png}
+\includegraphics[width=0.95\textwidth]{bilder/use-case-diagramm.drawio.png}
 \caption{Use-Case-Diagramm der \glqq Pollution Detection\grqq{}-App}
 \end{figure}
 
