@@ -28,7 +28,7 @@
             anchorcolor=softblue,
             linktoc=page]{hyperref} % Nur Seitenzahlen im Inhaltsverzeichnis verlinken
 \usepackage{cleveref}
-\usepackage[nonumberlist]{glossaries}
+\usepackage[nonumberlist, acronym]{glossaries}
 \usepackage{listings}
 
 \definecolor{lightgray}{gray}{0.9}
@@ -51,6 +51,20 @@
 \newacronym{sql}{SQL}{Structured Query Language}
 \newacronym{uuid}{UUID}{Universally Unique Identifier}
 \newacronym{id}{ID}{Identifier}
+
+\newglossaryentry{pollution}{
+  name=Pollution,
+  description={Spezifische Verschmutzungen oder Umweltbelastungen, die im Kontext dieser Dokumentation verwendet werden}
+}
+\newglossaryentry{geoarea}{
+  name=Geoarea,
+  description={Ein definierter geografischer Bereich, der für die Zuordnung und Analyse verschiedener Daten genutzt wird}
+}
+\newglossaryentry{pollutiontype}{
+  name=Pollution Type,
+  description={Ein eindeutiges Kennzeichen, das verschiedene Arten von Pollutions klassifiziert}
+}
+
 
 \makeglossaries % Erzeugt das Abkürzungsverzeichnis
 
@@ -75,17 +89,21 @@
 \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 \printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 
+\clearpage
+\addcontentsline{toc}{section}{Glossar}
+\printglossary[type=main,title=Glossar]
+
 
 \clearpage
 \pagenumbering{arabic}
 \section{Einleitung}
-In dieser Projektdokumentation wird der Ablauf des Projekts zur Entwicklung einer mobilen App für die Kantonspolizei Zürich erläutert. Dieses Projekt wurde von Jona Rams im Rahmen seines Abschlussprojekts für den Fachinformatiker mit der Fachrichtung Anwendungsentwicklung im Auftrag der Kantonspolizei Zürich durchgeführt. Die LogObject AG erhielt den Auftrag zur Entwicklung einer mobilen Anwendung, die es den Polizeibeamten der Kantonspolizei Zürich ermöglichen soll, Verschmutzungen während ihrer Streifenarbeit einfach zu erfassen und zu zählen. Die erfassten Daten werden digital in eine Datenbank geladen, um eine effiziente Erfassung und Auswertung zu gewährleisten.
+In dieser Projektdokumentation wird der Ablauf des Projekts zur Entwicklung einer mobilen App für die Kantonspolizei Zürich erläutert. Dieses Projekt wurde von Jona Rams im Rahmen seines Abschlussprojekts für den Fachinformatiker mit der Fachrichtung Anwendungsentwicklung im Auftrag der Kantonspolizei Zürich durchgeführt. Die LogObject AG erhielt den Auftrag zur Entwicklung einer mobilen Anwendung, die es den Polizeibeamten der Kantonspolizei Zürich ermöglichen soll, Verschmutzungen(\glspl{pollution}) während ihrer Streifenarbeit einfach zu erfassen und zu zählen. Die erfassten Daten werden digital in eine Datenbank geladen, um eine effiziente Erfassung und Auswertung zu gewährleisten.
 
 \subsection{Projektbeschreibung}
 \label{sec:projektbeschreibung}
-Die Hauptaufgabe dieses Projekts war die Erstellung eines Prototyps für die \glqq Pollution Detection\grqq{}-App im Auftrag der Kantonspolizei Zürich. Die App unterstützt Polizeibeamte bei der Erfassung und Quantifizierung von Verschmutzungen während ihrer Streifenarbeit.\\
-Die \glqq Pollution Detection\grqq{}-App bietet eine benutzerfreundliche Lösung, die es den Beamten ermöglicht, Verschmutzungen in von Kunden bereitgestellten geografischen Gebieten, den sogenannten Geoareas, effizient zu identifizieren und zu kategorisieren. Ein Schlüsselelement der App ist die nahtlose Integration der gesammelten Daten in eine zentrale Datenbank, wodurch eine zuverlässige Speicherung und einfache Analyse gewährleistet ist.\\
-Die Anwendung ermöglicht den Beamten nicht nur den Zugriff auf gespeicherte Daten über eine intuitive Benutzeroberfläche, sondern bietet auch die Flexibilität, eigene Verschmutzungsarten hinzuzufügen, die speziell für ihre Geoareas relevant sind.\\
+Die Hauptaufgabe dieses Projekts war die Erstellung eines Prototyps für die \glqq Pollution Detection\grqq{}-App im Auftrag der Kantonspolizei Zürich. Die App unterstützt Polizeibeamte bei der Erfassung und Quantifizierung von \glspl{pollution} während ihrer Streifenarbeit.\\
+Die \glqq Pollution Detection\grqq{}-App bietet eine benutzerfreundliche Lösung, die es den Beamten ermöglicht, \glspl{pollution} in von Kunden bereitgestellten geografischen Gebieten, den sogenannten \glspl{geoarea}, effizient zu identifizieren und zu kategorisieren. Ein Schlüsselelement der App ist die nahtlose Integration der gesammelten Daten in eine zentrale Datenbank, wodurch eine zuverlässige Speicherung und einfache Analyse gewährleistet ist.\\
+Die Anwendung ermöglicht den Beamten nicht nur den Zugriff auf gespeicherte Daten über eine intuitive Benutzeroberfläche, sondern bietet auch die Flexibilität, eigene \glspl{pollutiontype} hinzuzufügen, die speziell für ihre Geoareas relevant sind.\\
 Das Hauptziel ist es, die Umweltüberwachung der Kantonspolizei Zürich zu optimieren und den Beamten ein leistungsfähiges Tool an die Hand zu geben, das sowohl benutzerfreundlich als auch anpassbar ist. Dies fördert die Erhaltung der öffentlichen Ordnung in den Geoareas und ermöglicht eine effektivere Bekämpfung der Umweltverschmutzung.
 
 \subsection{Projektziel}
@@ -223,7 +241,7 @@ Für das \glqq Pollution Detection\grqq{}-Projekt wurde eine Drei-Schichten-Arch
 \\
 Die zweite Schicht, die Geschäftslogikschicht, ist das in \acrshort{python3} entwickelte Backend. Es dient als zentrale Schnittstelle für alle Datenoperationen und stellt eine \acrshort{restful} \acrshort{api} bereit, die \acrshort{crud}-Operationen (Create, Read, Update, Delete) unterstützt. Diese \acrshort{api} ermöglicht es, Daten zu erstellen, abzurufen, zu aktualisieren und zu löschen und bildet die Brücke zwischen der Präsentationsschicht und der Datenzugriffsschicht. Innerhalb dieser Schicht ist auch die Geschäftslogik der Anwendung enthalten.\\
 \\
-Die dritte und letzte Schicht, die Datenzugriffsschicht, beherbergt die PostgreSQL-Datenbank. In dieser Datenbank sind die Verschmutzungsdaten und andere relevante Informationen gespeichert. Sie bietet Mechanismen für den sicheren Zugriff auf die Daten und sorgt für deren Integrität und Konsistenz.\\
+Die dritte und letzte Schicht, die Datenzugriffsschicht, beherbergt die PostgreSQL-Daten\-bank. In dieser Datenbank sind die Verschmutzungsdaten und andere relevante Informationen gespeichert. Sie bietet Mechanismen für den sicheren Zugriff auf die Daten und sorgt für deren Integrität und Konsistenz.\\
 \\
 Die klare Trennung in diese drei Schichten bietet nicht nur Flexibilität und Skalierbarkeit, sondern erleichtert auch das Debugging und die Fehlerbehebung, da Probleme leichter auf eine der drei Schichten zurückgeführt werden können.\\
 \\
@@ -233,7 +251,7 @@ Die Interaktionen und Abhängigkeiten zwischen den beschriebenen Schichten sind 
 Wie unter \hyperref[sec:entwicklungsprozess]{2.3 (Entwicklungsprozess)} beschrieben, wurde für die Benutzeroberfläche ein intensiver Austausch mit den relevanten Stakeholdern vorgenommen, da sie die Hauptnutzer dieser Anwendung sein werden. Als ersten Schritt wurden Entwürfe erstellt. Die grafischen Darstellungen dieser Mockups finden Sie unter \hyperref[sec:mockups]{A.8: Mockups}.\\
 \\
 Im Header der App ist das \glqq LOGOBJECT\grqq{}-Logo platziert, um eine klare Zuordnung zur Marke zu ermöglichen. Der Hauptfokus der Startseite soll auf der Möglichkeit liegen, eine GeoArea auszuwählen. Diese Auswahl stellt ein zentrales Element der Anwendung dar und soll daher intuitiv und ohne Umwege für den Nutzer erreichbar sein.\\
-Nach der Auswahl der GeoArea soll die App automatisch die zugehörigen Pollutions laden und anzeigen. Hierbei ist geplant, dem Nutzer interaktive Bedienelemente zur Verfügung zu stellen, mit denen er Anpassungen an den Zahlenwerten vornehmen kann. Dafür sind Plus- und Minus-Buttons vorgesehen, die eine einfache und direkte Bearbeitung ermöglichen.\\
+Nach der Auswahl der \gls{geoarea} soll die App automatisch die zugehörigen \glspl{pollution} laden und anzeigen. Hierbei ist geplant, dem Nutzer interaktive Bedienelemente zur Verfügung zu stellen, mit denen er Anpassungen an den Zahlenwerten vornehmen kann. Dafür sind Plus- und Minus-Buttons vorgesehen, die eine einfache und direkte Bearbeitung ermöglichen.\\
 \\
 Um eine effiziente Nutzung der App zu gewährleisten, wurde in den Entwürfen darauf geachtet, dass alle Funktionen mit wenigen Klicks erreichbar sind und der Nutzer stets einen klaren Überblick über die dargestellten Inhalte behält.\\
 \\
@@ -320,14 +338,14 @@ Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter 
 Es ist wichtig zu erwähnen, dass sowohl die \texttt{Pollution}-, \texttt{PollutionType}- als auch die \texttt{Geoarea}-Klasse vom Kunden übernommen wurden. Während \texttt{Pollution} und \texttt{Pollu\-tion\-Type}
  eine neuere Implementierung darstellen und daher \acrshortpl{uuid} in Hexadezimalform verwenden, nutzt \texttt{Geoarea} aufgrund ihres Alters Ganzzahlen als \acrshortpl{id}.\\
 \\
-Abschließend sollte angemerkt werden, dass der Kunde ein Backup bereitstellte, das eine Anzahl von Testgebieten enthielt. Diese wurden in der Entwicklungsphase intensiv zum Testen und Verifizieren der Funktionalität des Systems genutzt.
+Abschließend sollte angemerkt werden, dass der Kunde ein Backup bereitstellte, das eine Anzahl von Testgebieten(\glspl{geoarea}) enthielt. Diese wurden in der Entwicklungsphase intensiv zum Testen und Verifizieren der Funktionalität des Systems genutzt.
 
 \subsection{Implementierung der Geschfäftslogik}
-Die Geschäftslogik fokussiert sich auf die Abbildung und Verarbeitung der Daten entsprechend der fachlichen Anforderungen. Entsprechend den in Abschnitt \hyperref[sec:anwendungsfälle]{3.3 (Anwendungsfälle)} erläuterten Anwendungsfällen, wurden die Hauptservices in der Service-Schicht realisiert. Hierbei wurden spezielle Service-Dateien, wie der \texttt{auth\_service} für Authentifizierungsprozesse, der \texttt{geoarea\_service} zur Abfrage von geografischen Gebieten, der \texttt{pollution\_type\_service} zur Abfrage der verschiedenen Verschmutzungsarten und der \texttt{pollution\_service} zur umfassenden Verwaltung von Pollution-Daten, erstellt.\\
+Die Geschäftslogik fokussiert sich auf die Abbildung und Verarbeitung der Daten entsprechend der fachlichen Anforderungen. Entsprechend den in Abschnitt \hyperref[sec:anwendungsfälle]{3.3 (Anwendungsfälle)} erläuterten Anwendungsfällen, wurden die Hauptservices in der Service-Schicht realisiert. Hierbei wurden spezielle Service-Dateien, wie der \texttt{auth\_service} für Authentifizierungsprozesse, der \texttt{geoarea\_service} zur Abfrage von \glspl{geoarea}, der \texttt{pollution\_\-type\_\-service} zur Abfrage der verschiedenen Verschmutzungsarten und der \texttt{pollution\_service} zur umfassenden Verwaltung von \gls{pollution}-Daten, erstellt.\\
 \\
 Zur Implementierung der in den Services definierten Methoden und zur Sicherstellung eines effizienten Zugriffs auf die Daten, wurde \textit{SQLAlchemy} als \acrshort{orm} genutzt. Durch die Verwendung von \textit{SQLAlchemy} wird eine klare Trennung zwischen Datenzugriff und Geschäftslogik erreicht. Dies bietet auch die Möglichkeit, bei Bedarf einfach auf andere Datenbank-Implementierungen umzusteigen.\\
 \\
-In den Services wird der direkte Zugriff auf die Datenmodelle und deren Methoden gehandhabt. So wird beispielsweise im \texttt{pollution\_service} eine Schnittstelle zur Datenmanipulation genutzt, welche die \acrshort{crud}-Operationen auf Pollution-Daten in der Datenbank ermöglicht. Ein zentraler Bestandteil der Logik innerhalb des \texttt{Pollution}-Services besteht darin, die Anzahl der gemeldeten Umweltverschmutzungen zu aktualisieren. Bei der Aktualisierung wird besonders darauf geachtet, dass die Werte korrekt und konsistent sind. Der \texttt{PollutionCount}-Resource verwendet entsprechende Schnittstellen, um die Anzahl der Verschmutzungen zu ändern. Bei einer Anfrage zum Aktualisieren eines \texttt{Pollution}-Eintrags wird zuerst überprüft, ob dieser Eintrag in der Datenbank existiert. Wenn der Eintrag gefunden wird, wird die \texttt{count}-Eigenschaft des \texttt{Pollution}-Objekts mit dem neuen Wert aktualisiert. Sollte während dieses Prozesses ein Fehler auftreten, etwa bei Datenbankkonflikten, wird die Transaktion rückgängig gemacht, um die Integrität der Daten zu gewährleisten. Im Anhang \hyperref[sec:python-code]{A.12: Listing von Python-Code} ist der entsprechende Code der \texttt{PollutionCount}-Klasse zu sehen.\\
+In den Services wird der direkte Zugriff auf die Datenmodelle und deren Methoden gehandhabt. So wird beispielsweise im \texttt{pollution\_service} eine Schnittstelle zur Datenmanipulation genutzt, welche die \acrshort{crud}-Operationen auf \gls{pollution}-Daten in der Datenbank ermöglicht. Ein zentraler Bestandteil der Logik innerhalb des \texttt{Pollution}-Services besteht darin, die Anzahl der gemeldeten Umweltverschmutzungen zu aktualisieren. Bei der Aktualisierung wird besonders darauf geachtet, dass die Werte korrekt und konsistent sind. Der \texttt{PollutionCount}-Resource verwendet entsprechende Schnittstellen, um die Anzahl der jeweiligen \gls{pollution} zu ändern. Bei einer Anfrage zum Aktualisieren eines \texttt{Pollution}-Eintrags wird zuerst überprüft, ob dieser Eintrag in der Datenbank existiert. Wenn der Eintrag gefunden wird, wird die \texttt{count}-Eigenschaft des \texttt{Pollution}-Objekts mit dem neuen Wert aktualisiert. Sollte während dieses Prozesses ein Fehler auftreten, etwa bei Datenbankkonflikten, wird die Transaktion rückgängig gemacht, um die Integrität der Daten zu gewährleisten. Im Anhang \hyperref[sec:python-code]{A.12: Listing von Python-Code} ist der entsprechende Code der \texttt{PollutionCount}-Klasse zu sehen.\\
 \\
 Ein besonderes Augenmerk wurde auf den \texttt{auth\_service} gelegt, welcher nicht nur die Funktionen für Login und Registrierung bietet, sondern auch sicherstellt, dass Benutzerdaten sicher und vertraulich behandelt werden. Dies beinhaltet unter anderem die sichere Speicherung von Passwörtern und die Generierung von Tokens für authentifizierte Sessions.
 
@@ -384,7 +402,7 @@ Die Projektdokumentation beschreibt den gesamten Prozess der Projektumsetzung, v
 \\
 Das Benutzerhandbuch bietet Endanwendern einen leichten Einstieg in die Anwendung. Es erläutert die Grundfunktionen der Software, zeigt, wie man sich darin navigiert, und gibt detaillierte Anweisungen zur Verwendung der verschiedenen Funktionen, illustriert durch Screenshots. Ein Ausschnitt des Benutzerhandbuchs ist im Anhang \hyperref[sec:benutzerdokumentation]{A.14: Benutzerdokumentation (Auszug)} zu finden.\\
 \\
-Die Entwicklerdokumentation bietet eine detaillierte Beschreibung der Softwarekomponenten. Es enthält Erläuterungen zu den Klassen, ihren Attributen und Methoden sowie deren Zusammenhängen. Die Dokumentation wurde manuell verfasst und soll als Leitfaden für zukünftige Entwicklungs- oder Anpassungsarbeiten dienen. Ein Ausschnitt der Entwicklerdokumentation ist im Anhang \hyperref[sec:entwicklerdokumentation]{A.15: Entwicklerdokumentation (Auszug)} zu finden.
+Die Entwicklerdokumentation bietet eine detaillierte Beschreibung der Softwarekomponenten. Sie enthält Erläuterungen zu den Klassen, ihren Attributen und Methoden sowie deren Zusammenhängen. Die Dokumentation wurde während des Entwicklungsprozesses kontinuierlich mit Hilfe von \texttt{pydoc}, einem spezialisierten Dokumentationswerkzeug für Python, erstellt. Die so verfasste Dokumentation soll als umfassender Leitfaden für zukünftige Entwicklungs- oder Anpassungsarbeiten dienen. Ein Ausschnitt der Entwicklerdokumentation ist im Anhang \hyperref[sec:entwicklerdokumentation]{A.15: Entwicklerdokumentation (Auszug)} zu finden.
 
 \section{Fazit}
 \subsection{Soll- / Ist-Vergleich}
@@ -576,16 +594,16 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{}-App für die Kantonspo
 
 \begin{itemize}
     \item Die App \textbf{muss} Verschmutzungsdaten in Echtzeit erfassen und kategorisieren.
-    \item Es \textbf{muss} möglich sein, spezifische Verschmutzungsarten hinzuzufügen, die für bestimmte geografische Gebiete (Geoareas) relevant sind.
-    \item Es \textbf{muss} eine Funktion geben, die den Beamten erlaubt, Verschmutzungsarten zu bearbeiten und zu löschen.
+    \item Es \textbf{muss} möglich sein, spezifische \glspl{pollutiontype} hinzuzufügen, die für bestimmte \glspl{geoarea} relevant sind.
+    \item Es \textbf{muss} eine Funktion geben, die den Beamten erlaubt, \glspl{pollutiontype} zu bearbeiten und zu löschen.
     \item Die erfassten Daten \textbf{könnten} mit anderen Datenquellen oder Systemen der Kantonspolizei synchronisiert werden.
 \end{itemize}
 
 \noindent\textbf{2. Benutzeroberfläche und Interaktivität}
 
 \begin{itemize}
-    \item Die App \textbf{muss} über eine intuitive Benutzeroberfläche verfügen, die eine schnelle und einfache Erfassung von Verschmutzungen ermöglicht.
-    \item Die App \textbf{könnte} in der Lage sein, die genaue Position der Verschmutzung mithilfe von GPS oder anderen geografischen Tools zu erfassen.
+    \item Die App \textbf{muss} über eine intuitive Benutzeroberfläche verfügen, die eine schnelle und einfache Erfassung von \glspl{pollution} ermöglicht.
+    \item Die App \textbf{könnte} in der Lage sein, die genaue Position der \gls{pollution} mithilfe von GPS oder anderen geografischen Tools zu erfassen.
 \end{itemize}
 
 \noindent\textbf{3. Zugänglichkeit}
@@ -676,7 +694,7 @@ Der folgende Abschnitt bietet einen Auszug aus dem Pflichtenheft und beschreibt 
 \noindent\textbf{3. Oberfläche und Interaktivität}
 \begin{itemize}
     \item Für die Entwicklung der App-Oberfläche wird das Ionic Framework auf Basis von Angular verwendet.
-    \item Die Benutzeroberfläche wird für eine schnelle Erfassung von Verschmutzungen optimiert.
+    \item Die Benutzeroberfläche wird für eine schnelle Erfassung von \glspl{pollution} optimiert.
     \item Die Oberfläche wird automatisch gebaut und in eine native App umgewandelt.
 \end{itemize}
 
@@ -695,6 +713,7 @@ Der folgende Abschnitt bietet einen Auszug aus dem Pflichtenheft und beschreibt 
 
 \clearpage
 \subsection{Listing von Python-Code}
+\subsubsection{Datenmodelle und Services}
 \label{sec:python-code}
 \lstset{
   basicstyle=\rmfamily\small,
@@ -753,7 +772,7 @@ class PollutionCount(Resource):
 \end{lstlisting}
 
 \clearpage
-\subsection{Listing von unittest}
+\subsubsection{Listing von unittest}
 \label{sec:unittest}
 \lstset{
   basicstyle=\rmfamily\small,
@@ -873,7 +892,7 @@ Nach erfolgreicher Anmeldung gelangen Sie zur Hauptseite.
 \includegraphics[width=0.4\textwidth]{bilder/select\_geoarea.png}
 \end{figure}
 
-\noindent Hier befindet sich ein Dropdown-Menü mit der Beschriftung \glqq Select geoarea\grqq{}. Um eine Geoarea auszuwählen, klicken Sie auf die Leiste. Es öffnet sich ein Menü mit den verfügbaren Geoareas. Wählen Sie die gewünschte Geoarea aus, um die Pollutions zu dem ausgewählten Gebiet zu erhalten.
+\noindent Hier befindet sich ein Dropdown-Menü mit der Beschriftung \glqq Select geoarea\grqq{}. Um eine Geoarea auszuwählen, klicken Sie auf die Leiste. Es öffnet sich ein Menü mit den verfügbaren Geoareas. Wählen Sie die gewünschte \gls{geoarea} aus, um die \glspl{pollution} zu dem ausgewählten Gebiet zu erhalten.
 
 \begin{figure}[h]
 \centering
@@ -883,11 +902,11 @@ Nach erfolgreicher Anmeldung gelangen Sie zur Hauptseite.
 \noindent Hier können Sie verschiedene Aktionen durchführen:
 
 \begin{enumerate}
-    \item \textbf{Anzahl bearbeiten:} Jede Verschmutzung zeigt die aktuelle Anzahl (Count) an. Mit den Plus- und Minus-Tasten können Sie die Anzahl der jeweiligen Pollution erhöhen oder verringern.
-    \item \textbf{Beschreibung bearbeiten:} Um die Beschreibung einer Pollution zu ändern, klicken Sie einfach auf das Beschreibungsfeld. 
+    \item \textbf{Anzahl bearbeiten:} Jede \gls{pollution} zeigt die aktuelle Anzahl (Count) an. Mit den Plus- und Minus-Tasten können Sie die Anzahl der jeweiligen \gls{pollution} erhöhen oder verringern.
+    \item \textbf{Beschreibung bearbeiten:} Um die Beschreibung einer \gls{pollution} zu ändern, klicken Sie einfach auf das Beschreibungsfeld. 
     \item \textbf{Mehr anzeigen:} Wenn der Beschreibungstext zu lang ist und nicht vollständig angezeigt wird, klicken Sie auf den \glqq More\grqq{}-Button. Ein Pop-Up-Fenster erscheint, in dem die vollständige Beschreibung sichtbar ist.
-   \item \textbf{Verschmutzung löschen:} Das kleine Mülleimer-Symbol in der oberen rechten Ecke jeder Verschmutzung dient dazu, den Löschvorgang zu initiieren. Ein Klick darauf öffnet ein kleines Fenster, das nach einer Bestätigung fragt, um sicherzustellen, dass Sie die Verschmutzung tatsächlich löschen möchten. Erst nach der Bestätigung wird die Verschmutzung endgültig gelöscht.
-    \item \textbf{Neue Verschmutzung hinzufügen:} Unten befindet sich ein Button mit der Bezeichnung \glqq ADD POLLUTION\grqq{}. Wenn Sie diesen anklicken, öffnet sich ein Menü, in dem Sie eine neue Verschmutzung für das ausgewählte Gebiet hinzufügen können.
+   \item \textbf{\gls{pollution} löschen:} Das kleine Mülleimer-Symbol in der oberen rechten Ecke jeder \gls{pollution} dient dazu, den Löschvorgang zu initiieren. Ein Klick darauf öffnet ein kleines Fenster, das nach einer Bestätigung fragt, um sicherzustellen, dass Sie die \gls{pollution} tatsächlich löschen möchten. Erst nach der Bestätigung wird die \gls{pollution} endgültig gelöscht.
+    \item \textbf{Neue \gls{pollution} hinzufügen:} Unten befindet sich ein Button mit der Bezeichnung \glqq ADD POLLUTION\grqq{}. Wenn Sie diesen anklicken, öffnet sich ein Menü, in dem Sie eine neue \gls{pollution} für das ausgewählte Gebiet hinzufügen können.
 \end{enumerate}
 
 \begin{figure}[h]
@@ -895,13 +914,13 @@ Nach erfolgreicher Anmeldung gelangen Sie zur Hauptseite.
 \includegraphics[width=0.5\textwidth]{bilder/add\_pollution.png}
 \end{figure}
 
-\noindent In diesem Menü können Sie eine neue Pollution zur aktuell ausgewählten Geoarea hinzufügen. Es ist wichtig, dass bereits eine Geoarea ausgewählt wurde und dass die neue Pollution einen eindeutigen Type besitzt. Ohne diese Informationen ist das Hinzufügen einer neuen Pollution nicht möglich.:
+\noindent In diesem Menü können Sie eine neue \gls{pollution} zur aktuell ausgewählten Geoarea hinzufügen. Es ist wichtig, dass bereits eine Geoarea ausgewählt wurde und dass die neue \gls{pollution} einen eindeutigen Type besitzt. Ohne diese Informationen ist das Hinzufügen einer neuen \gls{pollution} nicht möglich.:
 \begin{enumerate}
-    \item \textbf{Pollution Type:} Geben Sie den Type der neuen Pollution im Feld \glqq Pollution Type\grqq{} ein.
-    \item \textbf{Anzahl:} Setzen Sie die Anzahl der Verschmutzung, standardmäßig auf 0 gesetzt.
-    \item \textbf{Beschreibung:} Fügen Sie eine detaillierte Beschreibung der Verschmutzung im Feld \glqq Descritption\grqq{} hinzu.
-    \item \textbf{Bestätigen oder Abbrechen:} Klicken Sie auf \glqq CONFIRM\grqq{}, um die Verschmutzung hinzuzufügen, oder auf \glqq CANCEL\grqq{}, um das Hinzufügen abzubrechen.
-    \item\textbf{Neuen Pollution Type hinzufügen:} Klicken Sie auf den blauen Button \glqq ADD POLLUTION TYPE\grqq{}, um einen neuen Pollution Type zu erstellen und der Datenbank hinzuzufügen
+    \item \textbf{\gls{pollutiontype}:} Geben Sie den Type der neuen \gls{pollution} im Feld \glqq Pollution Type\grqq{} ein.
+    \item \textbf{Anzahl:} Setzen Sie die Anzahl der \gls{pollution}, standardmäßig auf 0 gesetzt.
+    \item \textbf{Beschreibung:} Fügen Sie eine detaillierte Beschreibung der \gls{pollution} im Feld \glqq Descritption\grqq{} hinzu.
+    \item \textbf{Bestätigen oder Abbrechen:} Klicken Sie auf \glqq CONFIRM\grqq{}, um die \gls{pollution} hinzuzufügen, oder auf \glqq CANCEL\grqq{}, um das Hinzufügen abzubrechen.
+    \item\textbf{Neuen \gls{pollutiontype} hinzufügen:} Klicken Sie auf den blauen Button \glqq ADD POLLUTION TYPE\grqq{}, um einen neuen \gls{pollutiontype} zu erstellen und der Datenbank hinzuzufügen
 \end{enumerate}
 
 \begin{figure}[h]
@@ -910,15 +929,26 @@ Nach erfolgreicher Anmeldung gelangen Sie zur Hauptseite.
 \end{figure}
 \noindent In dieses Menü gelangen Sie, wie bereits im letzten Unterpunkt erwähnt, durch betätigen des \glqq ADD POLLUTION TYPE\grqq{} Buttons.:
 \begin{enumerate}
-        \item \textbf{Pollution Type:} Geben Sie die Bezeichnung des neuen Pollution Type im Feld \glqq Pollution Type\grqq{} ein. Diese Bezeichnung sollte eindeutig sein, um Verwechslungen mit bereits vorhandenen Types zu vermeiden.
-        \item \textbf{Bestätigen oder Abbrechen:} Um den neuen Pollution Type zu speichern, klicken Sie auf \glqq CONFIRM\grqq{}. Wenn Sie den Vorgang abbrechen möchten, wählen Sie \glqq CANCEL\grqq{}. \end{enumerate}
+        \item \textbf{\gls{pollutiontype}:} Geben Sie die Bezeichnung des neuen \gls{pollutiontype} im Feld \glqq Pollution Type\grqq{} ein. Diese Bezeichnung sollte eindeutig sein, um Verwechslungen mit bereits vorhandenen Types zu vermeiden.
+        \item \textbf{Bestätigen oder Abbrechen:} Um den neuen \gls{pollutiontype} zu speichern, klicken Sie auf \glqq CONFIRM\grqq{}. Wenn Sie den Vorgang abbrechen möchten, wählen Sie \glqq CANCEL\grqq{}. \end{enumerate}
 
-\noindent Bitte beachten Sie, dass der neu erstellte Pollution Type nur dann der Datenbank hinzugefügt wird, wenn Sie auf \glqq CONFIRM\grqq{} klicken.
+\noindent Bitte beachten Sie, dass der neu erstellte \gls{pollutiontype} nur dann der Datenbank hinzugefügt wird, wenn Sie auf \glqq CONFIRM\grqq{} klicken.
 
 
 \clearpage
 \subsection{Entwicklerdokumentation (Auszug)}
 \label{sec:entwicklerdokumentation}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{bilder/entwicklerdokumentation.png}
+\caption{Startseite der Entwicklerdokumentation}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{bilder/databasedoku.png}
+\caption{Entwicklerdokumentation der Datenbankkofiguration}
+\end{figure}
 
 \end{document}

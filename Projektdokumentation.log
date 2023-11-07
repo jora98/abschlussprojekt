@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.21)  7 NOV 2023 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.21)  7 NOV 2023 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1282,8 +1282,13 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 \openout5 = `Projektdokumentation.glo'.
 
 Package glossaries Info: Writing glossary file Projektdokumentation.glo on inpu
-t line 55.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 57
+t line 69.
+\glo@acronym@file=\write6
+\openout6 = `Projektdokumentation.acn'.
+
+Package glossaries Info: Writing glossary file Projektdokumentation.acn on inpu
+t line 69.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 71
 .
  (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1291,24 +1296,24 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (Projektdokumentation.aux)
 \openout1 = `Projektdokumentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1374,52 +1379,52 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 57.
+ on input line 71.
 
-Package hyperref Info: Link coloring ON on input line 57.
+Package hyperref Info: Link coloring ON on input line 71.
 (Projektdokumentation.out) (Projektdokumentation.out)
-\@outlinefile=\write6
-\openout6 = `Projektdokumentation.out'.
+\@outlinefile=\write7
+\openout7 = `Projektdokumentation.out'.
 
 \c@lstlisting=\count398
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
-0.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
+4.
 
 (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
-0.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
+4.
 
 (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-60.
+74.
 
 (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-60.
+74.
 
 (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 60.
+(Font)              <14.4> on input line 74.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 60.
+(Font)              <10> on input line 74.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 60.
+(Font)              <7> on input line 74.
 
 (Projektdokumentation.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 7.
+(Font)              <12> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 7.
+(Font)              <8> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 7.
+(Font)              <6> on input line 8.
  [1
 Non-PDF special ignored!
 <special> header=pstricks.pro
@@ -1444,38 +1449,45 @@ Non-PDF special ignored!
 
 {C:/Users/Jona.Rams/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
 Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
-Overfull \hbox (3.98273pt too wide) detected at line 59
+Overfull \hbox (3.98273pt too wide) detected at line 61
  [][][]\T1/lmr/m/n/12 xviii[][]
  []
 
 )
-\tf@toc=\write7
-\openout7 = `Projektdokumentation.toc'.
+\tf@toc=\write8
+\openout8 = `Projektdokumentation.toc'.
 
- [2] (Projektdokumentation.lof)
-\tf@lof=\write8
-\openout8 = `Projektdokumentation.lof'.
+ [2] (Projektdokumentation.lof
+Overfull \hbox (3.98273pt too wide) detected at line 9
+ [][][]\T1/lmr/m/n/12 xviii[][]
+ []
+
+)
+\tf@lof=\write9
+\openout9 = `Projektdokumentation.lof'.
 
  (Projektdokumentation.lot)
-\tf@lot=\write9
-\openout9 = `Projektdokumentation.lot'.
+\tf@lot=\write10
+\openout10 = `Projektdokumentation.lot'.
 
-
-(Projektdokumentation.lol)
-\tf@lol=\write10
-\openout10 = `Projektdokumentation.lol'.
+ (Projektdokumentation.lol)
+\tf@lol=\write11
+\openout11 = `Projektdokumentation.lol'.
 
  [3
 
-] (Projektdokumentation.gls) [4
+]
+(Projektdokumentation.acr) [4
+
+] (Projektdokumentation.gls) [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 96--98
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--98
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
@@ -1483,12 +1495,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
 ] [2]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-42.
+60.
 
 (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (39.2362pt too wide) in paragraph at lines 149--164
+Overfull \hbox (39.2362pt too wide) in paragraph at lines 167--182
  [][] 
  []
 
@@ -1497,255 +1509,255 @@ nc}] [4{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
 rm.enc}{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
 mathsy.enc}{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
 /lm-mathit.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 212--219
+Underfull \hbox (badness 10000) in paragraph at lines 230--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--219
+Underfull \hbox (badness 10000) in paragraph at lines 230--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--219
+Underfull \hbox (badness 10000) in paragraph at lines 230--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--231
+Underfull \hbox (badness 10000) in paragraph at lines 240--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--231
+Underfull \hbox (badness 10000) in paragraph at lines 240--249
 
  []
 
 
-Overfull \hbox (18.69719pt too wide) in paragraph at lines 222--231
-\T1/lmr/m/n/12 Die drit-te und letz-te Schicht, die Da-ten-zu-griffs-schicht, b
-e-her-bergt die PostgreSQL-Datenbank.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--231
+Underfull \hbox (badness 10000) in paragraph at lines 240--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--231
+Underfull \hbox (badness 10000) in paragraph at lines 240--249
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 233--241
+Underfull \hbox (badness 10000) in paragraph at lines 251--259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--241
+Underfull \hbox (badness 10000) in paragraph at lines 251--259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--241
+Underfull \hbox (badness 10000) in paragraph at lines 251--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--265
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 243--247
-
- []
-
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-47.
-(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+65.
+ (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
+
+ []
+
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 276--279
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--290
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--290
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--303
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--303
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--303
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 293--303
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 309--314
+Underfull \hbox (badness 10000) in paragraph at lines 327--332
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--314
+Underfull \hbox (badness 10000) in paragraph at lines 327--332
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 316--324
+Underfull \hbox (badness 10000) in paragraph at lines 334--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--324
+Underfull \hbox (badness 10000) in paragraph at lines 334--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--324
+Underfull \hbox (badness 10000) in paragraph at lines 334--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--333
+Overfull \hbox (2.88504pt too wide) in paragraph at lines 344--351
+\T1/lmtt/m/n/12 service \T1/lmr/m/n/12 zur Ab-fra-ge der ver-schie-de-nen Ver-s
+chmut-zungs-ar-ten und der \T1/lmtt/m/n/12 pollution_service
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--333
+Underfull \hbox (badness 10000) in paragraph at lines 344--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--333
+Underfull \hbox (badness 10000) in paragraph at lines 344--351
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 335--342
+Underfull \hbox (badness 10000) in paragraph at lines 353--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--342
+Underfull \hbox (badness 10000) in paragraph at lines 353--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--342
+Underfull \hbox (badness 10000) in paragraph at lines 353--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--348
+Underfull \hbox (badness 10000) in paragraph at lines 363--366
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 352--357
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--357
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--364
+Underfull \hbox (badness 10000) in paragraph at lines 377--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--364
+Underfull \hbox (badness 10000) in paragraph at lines 377--382
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 371--378
+Underfull \hbox (badness 10000) in paragraph at lines 389--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--378
+Underfull \hbox (badness 10000) in paragraph at lines 389--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--378
+Underfull \hbox (badness 10000) in paragraph at lines 389--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--388
+Underfull \hbox (badness 10000) in paragraph at lines 399--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--388
+Underfull \hbox (badness 10000) in paragraph at lines 399--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--388
+Underfull \hbox (badness 10000) in paragraph at lines 399--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--414
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 391--396
+Underfull \hbox (badness 10000) in paragraph at lines 416--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--396
+Underfull \hbox (badness 10000) in paragraph at lines 416--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--407
+Underfull \hbox (badness 10000) in paragraph at lines 416--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--407
+Underfull \hbox (badness 10000) in paragraph at lines 416--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--407
+Underfull \hbox (badness 10000) in paragraph at lines 427--430
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 398--407
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 409--412
-
- []
-
-[15] [16
+[14] [15] [16
 
 ]
-Overfull \hbox (43.47794pt too wide) in paragraph at lines 425--484
+Overfull \hbox (43.47794pt too wide) in paragraph at lines 443--502
 [] 
  []
 
@@ -1754,7 +1766,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.485 \clearpage
+l.503 \clearpage
                  [1
 
 ]
@@ -1762,11 +1774,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.512 \clearpage
+l.530 \clearpage
                  [2
 
 ]
-Overfull \hbox (9.54866pt too wide) in paragraph at lines 554--555
+Overfull \hbox (9.54866pt too wide) in paragraph at lines 572--573
 [][] 
  []
 
@@ -1775,76 +1787,81 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.559 \clearpage
+l.577 \clearpage
                  [3
 
 ]
-<bilder/use-case-diagramm.drawio.png, id=503, 451.6875pt x 540.5796pt>
+<bilder/use-case-diagramm.drawio.png, id=537, 451.6875pt x 540.5796pt>
 File: bilder/use-case-diagramm.drawio.png Graphic file (type png)
 <use bilder/use-case-diagramm.drawio.png>
 Package pdftex.def Info: bilder/use-case-diagramm.drawio.png  used on input lin
-e 565.
+e 583.
 (pdftex.def)             Requested size: 432.48051pt x 517.6225pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.569 \clearpage
+l.587 \clearpage
                  [4
 
  <./bilder/use-case-diagramm.drawio.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 573--574
+Underfull \hbox (badness 10000) in paragraph at lines 591--592
 
  []
 
-[5
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.v}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.623 \clearpage
+                 [5
 
 ]
-<bilder/Komponentendiagramm2.png, id=513, 361.35pt x 442.7742pt>
+<bilder/Komponentendiagramm2.png, id=551, 361.35pt x 442.7742pt>
 File: bilder/Komponentendiagramm2.png Graphic file (type png)
 <use bilder/Komponentendiagramm2.png>
-Package pdftex.def Info: bilder/Komponentendiagramm2.png  used on input line 61
-1.
+Package pdftex.def Info: bilder/Komponentendiagramm2.png  used on input line 62
+9.
 (pdftex.def)             Requested size: 409.71692pt x 502.04509pt.
  [6
 
  <./bilder/Komponentendiagramm2.png>]
-<bilder/prototyp1.png, id=519, 133.83333pt x 292.76042pt>
+<bilder/prototyp1.png, id=557, 133.83333pt x 292.76042pt>
 File: bilder/prototyp1.png Graphic file (type png)
 <use bilder/prototyp1.png>
-Package pdftex.def Info: bilder/prototyp1.png  used on input line 621.
+Package pdftex.def Info: bilder/prototyp1.png  used on input line 639.
 (pdftex.def)             Requested size: 227.62206pt x 497.94073pt.
  [7
 
  <./bilder/prototyp1.png>]
-<bilder/Entity-Relationship-Diagram4.png, id=526, 469.755pt x 578.16pt>
+<bilder/Entity-Relationship-Diagram4.png, id=564, 469.755pt x 578.16pt>
 File: bilder/Entity-Relationship-Diagram4.png Graphic file (type png)
 <use bilder/Entity-Relationship-Diagram4.png>
 Package pdftex.def Info: bilder/Entity-Relationship-Diagram4.png  used on input
- line 631.
+ line 649.
 (pdftex.def)             Requested size: 409.71692pt x 504.2655pt.
-
-[8
+ [8
 
  <./bilder/Entity-Relationship-Diagram4.png>]
-<bilder/klassendiagramm.png, id=532, 632.3625pt x 813.0375pt>
+<bilder/klassendiagramm.png, id=570, 632.3625pt x 813.0375pt>
 File: bilder/klassendiagramm.png Graphic file (type png)
 <use bilder/klassendiagramm.png>
-Package pdftex.def Info: bilder/klassendiagramm.png  used on input line 641.
+Package pdftex.def Info: bilder/klassendiagramm.png  used on input line 659.
 (pdftex.def)             Requested size: 405.16698pt x 520.93771pt.
  [9
 
  <./bilder/klassendiagramm.png>]
-<bilder/flake8.png, id=538, 808.52063pt x 268.75406pt>
+<bilder/flake8.png, id=576, 808.52063pt x 268.75406pt>
 File: bilder/flake8.png Graphic file (type png)
 <use bilder/flake8.png>
-Package pdftex.def Info: bilder/flake8.png  used on input line 651.
+Package pdftex.def Info: bilder/flake8.png  used on input line 669.
 (pdftex.def)             Requested size: 437.0374pt x 145.27266pt.
  [10
 
  <./bilder/flake8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 659--663
+Underfull \hbox (badness 10000) in paragraph at lines 677--681
 
  []
 
@@ -1856,60 +1873,76 @@ ty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 719.
+nput line 738.
  [12
 
 ] [13
 
 ] [14]
-<bilder/select_geoarea.png, id=681, 295.1025pt x 256.70906pt>
+<bilder/select_geoarea.png, id=720, 295.1025pt x 256.70906pt>
 File: bilder/select_geoarea.png Graphic file (type png)
 <use bilder/select_geoarea.png>
-Package pdftex.def Info: bilder/select_geoarea.png  used on input line 873.
+Package pdftex.def Info: bilder/select_geoarea.png  used on input line 892.
 (pdftex.def)             Requested size: 182.09486pt x 158.40588pt.
-<bilder/pollutions1.png, id=682, 295.1025pt x 637.63219pt>
+<bilder/pollutions1.png, id=723, 295.1025pt x 637.63219pt>
 File: bilder/pollutions1.png Graphic file (type png)
 <use bilder/pollutions1.png>
-Package pdftex.def Info: bilder/pollutions1.png  used on input line 880.
+Package pdftex.def Info: bilder/pollutions1.png  used on input line 899.
 (pdftex.def)             Requested size: 166.1666pt x 359.04668pt.
  [15
 
  <./bilder/select_geoarea.png> <./bilder/pollutions1.png>]
-Overfull \hbox (2.34622pt too wide) in paragraph at lines 887--888
+Overfull \hbox (2.34622pt too wide) in paragraph at lines 906--907
 []\T1/lmr/bx/n/12 Beschreibung be-ar-bei-ten: \T1/lmr/m/n/12 Um die Be-schrei-b
-ung ei-ner Pol-lu-ti-on zu än-dern, klicken
+ung ei-ner [][][]Pol-lu-ti-on[][] zu än-dern, klicken
  []
 
-<bilder/add_pollution.png, id=689, 309.40594pt x 217.5628pt>
+<bilder/add_pollution.png, id=739, 309.40594pt x 217.5628pt>
 File: bilder/add_pollution.png Graphic file (type png)
 <use bilder/add_pollution.png>
-Package pdftex.def Info: bilder/add_pollution.png  used on input line 895.
+Package pdftex.def Info: bilder/add_pollution.png  used on input line 914.
 (pdftex.def)             Requested size: 227.62206pt x 160.0611pt.
-<bilder/add_pollution_type.png, id=690, 310.15875pt x 89.58469pt>
+<bilder/add_pollution_type.png, id=750, 310.15875pt x 89.58469pt>
 File: bilder/add_pollution_type.png Graphic file (type png)
 <use bilder/add_pollution_type.png>
-Package pdftex.def Info: bilder/add_pollution_type.png  used on input line 909.
+Package pdftex.def Info: bilder/add_pollution_type.png  used on input line 928.
 
 (pdftex.def)             Requested size: 227.62206pt x 65.74484pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16 <./bilder/add_pollution.png>] [17 <./bilder/add_pollution_type.png>]
+<bilder/entwicklerdokumentation.png, id=778, 1114.91531pt x 925.20656pt>
+File: bilder/entwicklerdokumentation.png Graphic file (type png)
+<use bilder/entwicklerdokumentation.png>
+Package pdftex.def Info: bilder/entwicklerdokumentation.png  used on input line
+ 944.
+(pdftex.def)             Requested size: 455.24411pt x 377.7701pt.
+<bilder/databasedoku.png, id=779, 551.81157pt x 520.94624pt>
+File: bilder/databasedoku.png Graphic file (type png)
+<use bilder/databasedoku.png>
+Package pdftex.def Info: bilder/databasedoku.png  used on input line 950.
+(pdftex.def)             Requested size: 455.24411pt x 429.80185pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [18
 
-] (Projektdokumentation.aux)
+ <./bilder/entwicklerdokumentation.png>] [19 <./bilder/databasedoku.png>]
+(Projektdokumentation.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
 Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: F6F7DC0A51D1081EF1591480BDB05C47;8800.
+(rerunfilecheck)             Checksum: B41FB495118A474408FAF6B3CC8ED304;9099.
  ) 
 Here is how much of TeX's memory you used:
- 46756 strings out of 475503
- 1029035 string characters out of 5759946
+ 46886 strings out of 475503
+ 1031930 string characters out of 5759946
  2331248 words of memory out of 5000000
- 67025 multiletter control sequences out of 15000+600000
+ 67143 multiletter control sequences out of 15000+600000
  617399 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,19n,121p,2362b,2187s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1923,9 +1956,9 @@ ublic/lm/lmr17.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/type
 pe1/public/lm/lmri12.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/font
 s/type1/public/lm/lmsy10.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/lm/lmtt12.pfb>
-Output written on Projektdokumentation.pdf (38 pages, 852273 bytes).
+Output written on Projektdokumentation.pdf (40 pages, 955020 bytes).
 PDF statistics:
- 828 PDF objects out of 1000 (max. 8388607)
- 242 named destinations out of 1000 (max. 500000)
- 527 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 901 PDF objects out of 1000 (max. 8388607)
+ 250 named destinations out of 1000 (max. 500000)
+ 553 words of extra memory for PDF output out of 10000 (max. 10000000)
 

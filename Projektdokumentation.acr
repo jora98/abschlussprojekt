@@ -1,0 +1,49 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossentry{api}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{6}}}\glsgroupskip
+\glsgroupheading{C}\relax \glsresetentrylist %
+\glossentry{ci}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{8}}}%
+\glossentry{crud}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{6}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{11}}}\glsgroupskip
+\glsgroupheading{E}\relax \glsresetentrylist %
+\glossentry{erm}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{8}}}\glsgroupskip
+\glsgroupheading{H}\relax \glsresetentrylist %
+\glossentry{http}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{6}}}\glsgroupskip
+\glsgroupheading{I}\relax \glsresetentrylist %
+\glossentry{id}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{10}}}\glsgroupskip
+\glsgroupheading{M}\relax \glsresetentrylist %
+\glossentry{moscow}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{5}}}\glsgroupskip
+\glsgroupheading{O}\relax \glsresetentrylist %
+\glossentry{orm}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{10}}}\glsgroupskip
+\glsgroupheading{P}\relax \glsresetentrylist %
+\glossentry{python3}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{5\delimN 6}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{9\delimN 10}}}\glsgroupskip
+\glsgroupheading{R}\relax \glsresetentrylist %
+\glossentry{restful}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{6}}}\glsgroupskip
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glossentry{sql}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{10}}}\glsgroupskip
+\glsgroupheading{U}\relax \glsresetentrylist %
+\glossentry{uuid}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{10}}}\glsgroupskip
+\glsgroupheading{V}\relax \glsresetentrylist %
+\glossentry{venv}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{9}}}%
+\glossentry{vscode}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xi}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{9}}}%
+\end{theglossary}\glossarypostamble
