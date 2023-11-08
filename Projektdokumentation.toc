@@ -15,8 +15,8 @@
 \contentsline {subsection}{\numberline {3.1}Ist-Analyse}{2}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Wirschaftlichkeitsanalyse}{3}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Projektkosten}{3}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Amortisationsdauer}{3}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Anwendungsfälle}{4}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.2.2}Amortisationsdauer}{4}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Anwendungsfälle}{5}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Lastenheft}{5}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Entwurfsphase}{5}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Zielplattform}{5}{subsection.4.1}%
@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {4.4}Datenmodell}{7}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Geschäftslogik}{8}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Code-Qualitätssicherung}{8}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Deployment}{8}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.7}Deployment}{9}{subsection.4.7}%
 \contentsline {subsection}{\numberline {4.8}Plichtenhfeft}{9}{subsection.4.8}%
 \contentsline {section}{\numberline {5}Implementierungsphase}{9}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Implentierung des Datenmodelle und der Datenbank}{10}{subsection.5.1}%
@@ -33,8 +33,8 @@
 \contentsline {subsection}{\numberline {5.3}Implementierung und Durchführung der Tests}{11}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Implementierung der Oberfläche}{12}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}Testen der Anwendung}{12}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Abnahme und Deploymentphase}{12}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Code-Review}{12}{subsection.6.1}%
+\contentsline {section}{\numberline {6}Abnahme und Deploymentphase}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Code-Review}{13}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Deployment}{13}{subsection.6.2}%
 \contentsline {section}{\numberline {7}Dokumentation}{13}{section.7}%
 \contentsline {section}{\numberline {8}Fazit}{14}{section.8}%

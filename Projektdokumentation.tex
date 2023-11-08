@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm, headsep=1.5cm]{geometry}
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=2cm, headsep=1.5cm, footnotesep=0.5cm]{geometry}
 \usepackage[table]{xcolor}
 \usepackage{tabularx}
 \usepackage{enumitem}
@@ -73,6 +73,7 @@
 \fancyhead[R]{\includegraphics[width=2.5cm]{bilder/LogObject-icon.png}} % Firmenlogo auf der rechten Seite
 \renewcommand{\headrulewidth}{0.4pt} % Stärke der Linie unter der Kopfzeile
 \renewcommand{\footrulewidth}{0pt} % Keine Linie über der Fußzeile
+
 
 
 \begin{document}
@@ -152,7 +153,7 @@ Das Hauptziel dieses Projekts war die Entwicklung der \glqq Pollution Detection\
 
 \section{Projektplanung}
 \subsection{Projektphasen}
-Gemäß den Vorgaben der IHK zu Essen war für die Realisierung des Projekts ein Zeitraum von 80 Stunden vorgesehen\cite{ihk2023essen}. Vor Beginn des Projekts wurde eine strukturierte Einteilung in verschiedene Entwicklungsphasen vorgenommen, um alle Aspekte der Softwareentwicklung abzudecken. Eine Übersicht über die geplanten Hauptphasen ist in  \hyperlink{Projektphasen}{Tabelle 1} dargestellt. Für eine ausführlichere Darstellung der geplanten Schritte innerhalb jeder Phase wird auf Anhang \hyperref[sec:detaillierte zeitplanung]{A.1: Detailierte Zeitplanung} verwiesen.\\
+Gemäß den Vorgaben der IHK zu Essen war für die Realisierung des Projekts ein Zeitraum von 80 Stunden vorgesehen\footnote{\citeauthor{ihk2023essen}}. Vor Beginn des Projekts wurde eine strukturierte Einteilung in verschiedene Entwicklungsphasen vorgenommen, um alle Aspekte der Softwareentwicklung abzudecken. Eine Übersicht über die geplanten Hauptphasen ist in  \hyperlink{Projektphasen}{Tabelle 1} dargestellt. Für eine ausführlichere Darstellung der geplanten Schritte innerhalb jeder Phase wird auf Anhang \hyperref[sec:detaillierte zeitplanung]{A.1: Detailierte Zeitplanung} verwiesen.\\
 \\
 
 \hypertarget{Projektphasen}{}
@@ -185,7 +186,7 @@ Die vollständige Auflistung aller für das Projekt verwendeten Ressourcen finde
 
 \subsection{Entwicklungsprozess}
 \label{sec:entwicklungsprozess}
-Vor dem eigentlichen Projektstart war es entscheidend, einen passenden Entwicklungsprozess auszuwählen, welcher die methodische Herangehensweise für die Projektumsetzung festlegt. Das Wasserfallmodell, das ich für dieses Vorhaben gewählt habe, ist ein geordneter und phasenbasierter Ansatz in der Softwareentwicklung. Dabei folgt jede Phase strikt auf die vorherige, wodurch klare Meilensteine und Abgrenzungen zwischen den einzelnen Entwicklungsschritten entstehen\cite{pressman2014software}. Bei der Entwicklung der Benutzeroberfläche wählte ich jedoch einen agileren Ansatz, um einen kontinuierlichen Austausch mit dem Fachbereich zu gewährleisten und auf deren Feedback zeitnah reagieren zu können.
+Vor dem eigentlichen Projektstart war es entscheidend, einen passenden Entwicklungsprozess auszuwählen, welcher die methodische Herangehensweise für die Projektumsetzung festlegt. Das Wasserfallmodell, das ich für dieses Vorhaben gewählt habe, ist ein geordneter und phasenbasierter Ansatz in der Softwareentwicklung. Dabei folgt jede Phase strikt auf die vorherige, wodurch klare Meilensteine und Abgrenzungen zwischen den einzelnen Entwicklungsschritten entstehen\footnote{\citeauthor{pressman2014software}}. Bei der Entwicklung der Benutzeroberfläche wählte ich jedoch einen agileren Ansatz, um einen kontinuierlichen Austausch mit dem Fachbereich zu gewährleisten und auf deren Feedback zeitnah reagieren zu können.
 
 \section{Analysephase}
 \subsection{Ist-Analyse}
@@ -261,7 +262,7 @@ Um eine grobe Übersicht darüber zu erhalten, wie der Beamte mit der Anwendung 
 Der Hauptakteur, der später mit der Anwendung arbeiten wird, ist der Beamte. Dieser hat die Aufgabe, Daten in die App einzuspeisen und von den bereitgestellten Funktionen zu profitieren. Das Diagramm zeigt die verschiedenen Interaktionen und Aufgaben, die der Streifenbeamte mit der App durchführen kann. Diese Interaktionen definieren die verschiedenen Rollen und Berechtigungen, die innerhalb der Anwendung benötigt werden.
 
 \subsection{Lastenheft}
-Am Ende der Analysephase wurde gemeinsam mit den Projektbeteiligten ein Lastenheft erstellt. In dem Lastenheft sind alle zu berücksichtigenden Anforderungen an die zu implementierende Softwarelösung, sortiert nach ihrer Wichtigkeit, festgehalten. Die Formulierung der Anforderungen erfolgte unter Anwendung der Must, Should, Could, Would (\acrshort{moscow})-Methode. Das bedeutet, dass in jeder Anforderung die Dringlichkeit in den Kategorien „muss“, „soll“, „kann“ und „würde gerne“ dargestellt wird\cite{cockburn2001agile}. Diese Methodik half ebenfalls bei der Priorisierung der Anforderungen. Das komplette Lastenheft kann im Anhang \hyperref[sec:lastenheft]{A.5: Lastenheft} eingesehen werden.
+Am Ende der Analysephase wurde gemeinsam mit den Projektbeteiligten ein Lastenheft erstellt. In dem Lastenheft sind alle zu berücksichtigenden Anforderungen an die zu implementierende Softwarelösung, sortiert nach ihrer Wichtigkeit, festgehalten. Die Formulierung der Anforderungen erfolgte unter Anwendung der Must, Should, Could, Would (\acrshort{moscow})-Methode. Das bedeutet, dass in jeder Anforderung die Dringlichkeit in den Kategorien „muss“, „soll“, „kann“ und „würde gerne“ dargestellt wird\footnote{\citeauthor{cockburn2001agile}}. Diese Methodik half ebenfalls bei der Priorisierung der Anforderungen. Das komplette Lastenheft kann im Anhang \hyperref[sec:lastenheft]{A.5: Lastenheft} eingesehen werden.
 
 \section{Entwurfsphase}
 \subsection{Zielplattform}
@@ -622,7 +623,7 @@ Es bleibt abzuwarten, wie sich die Zusammenarbeit mit dem Kunden weiterentwickel
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.95\textwidth]{bilder/use-case-diagramm.drawio.png}
+\includegraphics[width=0.9\textwidth]{bilder/use-case-diagramm.drawio.png}
 \caption{Use-Case-Diagramm der \glqq Pollution Detection\grqq{}-App}
 \end{figure}
 
@@ -698,7 +699,7 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{}-App für die Kantonspo
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.89\textwidth]{bilder/klassendiagramm.png}
+\includegraphics[width=0.8\textwidth]{bilder/klassendiagramm.png}
 \caption{Auszug des Klassendiagramms}
 \end{figure}
 
