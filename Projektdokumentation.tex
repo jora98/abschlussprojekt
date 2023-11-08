@@ -33,6 +33,8 @@
 \usepackage{listings}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
+\usepackage[super]{natbib}
+
 
 \newacronym{moscow}{MoSCoW}{Must, Should, Could, Would}
 \newacronym{python3}{Python3}{Version 3.10.10 der Python-Programmiersprache}
@@ -150,7 +152,7 @@ Das Hauptziel dieses Projekts war die Entwicklung der \glqq Pollution Detection\
 
 \section{Projektplanung}
 \subsection{Projektphasen}
-Gemäß den Vorgaben der IHK zu Essen war für die Realisierung des Projekts ein Zeitraum von 80 Stunden vorgesehen. Vor Beginn des Projekts wurde eine strukturierte Einteilung in verschiedene Entwicklungsphasen vorgenommen, um alle Aspekte der Softwareentwicklung abzudecken. Eine Übersicht über die geplanten Hauptphasen ist in  \hyperlink{Projektphasen}{Tabelle 1} dargestellt. Für eine ausführlichere Darstellung der geplanten Schritte innerhalb jeder Phase wird auf Anhang \hyperref[sec:detaillierte zeitplanung]{A.1: Detailierte Zeitplanung} verwiesen.\\
+Gemäß den Vorgaben der IHK zu Essen war für die Realisierung des Projekts ein Zeitraum von 80 Stunden vorgesehen\cite{ihk2023essen}. Vor Beginn des Projekts wurde eine strukturierte Einteilung in verschiedene Entwicklungsphasen vorgenommen, um alle Aspekte der Softwareentwicklung abzudecken. Eine Übersicht über die geplanten Hauptphasen ist in  \hyperlink{Projektphasen}{Tabelle 1} dargestellt. Für eine ausführlichere Darstellung der geplanten Schritte innerhalb jeder Phase wird auf Anhang \hyperref[sec:detaillierte zeitplanung]{A.1: Detailierte Zeitplanung} verwiesen.\\
 \\
 
 \hypertarget{Projektphasen}{}
@@ -183,7 +185,7 @@ Die vollständige Auflistung aller für das Projekt verwendeten Ressourcen finde
 
 \subsection{Entwicklungsprozess}
 \label{sec:entwicklungsprozess}
-Vor dem eigentlichen Projektstart war es entscheidend, einen passenden Entwicklungsprozess auszuwählen, welcher die methodische Herangehensweise für die Projektumsetzung festlegt. Das Wasserfallmodell, das ich für dieses Vorhaben gewählt habe, ist ein geordneter und phasenbasierter Ansatz in der Softwareentwicklung. Dabei folgt jede Phase strikt auf die vorherige, wodurch klare Meilensteine und Abgrenzungen zwischen den einzelnen Entwicklungsschritten entstehen. Bei der Entwicklung der Benutzeroberfläche wählte ich jedoch einen agileren Ansatz, um einen kontinuierlichen Austausch mit dem Fachbereich zu gewährleisten und auf deren Feedback zeitnah reagieren zu können.
+Vor dem eigentlichen Projektstart war es entscheidend, einen passenden Entwicklungsprozess auszuwählen, welcher die methodische Herangehensweise für die Projektumsetzung festlegt. Das Wasserfallmodell, das ich für dieses Vorhaben gewählt habe, ist ein geordneter und phasenbasierter Ansatz in der Softwareentwicklung. Dabei folgt jede Phase strikt auf die vorherige, wodurch klare Meilensteine und Abgrenzungen zwischen den einzelnen Entwicklungsschritten entstehen\cite{pressman2014software}. Bei der Entwicklung der Benutzeroberfläche wählte ich jedoch einen agileren Ansatz, um einen kontinuierlichen Austausch mit dem Fachbereich zu gewährleisten und auf deren Feedback zeitnah reagieren zu können.
 
 \section{Analysephase}
 \subsection{Ist-Analyse}
@@ -252,9 +254,6 @@ Amortisationszeit: $\frac{2008 \text{ €}}{39000 \text{ €/Jahr}} \approx 0,05
 Bei einer Nutzung von 3 Tagen die Woche und 10 mal am Tag durch 30 Personen würde sich die App demnach in etwa 18,9 Tagen amortisieren.\\
 Zusammenfassend zeigt sich, dass die Investition in die App bereits nach sehr kurzer Zeit finanziell lohnenswert ist. Eine detaillierte grafische Darstellung der Amortisation finden Sie im Anhang \hyperref[sec:amortisation]{A.3: Amortisation}.
 
-
-
-
 \subsection{Anwendungsfälle}
 \label{sec:anwendungsfälle}
 Um eine grobe Übersicht darüber zu erhalten, wie der Beamte mit der Anwendung arbeiten kann und welche Anwendungsfälle aus Endanwendersicht abgebildet werden müssen, wurde im Laufe der Analyse-Phase ein Use-Case-Diagramm erstellt. Dieses befindet sich unter \hyperref[sec:use-case-diagramm]{A.4: Use-Case-Diagramm}.
@@ -262,7 +261,7 @@ Um eine grobe Übersicht darüber zu erhalten, wie der Beamte mit der Anwendung 
 Der Hauptakteur, der später mit der Anwendung arbeiten wird, ist der Beamte. Dieser hat die Aufgabe, Daten in die App einzuspeisen und von den bereitgestellten Funktionen zu profitieren. Das Diagramm zeigt die verschiedenen Interaktionen und Aufgaben, die der Streifenbeamte mit der App durchführen kann. Diese Interaktionen definieren die verschiedenen Rollen und Berechtigungen, die innerhalb der Anwendung benötigt werden.
 
 \subsection{Lastenheft}
-Am Ende der Analysephase wurde gemeinsam mit den Projektbeteiligten ein Lastenheft erstellt. In dem Lastenheft sind alle zu berücksichtigenden Anforderungen an die zu implementierende Softwarelösung, sortiert nach ihrer Wichtigkeit, festgehalten. Die Formulierung der Anforderungen erfolgte unter Anwendung der Must, Should, Could, Would (\acrshort{moscow})-Methode. Das bedeutet, dass in jeder Anforderung die Dringlichkeit in den Kategorien „muss“, „soll“, „kann“ und „würde gerne“ dargestellt wird. Diese Methodik half ebenfalls bei der Priorisierung der Anforderungen. Das komplette Lastenheft kann im Anhang \hyperref[sec:lastenheft]{A.5: Lastenheft} eingesehen werden.
+Am Ende der Analysephase wurde gemeinsam mit den Projektbeteiligten ein Lastenheft erstellt. In dem Lastenheft sind alle zu berücksichtigenden Anforderungen an die zu implementierende Softwarelösung, sortiert nach ihrer Wichtigkeit, festgehalten. Die Formulierung der Anforderungen erfolgte unter Anwendung der Must, Should, Could, Would (\acrshort{moscow})-Methode. Das bedeutet, dass in jeder Anforderung die Dringlichkeit in den Kategorien „muss“, „soll“, „kann“ und „würde gerne“ dargestellt wird\cite{cockburn2001agile}. Diese Methodik half ebenfalls bei der Priorisierung der Anforderungen. Das komplette Lastenheft kann im Anhang \hyperref[sec:lastenheft]{A.5: Lastenheft} eingesehen werden.
 
 \section{Entwurfsphase}
 \subsection{Zielplattform}
@@ -343,7 +342,7 @@ Im Laufe des Projektes wurden gezielte Maßnahmen ergriffen, um die Qualität de
 \\
 Des Weiteren wurde durch GitHub Actions von Anfang an eine Continuous Integration (\acrshort{ci}) implementiert. Dies gewährleistete eine automatische Überprüfung des Codes nach jedem Push und ermöglichte das rasche Erkennen und Beheben von Fehlern.\\
 \\
-Für die detaillierte Codeüberwachung kam Flake8 zum Einsatz, welches den Python-Code auf Fehler, potenzielle Probleme und die Einhaltung des PEP 8-Stils untersuchte. Ein Screenshot der Analyseergebnisse von Flake8 ist im Anhang \hyperref[sec:codeanalyse]{A.10: Statische Codeanalyse} zu finden.
+Für die detaillierte Codeüberwachung kam Flake8 zum Einsatz, welches den Python-Code auf Fehler, potenzielle Probleme und die Einhaltung des PEP 8-Stils untersuchte.
 
 \subsection{Deployment}
 \label{sec:deployment}
@@ -372,7 +371,7 @@ Im Bereich des Frontends begann der Implementierungsprozess mit der Installation
 \subsection{Implentierung des Datenmodelle und der Datenbank}
 In der Entwicklung der \glqq Pollution Detection\grqq{}-App war es notwendig, die Datenstruktur adäquat im Backend abzubilden. Ein wichtiges Werkzeug, das dabei zum Einsatz kam, war \textit{SQLAlchemy}, ein \acrshort{sql} Toolkit und \gls{orm} System für \acrshort{python3}. Es ermöglicht das Mapping von in \acrshort{python3} definierten Klassen zu Datenbanktabellen und umgekehrt.\\
 \\
-Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter Entitäten. Zum Beispiel wurden für die Klassen \texttt{User}, \texttt{Pollution} und \texttt{PollutionType} \acrshortpl{uuid} mit einer Hexadezimaldarstellung für ihre \acrshortpl{id} verwendet. Das \texttt{\_\_tablename\_\_}-Attribut in \textit{SQLAlchemy} bestimmt den Namen der Tabelle in der Datenbank, und in unserem Fall entspricht der Klassenname dem Tabellennamen. Fremdschlüssel werden durch \texttt{ForeignKey} und die zugehörigen Relationen durch \texttt{relationship} repräsentiert. Primärschlüssel werden durch das \texttt{primary\_key=True} Argument in der Spaltendefinition angegeben. Ein exemplarischer Codeausschnitt hierzu kann im Anhang \hyperref[sec:python-code]{A.12: Listing von Python-Code} eingesehen werden.\\
+Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter Entitäten. Zum Beispiel wurden für die Klassen \texttt{User}, \texttt{Pollution} und \texttt{PollutionType} \acrshortpl{uuid} mit einer Hexadezimaldarstellung für ihre \acrshortpl{id} verwendet. Das \texttt{\_\_tablename\_\_}-Attribut in \textit{SQLAlchemy} bestimmt den Namen der Tabelle in der Datenbank, und in unserem Fall entspricht der Klassenname dem Tabellennamen. Fremdschlüssel werden durch \texttt{ForeignKey} und die zugehörigen Relationen durch \texttt{relationship} repräsentiert. Primärschlüssel werden durch das \texttt{primary\_key=True} Argument in der Spaltendefinition angegeben. Ein exemplarischer Codeausschnitt hierzu kann im Anhang \hyperref[lst:pollution]{A.12.1: Datenmodelle und Services} eingesehen werden.\\
 \\
 Es ist wichtig zu erwähnen, dass sowohl die \texttt{Pollution}-, \texttt{PollutionType}- als auch die \texttt{Geoarea}-Klasse vom Kunden übernommen wurden. Während \texttt{Pollution} und \texttt{Pollu\-tion\-Type}
  eine neuere Implementierung darstellen und daher \acrshortpl{uuid} in Hexadezimalform verwenden, nutzt \texttt{Geoarea} aufgrund ihres Alters Ganzzahlen als \acrshortpl{id}.\\
@@ -384,18 +383,18 @@ Die Geschäftslogik fokussiert sich auf die Abbildung und Verarbeitung der Daten
 \\
 Zur Implementierung der in den Services definierten Methoden und zur Sicherstellung eines effizienten Zugriffs auf die Daten, wurde \textit{SQLAlchemy} als \acrshort{orm} genutzt. Durch die Verwendung von \textit{SQLAlchemy} wird eine klare Trennung zwischen Datenzugriff und Geschäftslogik erreicht. Dies bietet auch die Möglichkeit, bei Bedarf einfach auf andere Datenbank-Implementierungen umzusteigen.\\
 \\
-In den Services wird der direkte Zugriff auf die Datenmodelle und deren Methoden gehandhabt. So wird beispielsweise im \texttt{pollution\_service} eine Schnittstelle zur Datenmanipulation genutzt, welche die \acrshort{crud}-Operationen auf \gls{pollution}-Daten in der Datenbank ermöglicht. Ein zentraler Bestandteil der Logik innerhalb des \texttt{Pollution}-Services besteht darin, die Anzahl der gemeldeten Umweltverschmutzungen zu aktualisieren. Bei der Aktualisierung wird besonders darauf geachtet, dass die Werte korrekt und konsistent sind. Der \texttt{PollutionCount}-Resource verwendet entsprechende Schnittstellen, um die Anzahl der jeweiligen \gls{pollution} zu ändern. Bei einer Anfrage zum Aktualisieren eines \texttt{Pollution}-Eintrags wird zuerst überprüft, ob dieser Eintrag in der Datenbank existiert. Wenn der Eintrag gefunden wird, wird die \texttt{count}-Eigenschaft des \texttt{Pollution}-Objekts mit dem neuen Wert aktualisiert. Sollte während dieses Prozesses ein Fehler auftreten, etwa bei Datenbankkonflikten, wird die Transaktion rückgängig gemacht, um die Integrität der Daten zu gewährleisten. Im Anhang \hyperref[sec:python-code]{A.12: Listing von Python-Code} ist der entsprechende Code der \texttt{PollutionCount}-Klasse zu sehen.\\
+In den Services wird der direkte Zugriff auf die Datenmodelle und deren Methoden gehandhabt. So wird beispielsweise im \texttt{pollution\_service} eine Schnittstelle zur Datenmanipulation genutzt, welche die \acrshort{crud}-Operationen auf \gls{pollution}-Daten in der Datenbank ermöglicht. Ein zentraler Bestandteil der Logik innerhalb des \texttt{Pollution}-Services besteht darin, die Anzahl der gemeldeten Umweltverschmutzungen zu aktualisieren. Bei der Aktualisierung wird besonders darauf geachtet, dass die Werte korrekt und konsistent sind. Der \texttt{PollutionCount}-Resource verwendet entsprechende Schnittstellen, um die Anzahl der jeweiligen \gls{pollution} zu ändern. Bei einer Anfrage zum Aktualisieren eines \texttt{Pollution}-Eintrags wird zuerst überprüft, ob dieser Eintrag in der Datenbank existiert. Wenn der Eintrag gefunden wird, wird die \texttt{count}-Eigenschaft des \texttt{Pollution}-Objekts mit dem neuen Wert aktualisiert. Sollte während dieses Prozesses ein Fehler auftreten, etwa bei Datenbankkonflikten, wird die Transaktion rückgängig gemacht, um die Integrität der Daten zu gewährleisten. Im Anhang \hyperref[lst:pollutionCount]{A.12.1: Datenmodelle und Services} ist der entsprechende Code der \texttt{PollutionCount}-Klasse zu sehen.\\
 \\
 Ein besonderes Augenmerk wurde auf den \texttt{auth\_service} gelegt, welcher nicht nur die Funktionen für Login und Registrierung bietet, sondern auch sicherstellt, dass Benutzerdaten sicher und vertraulich behandelt werden. Dies beinhaltet unter anderem die sichere Speicherung von Passwörtern und die Generierung von Tokens für authentifizierte Sessions.
 
 \subsection{Implementierung und Durchführung der Tests}
 Die Tests in unserer Anwendung können in zwei Hauptkategorien unterteilt werden: Tests für Hilfsfunktionen und Tests für API-Endpunkte. Die Hilfsfunktionen, die im Modul \texttt{test\_utils} getestet werden, überprüfen primär, ob E-Mail-Adressen als gültig erkannt werden und ob Passwörter korrekt gehasht und überprüft werden können.\\
 \\
-Für die Tests der Hilfsfunktionen gibt es ergänzende Codeausschnitte im Anhang \hyperref[sec:unittest]{A.13: Listing von unittest}.\\
+Für die Tests der Hilfsfunktionen gibt es ergänzende Codeausschnitte im Anhang \hyperref[lst:utilstest]{A.12.2: Listing von unittest}.\\
 \\
 Im Modul \texttt{test\_endpoints} konzentrieren sich die Tests auf verschiedene API-Endpunkte. Bevor jeder Test durchgeführt wird, bereitet die Methode \texttt{setUp} die Testumgebung vor. Hier wird die Datenbank initialisiert und Testdaten werden eingefügt. Nachdem ein Test abgeschlossen ist, sorgt die Methode \texttt{tearDown} dafür, dass alle Änderungen rückgängig gemacht werden, sodass die Datenbank in ihren ursprünglichen Zustand zurückversetzt wird. Dies stellt sicher, dass Tests unter den gleichen Voraussetzungen durchgeführt werden und sich nicht gegenseitig beeinflussen.\\
 \\
-Zu den Integrationstests gibt es ergänzende Codeausschnitte im Anhang \hyperref[sec:unittest]{A.13: Listing von unittest}, die Einblicke in die Implementierung bieten.
+Zu den Integrationstests gibt es ergänzende Codeausschnitte im Anhang \hyperref[lst:integrationtest]{A.12.2: Listing von unittest}, die Einblicke in die Implementierung bieten.
 
 
 \subsection{Implementierung der Oberfläche}
@@ -415,9 +414,7 @@ Die Implementierung folgt allgemeinen Richtlinien der Software-Ergonomie, um ein
 \subsection{Testen der Anwendung}
 Nach der Backend-Entwicklung und der Implementierung des Frontends wurde die Benutzeroberfläche in der Testumgebung getestet. Hierbei lag der Fokus darauf, die Interaktion des Benutzers mit der Anwendung zu simulieren. \\
 \\
-Während der Oberflächentests wurden verschiedene Benutzeraktionen durchgeführt, um mögliche Fehler zu erkennen und zu korrigieren. Das Hauptziel dieser Tests war es sicherzustellen, dass die Anwendung stabil läuft und der Endbenutzer problemlos damit interagieren kann.\\
-\\
-Ein Beispiel für einen durchgeführten Oberflächentest ist im Anhang A.23: Oberflächentest auf Seite xxiii zu finden.
+Während der Oberflächentests wurden verschiedene Benutzeraktionen durchgeführt, um mögliche Fehler zu erkennen und zu korrigieren. Das Hauptziel dieser Tests war es sicherzustellen, dass die Anwendung stabil läuft und der Endbenutzer problemlos damit interagieren kann.
 
 \section{Abnahme und Deploymentphase}
 \subsection{Code-Review}
@@ -439,9 +436,9 @@ Die Dokumentation dieses Projekts teilt sich in drei Hauptteile: die Projektdoku
 \\
 Die Projektdokumentation beschreibt den gesamten Prozess der Projektumsetzung, von der Planung bis zum Deployment. Sie dient als Überblick und Nachschlagewerk für alle Phasen und Entscheidungen, die während der Entwicklung getroffen wurden.\\
 \\
-Das Benutzerhandbuch bietet Endanwendern einen leichten Einstieg in die Anwendung. Es erläutert die Grundfunktionen der Software, zeigt, wie man sich darin navigiert, und gibt detaillierte Anweisungen zur Verwendung der verschiedenen Funktionen, illustriert durch Screenshots. Ein Ausschnitt des Benutzerhandbuchs ist im Anhang \hyperref[sec:benutzerdokumentation]{A.14: Benutzerdokumentation (Auszug)} zu finden.\\
+Das Benutzerhandbuch bietet Endanwendern einen leichten Einstieg in die Anwendung. Es erläutert die Grundfunktionen der Software, zeigt, wie man sich darin navigiert, und gibt detaillierte Anweisungen zur Verwendung der verschiedenen Funktionen, illustriert durch Screenshots. Ein Ausschnitt des Benutzerhandbuchs ist im Anhang \hyperref[sec:benutzerdokumentation]{A.13: Benutzerdokumentation (Auszug)} zu finden.\\
 \\
-Die Entwicklerdokumentation bietet eine detaillierte Beschreibung der Softwarekomponenten. Sie enthält Erläuterungen zu den Klassen, ihren Attributen und Methoden sowie deren Zusammenhängen. Die Dokumentation wurde während des Entwicklungsprozesses kontinuierlich mit Hilfe von \texttt{pydoc}, einem spezialisierten Dokumentationswerkzeug für Python, erstellt. Die so verfasste Dokumentation soll als umfassender Leitfaden für zukünftige Entwicklungs- oder Anpassungsarbeiten dienen. Ein Ausschnitt der Entwicklerdokumentation ist im Anhang \hyperref[sec:entwicklerdokumentation]{A.15: Entwicklerdokumentation (Auszug)} zu finden.
+Die Entwicklerdokumentation bietet eine detaillierte Beschreibung der Softwarekomponenten. Sie enthält Erläuterungen zu den Klassen, ihren Attributen und Methoden sowie deren Zusammenhängen. Die Dokumentation wurde während des Entwicklungsprozesses kontinuierlich mit Hilfe von \texttt{pydoc}, einem spezialisierten Dokumentationswerkzeug für Python, erstellt. Die so verfasste Dokumentation soll als umfassender Leitfaden für zukünftige Entwicklungs- oder Anpassungsarbeiten dienen. Ein Ausschnitt der Entwicklerdokumentation ist im Anhang \hyperref[sec:entwicklerdokumentation]{A.14: Entwicklerdokumentation (Auszug)} zu finden.
 
 \section{Fazit}
 \subsection{Soll- / Ist-Vergleich}
@@ -470,6 +467,9 @@ Es bleibt abzuwarten, wie sich die Zusammenarbeit mit dem Kunden weiterentwickel
 \clearpage
 \section*{Literaturverzeichnis}
 \addcontentsline{toc}{section}{Literaturverzeichnis}
+
+\bibliographystyle{unsrtnat}
+\bibliography{meine-quellen.bib}
 
 \clearpage
 \pagenumbering{roman}
@@ -700,16 +700,6 @@ Für die Entwicklung der \glqq Pollution Detection\grqq{}-App für die Kantonspo
 \centering
 \includegraphics[width=0.89\textwidth]{bilder/klassendiagramm.png}
 \caption{Auszug des Klassendiagramms}
-\end{figure}
-
-\clearpage
-\subsection{Statische Codeanalyse}
-\label{sec:codeanalyse}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.96\textwidth]{bilder/flake8.png}
-\caption{Statische Code-Analyse mit flake8}
 \end{figure}
 
 \clearpage
