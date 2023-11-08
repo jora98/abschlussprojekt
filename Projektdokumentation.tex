@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm, headsep=1.5cm]{geometry}
 \usepackage[table]{xcolor}
 \usepackage{tabularx}
 \usepackage{enumitem}
@@ -21,6 +21,7 @@
 \definecolor{darkblue}{RGB}{0,0,139}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{graugruen}{RGB}{88,88,90}
+\definecolor{lightgray}{gray}{0.9}
 \usepackage[colorlinks=true,
             linkcolor=softblue, % Farbe für interne Links
             urlcolor=softblue, % Farbe für externe URLs
@@ -30,11 +31,8 @@
 \usepackage{cleveref}
 \usepackage[nonumberlist, acronym]{glossaries}
 \usepackage{listings}
-
-\definecolor{lightgray}{gray}{0.9}
-
-\title{Projektdokumentation: Pollution Detection - Mobile App Entwicklung}
-\author{Jona Rams}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
 
 \newacronym{moscow}{MoSCoW}{Must, Should, Could, Would}
 \newacronym{python3}{Python3}{Version 3.10.10 der Python-Programmiersprache}
@@ -68,10 +66,51 @@
 
 \makeglossaries % Erzeugt das Abkürzungsverzeichnis
 
-\begin{document}
-\pagenumbering{roman} % Wechselt zu römischen Ziffern
-\maketitle
+\pagestyle{fancy}
+\fancyhead[L]{ Pollution Detection\\Mobile App Entwicklung} % Name des Hauptthemas auf der linken Seite
+\fancyhead[R]{\includegraphics[width=2.5cm]{bilder/LogObject-icon.png}} % Firmenlogo auf der rechten Seite
+\renewcommand{\headrulewidth}{0.4pt} % Stärke der Linie unter der Kopfzeile
+\renewcommand{\footrulewidth}{0pt} % Keine Linie über der Fußzeile
 
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \par\vspace{1cm}
+    {\large Abschlussprüfung Winter 2023/24 \par}
+    \vspace{0.5cm}
+    {\Large Fachinformatiker für Anwendungsentwicklung\par}
+    \vspace{0.5cm}
+    {\LARGE Dokumentation zur betrieblichen Projektarbeit\par}
+    \vspace{2cm}
+    {\huge\bfseries Pollution Detection \par}
+    \vspace{0.5cm}
+    {\Large Entwicklung einer Mobile App zur Erfassung von Verschmutzungen in spezifischen geografischen Gebieten \par}
+     \vspace{1cm}
+    Abgabetermin: \par
+    Oberhausen, den 19.11.2023
+
+    \vspace{1.5cm}
+
+    {\bfseries Prüfungsbewerber: \par}
+    Jona Rams \par
+    Walsumermarkstraße 72 \par
+    46147 Oberhausen
+
+    \vspace{0.5cm}
+    \includegraphics[width=0.5\textwidth]{bilder/LogObject\_Deutschland.jpg} % Ersetzen Sie dies mit dem Pfad zu Ihrem LogObject-Logo
+
+     \vspace{0.5cm}
+
+   {\bfseries Ausbildungsbetrieb: \par}
+    LogObject Deutschland GmbH \par
+    Centroallee 263A \par
+    46047 Oberhausen
+
+\end{titlepage}
+\pagenumbering{roman} % Wechselt zu römischen Ziffern
+
+\clearpage
 \tableofcontents % Inhaltsverzeichnis
 
 \clearpage
@@ -97,7 +136,7 @@
 \clearpage
 \pagenumbering{arabic}
 \section{Einleitung}
-In dieser Projektdokumentation wird der Ablauf des Projekts zur Entwicklung einer mobilen App für die Kantonspolizei Zürich erläutert. Dieses Projekt wurde von Jona Rams im Rahmen seines Abschlussprojekts für den Fachinformatiker mit der Fachrichtung Anwendungsentwicklung im Auftrag der Kantonspolizei Zürich durchgeführt. Die LogObject AG erhielt den Auftrag zur Entwicklung einer mobilen Anwendung, die es den Polizeibeamten der Kantonspolizei Zürich ermöglichen soll, Verschmutzungen(\glspl{pollution}) während ihrer Streifenarbeit einfach zu erfassen und zu zählen. Die erfassten Daten werden digital in eine Datenbank geladen, um eine effiziente Erfassung und Auswertung zu gewährleisten.
+In dieser Projektdokumentation wird der Ablauf des Projekts zur Entwicklung einer mobilen App für die Kantonspolizei Zürich erläutert. Dieses Projekt wurde von Jona Rams im Rahmen seines Abschlussprojekts für den Fachinformatiker mit der Fachrichtung Anwendungsentwicklung im Auftrag der Kantonspolizei Zürich durchgeführt. Die LogObject Deutschland GmbH erhielt den Auftrag zur Entwicklung einer mobilen Anwendung, die es den Polizeibeamten der Kantonspolizei Zürich ermöglichen soll, Verschmutzungen(\glspl{pollution}) während ihrer Streifenarbeit einfach zu erfassen und zu zählen. Die erfassten Daten werden digital in eine Datenbank geladen, um eine effiziente Erfassung und Auswertung zu gewährleisten.
 
 \subsection{Projektbeschreibung}
 \label{sec:projektbeschreibung}
@@ -511,11 +550,14 @@ Es bleibt abzuwarten, wie sich die Zusammenarbeit mit dem Kunden weiterentwickel
 
 \noindent\textbf{Software}
 \begin{itemize}
+\item Docker Desktop – Container Software
 \item Git – Verteilte Versionsverwaltung
 \item Gradle – Build-Management-Automatisierungstool
+\item Lucidchart – UML Diagramm Software
 \item MiKTeX – Distribution des Textsatzsystems \TeX
 \item PGAdmin4 – Verwaltungstool für PostgreSQL-Datenbanken
 \item PostgreSQL – Relationales Datenbanksystem
+\item Postman – Software zum Testen von APIs
 \item Visual Studio Code (VSCode) – Quellcode-Editor
 \item Windows 11 Pro – Betriebssystem
 \end{itemize}

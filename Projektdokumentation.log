@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.21)  7 NOV 2023 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.21)  8 NOV 2023 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1277,18 +1277,33 @@ fg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.s
+ty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip84
+\f@nch@O@elh=\skip85
+\f@nch@O@erh=\skip86
+\f@nch@O@olh=\skip87
+\f@nch@O@orh=\skip88
+\f@nch@O@elf=\skip89
+\f@nch@O@erf=\skip90
+\f@nch@O@olf=\skip91
+\f@nch@O@orf=\skip92
+)
 \glswrite=\write4
 \glo@main@file=\write5
 \openout5 = `Projektdokumentation.glo'.
 
 Package glossaries Info: Writing glossary file Projektdokumentation.glo on inpu
-t line 69.
+t line 67.
 \glo@acronym@file=\write6
 \openout6 = `Projektdokumentation.acn'.
 
 Package glossaries Info: Writing glossary file Projektdokumentation.acn on inpu
-t line 69.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 71
+t line 67.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 76
 .
  (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1296,24 +1311,24 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (Projektdokumentation.aux)
 \openout1 = `Projektdokumentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1331,9 +1346,9 @@ LaTeX Font Info:    ... okay on input line 71.
 * \textheight=702.78308pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
+* \topmargin=-55.81723pt
 * \headheight=12.0pt
-* \headsep=25.0pt
+* \headsep=42.67912pt
 * \topskip=12.0pt
 * \footskip=30.0pt
 * \marginparwidth=35.0pt
@@ -1379,52 +1394,20 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 71.
+ on input line 76.
 
-Package hyperref Info: Link coloring ON on input line 71.
+Package hyperref Info: Link coloring ON on input line 76.
 (Projektdokumentation.out) (Projektdokumentation.out)
 \@outlinefile=\write7
 \openout7 = `Projektdokumentation.out'.
 
 \c@lstlisting=\count398
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-4.
-
-(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-4.
-
-(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-74.
-
-(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-74.
-
-(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 74.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 74.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 74.
-
-(Projektdokumentation.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 8.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 8.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 8.
+<bilder/LogObject_Deutschland.jpg, id=242, 357.58594pt x 197.23688pt>
+File: bilder/LogObject_Deutschland.jpg Graphic file (type jpg)
+<use bilder/LogObject_Deutschland.jpg>
+Package pdftex.def Info: bilder/LogObject_Deutschland.jpg  used on input line 1
+01.
+(pdftex.def)             Requested size: 227.62206pt x 125.55098pt.
  [1
 Non-PDF special ignored!
 <special> header=pstricks.pro
@@ -1448,7 +1431,55 @@ Non-PDF special ignored!
 \openout4 = `Projektdokumentation.ist'.
 
 {C:/Users/Jona.Rams/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
-Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
+Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./bilder
+/LogObject_Deutschland.jpg>] (Projektdokumentation.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+.
+
+(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+.
+
+(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+8.
+
+(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+8.
+
+(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 8.
+<bilder/LogObject-icon.png, id=288, 67.92041pt x 35.46584pt>
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 40.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[1
+
+ <./bilder/LogObject-icon.png>]
 Overfull \hbox (3.98273pt too wide) detected at line 61
  [][][]\T1/lmr/m/n/12 xviii[][]
  []
@@ -1457,7 +1488,20 @@ Overfull \hbox (3.98273pt too wide) detected at line 61
 \tf@toc=\write8
 \openout8 = `Projektdokumentation.toc'.
 
- [2] (Projektdokumentation.lof
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 116.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[2] (Projektdokumentation.lof
 Overfull \hbox (3.98273pt too wide) detected at line 9
  [][][]\T1/lmr/m/n/12 xviii[][]
  []
@@ -1474,396 +1518,780 @@ Overfull \hbox (3.98273pt too wide) detected at line 9
 \tf@lol=\write11
 \openout11 = `Projektdokumentation.lol'.
 
- [3
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 127.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[3
+
+] (Projektdokumentation.acr)
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 131.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[4
+
+] (Projektdokumentation.gls)
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 136.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[5
 
 ]
-(Projektdokumentation.acr) [4
-
-] (Projektdokumentation.gls) [5
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 114--116
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--116
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
 
  []
 
-[1
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 155.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
 
-] [2]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.155 
+       [1
+
+]
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 194.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[2]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-60.
-
-(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+99.
+ (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (39.2362pt too wide) in paragraph at lines 167--182
+Overfull \hbox (39.2362pt too wide) in paragraph at lines 206--221
  [][] 
  []
 
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 227.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
 [3{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.e
-nc}] [4{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
-rm.enc}{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
-mathsy.enc}{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
-/lm-mathit.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 230--237
+nc}]
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 264.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[4{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-maths
+y.enc}{C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
+athit.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 269--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--237
+Underfull \hbox (badness 10000) in paragraph at lines 269--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--237
+Underfull \hbox (badness 10000) in paragraph at lines 269--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--249
+Underfull \hbox (badness 10000) in paragraph at lines 279--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--249
+Underfull \hbox (badness 10000) in paragraph at lines 279--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--249
+Underfull \hbox (badness 10000) in paragraph at lines 279--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--249
+Underfull \hbox (badness 10000) in paragraph at lines 279--288
 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 288.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 251--259
+Underfull \hbox (badness 10000) in paragraph at lines 290--298
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--259
+Underfull \hbox (badness 10000) in paragraph at lines 290--298
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--259
+Underfull \hbox (badness 10000) in paragraph at lines 290--298
 
  []
 
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 298.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--265
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
- []
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [6]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-65.
- (C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+Underfull \hbox (badness 10000) in paragraph at lines 300--304
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+04.
+(C:\Users\Jona.Rams\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 294--297
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 331.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
 
- []
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 303--308
+Underfull \hbox (badness 10000) in paragraph at lines 333--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--308
+Underfull \hbox (badness 10000) in paragraph at lines 342--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--321
+Underfull \hbox (badness 10000) in paragraph at lines 342--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--321
+Underfull \hbox (badness 10000) in paragraph at lines 350--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--321
+Underfull \hbox (badness 10000) in paragraph at lines 350--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--321
+Underfull \hbox (badness 10000) in paragraph at lines 350--360
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--360
+
+ []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 360.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 327--332
+Underfull \hbox (badness 10000) in paragraph at lines 366--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--332
+Underfull \hbox (badness 10000) in paragraph at lines 366--371
 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 371.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
+Underfull \hbox (badness 10000) in paragraph at lines 373--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
+Underfull \hbox (badness 10000) in paragraph at lines 373--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
+Underfull \hbox (badness 10000) in paragraph at lines 373--381
 
  []
 
 
-Overfull \hbox (2.88504pt too wide) in paragraph at lines 344--351
+Overfull \hbox (2.88504pt too wide) in paragraph at lines 383--390
 \T1/lmtt/m/n/12 service \T1/lmr/m/n/12 zur Ab-fra-ge der ver-schie-de-nen Ver-s
 chmut-zungs-ar-ten und der \T1/lmtt/m/n/12 pollution_service
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--351
+Underfull \hbox (badness 10000) in paragraph at lines 383--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--351
+Underfull \hbox (badness 10000) in paragraph at lines 383--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--351
+Underfull \hbox (badness 10000) in paragraph at lines 383--390
 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 390.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 353--360
+Underfull \hbox (badness 10000) in paragraph at lines 392--399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--360
+Underfull \hbox (badness 10000) in paragraph at lines 392--399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--360
+Underfull \hbox (badness 10000) in paragraph at lines 392--399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--366
+Underfull \hbox (badness 10000) in paragraph at lines 402--405
 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 405.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 370--375
+Underfull \hbox (badness 10000) in paragraph at lines 409--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--375
+Underfull \hbox (badness 10000) in paragraph at lines 409--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--382
+Underfull \hbox (badness 10000) in paragraph at lines 416--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--382
+Underfull \hbox (badness 10000) in paragraph at lines 416--421
 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 425.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 389--396
+Underfull \hbox (badness 10000) in paragraph at lines 428--435
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--396
+Underfull \hbox (badness 10000) in paragraph at lines 428--435
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--396
+Underfull \hbox (badness 10000) in paragraph at lines 428--435
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--406
+Underfull \hbox (badness 10000) in paragraph at lines 438--445
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--406
+Underfull \hbox (badness 10000) in paragraph at lines 438--445
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--406
+Underfull \hbox (badness 10000) in paragraph at lines 438--445
 
  []
 
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 445.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--414
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 409--414
-
- []
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 416--425
+Underfull \hbox (badness 10000) in paragraph at lines 448--453
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--425
+Underfull \hbox (badness 10000) in paragraph at lines 448--453
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--425
+Underfull \hbox (badness 10000) in paragraph at lines 455--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--425
+Underfull \hbox (badness 10000) in paragraph at lines 455--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--430
+Underfull \hbox (badness 10000) in paragraph at lines 455--464
 
  []
 
-[14] [15] [16
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--464
+
+ []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 464.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 466--469
+
+ []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 470.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[15]
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 474.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[16
 
 ]
-Overfull \hbox (43.47794pt too wide) in paragraph at lines 443--502
+Overfull \hbox (43.47794pt too wide) in paragraph at lines 482--541
 [] 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 542.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.503 \clearpage
+l.542 \clearpage
                  [1
 
 ]
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 572.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.530 \clearpage
+l.572 \clearpage
                  [2
 
 ]
-Overfull \hbox (9.54866pt too wide) in paragraph at lines 572--573
+Overfull \hbox (9.54866pt too wide) in paragraph at lines 614--615
 [][] 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 619.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.577 \clearpage
+l.619 \clearpage
                  [3
 
 ]
-<bilder/use-case-diagramm.drawio.png, id=537, 451.6875pt x 540.5796pt>
+<bilder/use-case-diagramm.drawio.png, id=543, 451.6875pt x 540.5796pt>
 File: bilder/use-case-diagramm.drawio.png Graphic file (type png)
 <use bilder/use-case-diagramm.drawio.png>
 Package pdftex.def Info: bilder/use-case-diagramm.drawio.png  used on input lin
-e 583.
+e 625.
 (pdftex.def)             Requested size: 432.48051pt x 517.6225pt.
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 629.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.587 \clearpage
+l.629 \clearpage
                  [4
 
  <./bilder/use-case-diagramm.drawio.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 665.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.v}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.623 \clearpage
+l.665 \clearpage
                  [5
 
 ]
-<bilder/Komponentendiagramm2.png, id=551, 361.35pt x 442.7742pt>
+<bilder/Komponentendiagramm2.png, id=556, 361.35pt x 442.7742pt>
 File: bilder/Komponentendiagramm2.png Graphic file (type png)
 <use bilder/Komponentendiagramm2.png>
-Package pdftex.def Info: bilder/Komponentendiagramm2.png  used on input line 62
-9.
+Package pdftex.def Info: bilder/Komponentendiagramm2.png  used on input line 67
+1.
 (pdftex.def)             Requested size: 409.71692pt x 502.04509pt.
- [6
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 675.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[6
 
  <./bilder/Komponentendiagramm2.png>]
-<bilder/prototyp1.png, id=557, 133.83333pt x 292.76042pt>
+<bilder/prototyp1.png, id=562, 133.83333pt x 292.76042pt>
 File: bilder/prototyp1.png Graphic file (type png)
 <use bilder/prototyp1.png>
-Package pdftex.def Info: bilder/prototyp1.png  used on input line 639.
+Package pdftex.def Info: bilder/prototyp1.png  used on input line 681.
 (pdftex.def)             Requested size: 227.62206pt x 497.94073pt.
- [7
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 685.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[7
 
  <./bilder/prototyp1.png>]
-<bilder/Entity-Relationship-Diagram4.png, id=564, 469.755pt x 578.16pt>
+<bilder/Entity-Relationship-Diagram4.png, id=569, 469.755pt x 578.16pt>
 File: bilder/Entity-Relationship-Diagram4.png Graphic file (type png)
 <use bilder/Entity-Relationship-Diagram4.png>
 Package pdftex.def Info: bilder/Entity-Relationship-Diagram4.png  used on input
- line 649.
+ line 691.
 (pdftex.def)             Requested size: 409.71692pt x 504.2655pt.
- [8
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 695.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[8
 
  <./bilder/Entity-Relationship-Diagram4.png>]
-<bilder/klassendiagramm.png, id=570, 632.3625pt x 813.0375pt>
+<bilder/klassendiagramm.png, id=575, 632.3625pt x 813.0375pt>
 File: bilder/klassendiagramm.png Graphic file (type png)
 <use bilder/klassendiagramm.png>
-Package pdftex.def Info: bilder/klassendiagramm.png  used on input line 659.
+Package pdftex.def Info: bilder/klassendiagramm.png  used on input line 701.
 (pdftex.def)             Requested size: 405.16698pt x 520.93771pt.
- [9
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 705.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[9
 
  <./bilder/klassendiagramm.png>]
-<bilder/flake8.png, id=576, 808.52063pt x 268.75406pt>
+<bilder/flake8.png, id=582, 808.52063pt x 268.75406pt>
 File: bilder/flake8.png Graphic file (type png)
 <use bilder/flake8.png>
-Package pdftex.def Info: bilder/flake8.png  used on input line 669.
+Package pdftex.def Info: bilder/flake8.png  used on input line 711.
 (pdftex.def)             Requested size: 437.0374pt x 145.27266pt.
- [10
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 715.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[10
 
  <./bilder/flake8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 677--681
+Underfull \hbox (badness 10000) in paragraph at lines 719--723
 
  []
+
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 756.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [11
 
@@ -1873,64 +2301,169 @@ ty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 738.
- [12
+nput line 780.
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 816.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
 
-] [13
 
-] [14]
-<bilder/select_geoarea.png, id=720, 295.1025pt x 256.70906pt>
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[12
+
+]
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 890.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[13
+
+]
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 927.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[14]
+<bilder/select_geoarea.png, id=725, 295.1025pt x 256.70906pt>
 File: bilder/select_geoarea.png Graphic file (type png)
 <use bilder/select_geoarea.png>
-Package pdftex.def Info: bilder/select_geoarea.png  used on input line 892.
+Package pdftex.def Info: bilder/select_geoarea.png  used on input line 934.
 (pdftex.def)             Requested size: 182.09486pt x 158.40588pt.
-<bilder/pollutions1.png, id=723, 295.1025pt x 637.63219pt>
+<bilder/pollutions1.png, id=728, 295.1025pt x 637.63219pt>
 File: bilder/pollutions1.png Graphic file (type png)
 <use bilder/pollutions1.png>
-Package pdftex.def Info: bilder/pollutions1.png  used on input line 899.
+Package pdftex.def Info: bilder/pollutions1.png  used on input line 941.
 (pdftex.def)             Requested size: 166.1666pt x 359.04668pt.
- [15
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 948.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[15
 
  <./bilder/select_geoarea.png> <./bilder/pollutions1.png>]
-Overfull \hbox (2.34622pt too wide) in paragraph at lines 906--907
+Overfull \hbox (2.34622pt too wide) in paragraph at lines 948--949
 []\T1/lmr/bx/n/12 Beschreibung be-ar-bei-ten: \T1/lmr/m/n/12 Um die Be-schrei-b
 ung ei-ner [][][]Pol-lu-ti-on[][] zu än-dern, klicken
  []
 
-<bilder/add_pollution.png, id=739, 309.40594pt x 217.5628pt>
+<bilder/add_pollution.png, id=745, 309.40594pt x 217.5628pt>
 File: bilder/add_pollution.png Graphic file (type png)
 <use bilder/add_pollution.png>
-Package pdftex.def Info: bilder/add_pollution.png  used on input line 914.
+Package pdftex.def Info: bilder/add_pollution.png  used on input line 956.
 (pdftex.def)             Requested size: 227.62206pt x 160.0611pt.
-<bilder/add_pollution_type.png, id=750, 310.15875pt x 89.58469pt>
+<bilder/add_pollution_type.png, id=756, 310.15875pt x 89.58469pt>
 File: bilder/add_pollution_type.png Graphic file (type png)
 <use bilder/add_pollution_type.png>
-Package pdftex.def Info: bilder/add_pollution_type.png  used on input line 928.
+Package pdftex.def Info: bilder/add_pollution_type.png  used on input line 970.
 
 (pdftex.def)             Requested size: 227.62206pt x 65.74484pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[16 <./bilder/add_pollution.png>] [17 <./bilder/add_pollution_type.png>]
-<bilder/entwicklerdokumentation.png, id=778, 1114.91531pt x 925.20656pt>
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 974.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[16 <./bilder/add_pollution.png>]
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 980.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[17 <./bilder/add_pollution_type.png>]
+<bilder/entwicklerdokumentation.png, id=783, 1114.91531pt x 925.20656pt>
 File: bilder/entwicklerdokumentation.png Graphic file (type png)
 <use bilder/entwicklerdokumentation.png>
 Package pdftex.def Info: bilder/entwicklerdokumentation.png  used on input line
- 944.
+ 986.
 (pdftex.def)             Requested size: 455.24411pt x 377.7701pt.
-<bilder/databasedoku.png, id=779, 551.81157pt x 520.94624pt>
+<bilder/databasedoku.png, id=784, 551.81157pt x 520.94624pt>
 File: bilder/databasedoku.png Graphic file (type png)
 <use bilder/databasedoku.png>
-Package pdftex.def Info: bilder/databasedoku.png  used on input line 950.
+Package pdftex.def Info: bilder/databasedoku.png  used on input line 992.
 (pdftex.def)             Requested size: 455.24411pt x 429.80185pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 996.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
 [18
 
- <./bilder/entwicklerdokumentation.png>] [19 <./bilder/databasedoku.png>]
-(Projektdokumentation.aux)
+ <./bilder/entwicklerdokumentation.png>]
+File: bilder/LogObject-icon.png Graphic file (type png)
+<use bilder/LogObject-icon.png>
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 996.
+(pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 41.49608pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.49608pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
+
+[19 <./bilder/databasedoku.png>] (Projektdokumentation.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -1939,11 +2472,11 @@ Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
 (rerunfilecheck)             Checksum: B41FB495118A474408FAF6B3CC8ED304;9099.
  ) 
 Here is how much of TeX's memory you used:
- 46886 strings out of 475503
- 1031930 string characters out of 5759946
- 2331248 words of memory out of 5000000
- 67143 multiletter control sequences out of 15000+600000
- 617399 words of font info for 74 fonts, out of 8000000 for 9000
+ 47067 strings out of 475503
+ 1034838 string characters out of 5759946
+ 2333248 words of memory out of 5000000
+ 67325 multiletter control sequences out of 15000+600000
+ 612598 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,19n,121p,2362b,2187s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx1
@@ -1956,9 +2489,9 @@ ublic/lm/lmr17.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/type
 pe1/public/lm/lmri12.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/font
 s/type1/public/lm/lmsy10.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/lm/lmtt12.pfb>
-Output written on Projektdokumentation.pdf (40 pages, 955020 bytes).
+Output written on Projektdokumentation.pdf (41 pages, 990916 bytes).
 PDF statistics:
- 901 PDF objects out of 1000 (max. 8388607)
+ 906 PDF objects out of 1000 (max. 8388607)
  250 named destinations out of 1000 (max. 500000)
- 553 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 563 words of extra memory for PDF output out of 10000 (max. 10000000)
 
