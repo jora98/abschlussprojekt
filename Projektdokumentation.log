@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.21)  8 NOV 2023 16:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.21)  13 NOV 2023 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1940,7 +1940,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 416--419
 
 File: bilder/LogObject-icon.png Graphic file (type png)
 <use bilder/LogObject-icon.png>
-Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 423.
+Package pdftex.def Info: bilder/LogObject-icon.png  used on input line 419.
 (pdftex.def)             Requested size: 71.13188pt x 37.14604pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2156,7 +2156,7 @@ l.620 \clearpage
                  [3
 
 ]
-<bilder/use-case-diagramm.drawio.png, id=554, 451.6875pt x 540.5796pt>
+<bilder/use-case-diagramm.drawio.png, id=550, 451.6875pt x 540.5796pt>
 File: bilder/use-case-diagramm.drawio.png Graphic file (type png)
 <use bilder/use-case-diagramm.drawio.png>
 Package pdftex.def Info: bilder/use-case-diagramm.drawio.png  used on input lin
@@ -2209,7 +2209,7 @@ l.666 \clearpage
                  [5
 
 ]
-<bilder/Komponentendiagramm2.png, id=567, 361.35pt x 442.7742pt>
+<bilder/Komponentendiagramm2.png, id=563, 361.35pt x 442.7742pt>
 File: bilder/Komponentendiagramm2.png Graphic file (type png)
 <use bilder/Komponentendiagramm2.png>
 Package pdftex.def Info: bilder/Komponentendiagramm2.png  used on input line 67
@@ -2231,7 +2231,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6
 
  <./bilder/Komponentendiagramm2.png>]
-<bilder/prototyp1.png, id=573, 133.83333pt x 292.76042pt>
+<bilder/prototyp1.png, id=569, 133.83333pt x 292.76042pt>
 File: bilder/prototyp1.png Graphic file (type png)
 <use bilder/prototyp1.png>
 Package pdftex.def Info: bilder/prototyp1.png  used on input line 682.
@@ -2252,7 +2252,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [7
 
  <./bilder/prototyp1.png>]
-<bilder/Entity-Relationship-Diagram4.png, id=580, 469.755pt x 578.16pt>
+<bilder/Entity-Relationship-Diagram4.png, id=576, 469.755pt x 578.16pt>
 File: bilder/Entity-Relationship-Diagram4.png Graphic file (type png)
 <use bilder/Entity-Relationship-Diagram4.png>
 Package pdftex.def Info: bilder/Entity-Relationship-Diagram4.png  used on input
@@ -2274,7 +2274,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
  <./bilder/Entity-Relationship-Diagram4.png>]
-<bilder/klassendiagramm.png, id=586, 632.3625pt x 813.0375pt>
+<bilder/klassendiagramm.png, id=582, 632.3625pt x 813.0375pt>
 File: bilder/klassendiagramm.png Graphic file (type png)
 <use bilder/klassendiagramm.png>
 Package pdftex.def Info: bilder/klassendiagramm.png  used on input line 702.
@@ -2366,12 +2366,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [13]
-<bilder/select_geoarea.png, id=729, 295.1025pt x 256.70906pt>
+<bilder/select_geoarea.png, id=725, 295.1025pt x 256.70906pt>
 File: bilder/select_geoarea.png Graphic file (type png)
 <use bilder/select_geoarea.png>
 Package pdftex.def Info: bilder/select_geoarea.png  used on input line 925.
 (pdftex.def)             Requested size: 182.09486pt x 158.40588pt.
-<bilder/pollutions1.png, id=732, 295.1025pt x 637.63219pt>
+<bilder/pollutions1.png, id=728, 295.1025pt x 637.63219pt>
 File: bilder/pollutions1.png Graphic file (type png)
 <use bilder/pollutions1.png>
 Package pdftex.def Info: bilder/pollutions1.png  used on input line 932.
@@ -2397,12 +2397,12 @@ Overfull \hbox (2.34622pt too wide) in paragraph at lines 939--940
 ung ei-ner [][][]Pol-lu-ti-on[][] zu än-dern, klicken
  []
 
-<bilder/add_pollution.png, id=748, 309.40594pt x 217.5628pt>
+<bilder/add_pollution.png, id=744, 309.40594pt x 217.5628pt>
 File: bilder/add_pollution.png Graphic file (type png)
 <use bilder/add_pollution.png>
 Package pdftex.def Info: bilder/add_pollution.png  used on input line 947.
 (pdftex.def)             Requested size: 227.62206pt x 160.0611pt.
-<bilder/add_pollution_type.png, id=759, 310.15875pt x 89.58469pt>
+<bilder/add_pollution_type.png, id=755, 310.15875pt x 89.58469pt>
 File: bilder/add_pollution_type.png Graphic file (type png)
 <use bilder/add_pollution_type.png>
 Package pdftex.def Info: bilder/add_pollution_type.png  used on input line 961.
@@ -2438,13 +2438,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-29.49608pt}.
 
 [16 <./bilder/add_pollution_type.png>]
-<bilder/entwicklerdokumentation.png, id=787, 1114.91531pt x 925.20656pt>
+<bilder/entwicklerdokumentation.png, id=783, 1114.91531pt x 925.20656pt>
 File: bilder/entwicklerdokumentation.png Graphic file (type png)
 <use bilder/entwicklerdokumentation.png>
 Package pdftex.def Info: bilder/entwicklerdokumentation.png  used on input line
  977.
 (pdftex.def)             Requested size: 455.24411pt x 377.7701pt.
-<bilder/databasedoku.png, id=788, 551.81157pt x 520.94624pt>
+<bilder/databasedoku.png, id=784, 551.81157pt x 520.94624pt>
 File: bilder/databasedoku.png Graphic file (type png)
 <use bilder/databasedoku.png>
 Package pdftex.def Info: bilder/databasedoku.png  used on input line 983.
@@ -2508,9 +2508,9 @@ pe1/public/lm/lmr8.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/lm/lmri12.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/lm/lmsy10.pfb><C:/Users/Jona.Rams/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Projektdokumentation.pdf (40 pages, 1004427 bytes).
+Output written on Projektdokumentation.pdf (40 pages, 1003917 bytes).
 PDF statistics:
- 916 PDF objects out of 1000 (max. 8388607)
+ 912 PDF objects out of 1000 (max. 8388607)
  253 named destinations out of 1000 (max. 500000)
  550 words of extra memory for PDF output out of 10000 (max. 10000000)
 

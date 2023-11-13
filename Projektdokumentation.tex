@@ -305,7 +305,7 @@ Die Entität \textbf{User} repräsentiert einen Anwender der App und besitzt fol
     \item \texttt{email}: Die E-Mail-Adresse des Benutzers.
     \item \texttt{password}: Das Passwort des Benutzers.
 \end{itemize}
-Die Entitäten \textbf{GeoArea} und \textbf{Pollution} wurden vom Kunden vorgegeben. Die Entität \textbf{GeoArea} kapselt Informationen zu geografischen Bereichen, in denen \textbf{Pollutions} erfasst werden. Sie verfügt über folgende Attribute:
+Die Entität \textbf{GeoArea} wurde vom Kunden vorgegeben. Sie kapselt Informationen zu geografischen Bereichen, in denen \textbf{Pollutions} erfasst werden und verfügt über folgende Attribute:
 \begin{itemize}
     \item \texttt{id}: Ein eindeutiger Identifikator für jede GeoArea.
     \item \texttt{datecreated}: Das Erstellungsdatum der GeoArea.
@@ -374,10 +374,10 @@ In der Entwicklung der \glqq Pollution Detection\grqq{}-App war es notwendig, di
 \\
 Innerhalb dieses Systems gibt es Unterschiede in der Implementierung bestimmter Entitäten. Zum Beispiel wurden für die Klassen \texttt{User}, \texttt{Pollution} und \texttt{PollutionType} \acrshortpl{uuid} mit einer Hexadezimaldarstellung für ihre \acrshortpl{id} verwendet. Das \texttt{\_\_tablename\_\_}-Attribut in \textit{SQLAlchemy} bestimmt den Namen der Tabelle in der Datenbank, und in unserem Fall entspricht der Klassenname dem Tabellennamen. Fremdschlüssel werden durch \texttt{ForeignKey} und die zugehörigen Relationen durch \texttt{relationship} repräsentiert. Primärschlüssel werden durch das \texttt{primary\_key=True} Argument in der Spaltendefinition angegeben. Ein exemplarischer Codeausschnitt hierzu kann im Anhang \hyperref[lst:pollution]{A.12.1: Datenmodelle und Services} eingesehen werden.\\
 \\
-Es ist wichtig zu erwähnen, dass sowohl die \texttt{Pollution}-, \texttt{PollutionType}- als auch die \texttt{Geoarea}-Klasse vom Kunden übernommen wurden. Während \texttt{Pollution} und \texttt{Pollu\-tion\-Type}
+Es sollte hervorgehoben werden, dass die \texttt{Geoarea}-Klasse direkt vom Kunden übernommen wurde, im Gegensatz zu den neu gestalteten Klassen \texttt{Pollution} und \texttt{PollutionType}. Während \texttt{Pollution} und \texttt{Pollu\-tion\-Type}
  eine neuere Implementierung darstellen und daher \acrshortpl{uuid} in Hexadezimalform verwenden, nutzt \texttt{Geoarea} aufgrund ihres Alters Ganzzahlen als \acrshortpl{id}.\\
 \\
-Abschließend sollte angemerkt werden, dass der Kunde ein Backup bereitstellte, das eine Anzahl von Testgebieten(\glspl{geoarea}) enthielt. Diese wurden in der Entwicklungsphase intensiv zum Testen und Verifizieren der Funktionalität des Systems genutzt.
+Beim Übergang zum neuen System müssen die Daten aus der alten \texttt{Pollution}-Tabelle migriert werden. Dies gilt auch für \texttt{PollutionType}, da diese in der alten Methode noch keine eigene Tabelle hatten. Zusätzlich wurde ein Backup für \texttt{Geoarea} bereitgestellt, das ebenso wie das Backup für \texttt{PollutionTypes} während der Entwicklungsphase zum Testen und Verifizieren der Funktionalität des neuen Systems genutzt wurde.
 
 \subsection{Implementierung der Geschfäftslogik}
 Die Geschäftslogik fokussiert sich auf die Abbildung und Verarbeitung der Daten entsprechend der fachlichen Anforderungen. Entsprechend den in Abschnitt \hyperref[sec:anwendungsfälle]{3.3 (Anwendungsfälle)} erläuterten Anwendungsfällen, wurden die Hauptservices in der Service-Schicht realisiert. Hierbei wurden spezielle Service-Dateien, wie der \texttt{auth\_service} für Authentifizierungsprozesse, der \texttt{geoarea\_service} zur Abfrage von \glspl{geoarea}, der \texttt{pollution\_\-type\_\-service} zur Abfrage der verschiedenen Verschmutzungsarten und der \texttt{pollution\_service} zur umfassenden Verwaltung von \gls{pollution}-Daten, erstellt.\\
