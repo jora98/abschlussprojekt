@@ -186,7 +186,7 @@ Die vollständige Auflistung aller für das Projekt verwendeten Ressourcen finde
 
 \subsection{Entwicklungsprozess}
 \label{sec:entwicklungsprozess}
-Vor dem eigentlichen Projektstart war es entscheidend, einen passenden Entwicklungsprozess auszuwählen, welcher die methodische Herangehensweise für die Projektumsetzung festlegt. Das Wasserfallmodell, das für dieses Vorhaben gewählt habe wurde, ist ein geordneter und phasenbasierter Ansatz in der Softwareentwicklung. Dabei folgt jede Phase strikt auf die vorherige, wodurch klare Meilensteine und Abgrenzungen zwischen den einzelnen Entwicklungsschritten entstehen\footnote{\citeauthor{pressman2014software}}. Bei der Entwicklung der Benutzeroberfläche wurde jedoch einen agileren Ansatz gewählt, um einen kontinuierlichen Austausch mit dem Fachbereich zu gewährleisten und auf deren Feedback zeitnah reagieren zu können.
+Vor dem eigentlichen Projektstart war es entscheidend, einen passenden Entwicklungsprozess auszuwählen, welcher die methodische Herangehensweise für die Projektumsetzung festlegt. Das Wasserfallmodell, das für dieses Vorhaben gewählt habe wurde, ist ein geordneter und phasenbasierter Ansatz in der Softwareentwicklung. Dabei folgt jede Phase strikt auf die vorherige, wodurch klare Meilensteine und Abgrenzungen zwischen den einzelnen Entwicklungsschritten entstehen\footnote{\citeauthor{pressman2014software}}. Bei der Entwicklung der Benutzeroberfläche wurde jedoch ein agilerer Ansatz gewählt, um einen kontinuierlichen Austausch mit dem Fachbereich zu gewährleisten und auf deren Feedback zeitnah reagieren zu können.
 
 \section{Analysephase}
 \subsection{Ist-Analyse}
@@ -347,7 +347,7 @@ Für die detaillierte Codeüberwachung kam Flake8 zum Einsatz, welches den Pytho
 
 \subsection{Deployment}
 \label{sec:deployment}
-Bei dem vorliegenden Projekt handelt es sich um eine mobile Anwendung. Aufgrund dessen ist das Deployment auf einem Firmenlaptop innerhalb des Firmennetzwerks notwendig, um in einer Testumgebung die Anwendung zu evaluieren. Das zugehörige Verteilungsdiagramm, welches den gesamten Prozess und die Architektur darstellt, ist im Anhang A.12 abgebildet.\\
+In diesem Projekt wird eine mobile Anwendung entwickelt, die in der abschließenden Phase in eine Testumgebung überführt werden soll. Hierfür ist das Deployment der Anwendung auf einen firmeninternen Laptop vorgesehen. Dieser Schritt ermöglicht es, die Anwendung innerhalb des Firmennetzwerks zu testen und zu evaluieren, um sicherzustellen, dass sie den Anforderungen und Standards des Unternehmens entspricht.\\
 \\
 Die Entwicklung der mobilen App erfolgte mittels Ionic auf Angular-Basis. In diesem Projekt wurde \textit{Capacitor} als Cross-Platform Native Runtime eingesetzt. Mit den Befehlen \texttt{ionic build}, gefolgt von \texttt{npx cap sync} und \texttt{npx cap open android}, wird die Web-App in eine native Android-App konvertiert. Obwohl der Fokus auf \textit{Capacitor} liegt, wird im Hintergrund \textit{Gradle} als Build-System verwendet, sobald das Projekt in \textit{Android Studio} geöffnet ist, um die Android-App zu bauen.
 \\
@@ -365,7 +365,7 @@ Basierend auf den in der Entwurfsphase entwickelten Konzepten wurde ein Pflichte
 \section{Implementierungsphase}
 Zu Beginn der Implementierungsphase stand die Einrichtung der notwendigen Projektstrukturen im Vordergrund.\\
 \\
-Für das Backend wurde zuerst in \acrshort{vscode} ein \acrshort{python3}-Projekt ins Leben gerufen. Dies ist ein essenzieller Schritt, um eine isolierte Entwicklungsumgebung zu gewährleisten und sicherzustellen, dass alle Abhängigkeiten und Bibliotheken korrekt verwaltet werden. Dafür wurde eine \gls{venv} erstellt. Diese bietet die Möglichkeit, Abhängigkeiten projektbezogen zu isolieren und somit sicherzustellen, dass unterschiedliche Projekte mit potenziell unterschiedlichen Anforderungen an die Paketversionen nicht in Konflikt geraten.\\
+Für das Backend wurde zuerst in \acrshort{vscode} ein \acrshort{python3}-Projekt angelegt. Dies ist ein essenzieller Schritt, um eine isolierte Entwicklungsumgebung zu gewährleisten und sicherzustellen, dass alle Abhängigkeiten und Bibliotheken korrekt verwaltet werden. Dafür wurde eine \gls{venv} erstellt. Diese bietet die Möglichkeit, Abhängigkeiten projektbezogen zu isolieren und somit sicherzustellen, dass unterschiedliche Projekte mit potenziell unterschiedlichen Anforderungen an die Paketversionen nicht in Konflikt geraten.\\
 \\
 Im Bereich des Frontends begann der Implementierungsprozess mit der Installation von Ionic. Ionic ist ein weit verbreitetes Framework zur Erstellung plattformübergreifender mobiler Anwendungen unter Verwendung von Webtechnologien. Nach der erfolgreichen Installation wurde mithilfe von Ionic ein neues Projekt auf der Grundlage von Angular generiert. Dieser Schritt bietet den Vorteil, dass Ionic eine Grundstruktur für das Projekt vorgibt. Dies erleichtert den Entwicklungsprozess erheblich, da bestimmte, immer wiederkehrende Aufgaben, wie die Einrichtung von Verzeichnisstrukturen oder die Integration von Basiskomponenten, automatisiert werden.
 
